@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
-import { Phone, MapPin, Send, Sparkles, ArrowRight } from "lucide-react";
+import { Phone, MapPin, Send, Sparkles, ArrowRight, Mail } from "lucide-react";
 import { useState } from "react";
 
 export function Contact() {
@@ -140,7 +140,7 @@ export function Contact() {
                       className="text-blue-400 uppercase tracking-[0.2em]"
                       style={{ fontSize: '0.75rem', fontWeight: '600' }}
                     >
-                      Available 24/7
+                      Let's Talk Business
                     </span>
                   </motion.div>
 
@@ -193,11 +193,40 @@ export function Contact() {
                     </div>
                   </motion.div>
 
-                  {/* Address Card */}
+                  {/* Email Card */}
                   <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.5 }}
+                    whileHover={{ scale: 1.02, x: 10 }}
+                    className="group relative p-6 rounded-2xl backdrop-blur-xl border border-white/10 overflow-hidden"
+                    style={{ background: 'linear-gradient(135deg, rgba(45,62,95,0.2), rgba(26,35,50,0.3))' }}
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/0 via-cyan-500/10 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    
+                    <div className="relative flex items-start gap-5">
+                      <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br from-cyan-500 to-cyan-600 flex items-center justify-center shadow-lg shadow-cyan-500/20">
+                        <Mail className="w-6 h-6 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-white mb-2" style={{ fontSize: '1.125rem', fontWeight: '600' }}>
+                          Email Address
+                        </h3>
+                        <a 
+                          href="mailto:info@arnngroup.com" 
+                          className="text-cyan-400 hover:text-cyan-300 transition-colors"
+                        >
+                          info@arnngroup.com
+                        </a>
+                      </div>
+                    </div>
+                  </motion.div>
+
+                  {/* Address Card */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.6 }}
                     whileHover={{ scale: 1.02, x: 10 }}
                     className="group relative p-6 rounded-2xl backdrop-blur-xl border border-white/10 overflow-hidden"
                     style={{ background: 'linear-gradient(135deg, rgba(45,62,95,0.2), rgba(26,35,50,0.3))' }}

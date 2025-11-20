@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import logo from "figma:asset/4887e81018b6be301890d453fcf0bdc0fd5e7560.png";
 
 export function GlobalLoader() {
   return (
@@ -70,21 +71,33 @@ export function GlobalLoader() {
           />
         </div>
 
-        {/* Brand Text */}
+        {/* Brand Logo */}
         <motion.div
           className="flex flex-col items-center gap-2"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <h2 className="text-2xl tracking-wider text-[#2d3e5f]">
-            ARNN GROUP
-          </h2>
+          {/* Animated Logo */}
+          <motion.img
+            src={logo}
+            alt="ARNN Group"
+            className="h-24"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ 
+              opacity: 1, 
+              scale: 1,
+            }}
+            transition={{
+              duration: 0.6,
+              ease: "easeOut"
+            }}
+          />
           
           {/* Loading Bar */}
           <div className="w-48 h-0.5 bg-gray-200 rounded-full overflow-hidden">
             <motion.div
-              className="h-full bg-[#2d3e5f]"
+              className="h-full bg-[#28315A]"
               initial={{ x: "-100%" }}
               animate={{ x: "100%" }}
               transition={{
@@ -98,9 +111,15 @@ export function GlobalLoader() {
 
         {/* Subtle Loading Text */}
         <motion.p
-          className="text-sm text-gray-500 tracking-wide"
+          className="tracking-wide"
+          style={{ 
+            fontSize: '0.875rem', 
+            fontWeight: '700',
+            color: '#2d3e5f',
+            letterSpacing: '0.1em'
+          }}
           animate={{
-            opacity: [0.4, 1, 0.4],
+            opacity: [0.7, 1, 0.7],
           }}
           transition={{
             duration: 2,

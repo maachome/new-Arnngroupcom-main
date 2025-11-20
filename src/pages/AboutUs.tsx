@@ -119,7 +119,7 @@ export function AboutUs() {
       </section>
 
       {/* Stats Section - Glassmorphic Cards */}
-      <section className="relative py-32 px-8 bg-gradient-to-b from-[#0a0a0a] to-[#1a1a2e]">
+      <section className="relative py-[20px] px-[32px] bg-gradient-to-b from-[#0a0a0a] to-[#1a1a2e]">
         <div className="max-w-[1400px] mx-auto">
           <div className="grid md:grid-cols-3 gap-8">
             {[
@@ -159,7 +159,7 @@ export function AboutUs() {
       {/* Introduction Section - Split Screen Asymmetric */}
       <section className="relative py-32 px-8 bg-[#1a1a2e] overflow-hidden">
         {/* Background Elements */}
-        <div className="absolute top-20 right-10 w-96 h-96 bg-blue-500/10 rounded-full blur-[120px]"></div>
+        <div className="absolute top-[100px] right-[70px] w-96 h-96 bg-blue-500/10 rounded-full blur-[120px] mt-[0px] mr-[0px] mb-[0px] ml-[50px]"></div>
         <div className="absolute bottom-20 left-10 w-96 h-96 bg-purple-500/10 rounded-full blur-[120px]"></div>
         
         <div className="max-w-[1400px] mx-auto">
@@ -212,7 +212,7 @@ export function AboutUs() {
               <motion.div
                 animate={{ y: [0, -20, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -top-8 -right-8 w-32 h-32 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-3xl backdrop-blur-sm border border-white/10 rotate-12"
+                className="absolute -top-24 -right-8 w-32 h-32 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-3xl backdrop-blur-sm border border-white/10 rotate-12"
               ></motion.div>
             </motion.div>
           </div>
@@ -220,7 +220,7 @@ export function AboutUs() {
       </section>
 
       {/* Core Values Section - 3D Cards */}
-      <section className="relative py-32 px-8 bg-gradient-to-b from-[#1a1a2e] to-[#0a0a0a]">
+      <section className="relative py-32 px-8 bg-gradient-to-b from-[#1a1a2e] to-[#0a0a0a] pt-[20px] pr-[32px] pb-[128px] pl-[32px]">
         <div className="max-w-[1400px] mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

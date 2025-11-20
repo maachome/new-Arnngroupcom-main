@@ -55,7 +55,7 @@ export function Header() {
       <div className="max-w-[1400px] mx-auto flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-          <img src={logo} alt="ARNN Group" className="h-16" />
+          <img src={logo} alt="ARNN Group" className="h-20" />
         </Link>
 
         {/* Desktop Navigation - Hidden on mobile/tablet */}

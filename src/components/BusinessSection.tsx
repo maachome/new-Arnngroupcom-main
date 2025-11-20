@@ -469,7 +469,7 @@ export function BusinessSection() {
               
               {/* Blue Tint Overlay */}
               <div className={`absolute inset-0 transition-colors duration-300 ${
-                (isVisible && hoveredIndex === localIndex) || (isTouchDevice && expandedCardIndex === index) ? 'bg-[#2d3e5f]/60' : 'bg-[#2d3e5f]/70'
+                (isVisible && hoveredIndex === localIndex) || (isTouchDevice && expandedCardIndex === index) ? 'bg-[#2d3e5f]/50' : 'bg-[#2d3e5f]/60'
               }`} />
               
               {/* Content */}
@@ -477,7 +477,9 @@ export function BusinessSection() {
                 {/* Default State - Vertical Title and Number */}
                 <div className={`h-full flex flex-col items-center justify-end p-6 pb-12 transition-all duration-500 ease-out ${
                   (isVisible && showContent === localIndex) || (isTouchDevice && expandedCardIndex === index) ? 'opacity-0 pointer-events-none' : 'opacity-100'
-                }`}>
+                }`} style={{
+                  background: 'linear-gradient(to top, rgba(40, 49, 90, 0.7) 0%, rgba(40, 49, 90, 0.4) 50%, rgba(40, 49, 90, 0.1) 100%)'
+                }}>
                   {/* Vertical Title */}
                   <div
                     className="mb-8 text-xs tracking-[0.2em] uppercase"
