@@ -47,7 +47,7 @@ export function Header() {
     const isServicePage = location.pathname.startsWith('/services/');
 
     return (
-        <header className={`fixed left-0 right-0 z-50 py-3 px-8 flex-shrink-0 transition-all duration-500 ${isVisible ? 'top-0' : '-top-32'
+        <header className={`fixed left-0 right-0 z-50 py-6 px-8 flex-shrink-0 transition-all duration-500 ${isVisible ? 'top-0' : '-top-32'
             } ${isScrolled ? 'bg-[#2d3e5f] text-white shadow-lg' : `bg-transparent ${location.pathname === '/' ? 'text-gray-900' : 'text-white'}`
             }`} style={{ margin: '0 10vw' }}>
             <div className="w-full relative">
@@ -73,7 +73,7 @@ export function Header() {
                 {/* Navigation - Stays at the top */}
                 <div className="flex justify-end items-center">
                     {/* Desktop Navigation - Hidden on mobile/tablet */}
-                    <nav className="hidden lg:flex items-center gap-8">
+                    <nav className="hidden lg:flex items-center gap-8 mt-8">
                         <Link
                             to="/"
                             className={`text-sm tracking-wide hover:opacity-80 transition-opacity ${location.pathname === '/' ? `border-b-2 ${isScrolled ? 'border-white' : 'border-gray-900'}` : ''
@@ -84,7 +84,7 @@ export function Header() {
 
                         <Link
                             to="/about-us"
-                            className={`text-sm tracking-wide hover:opacity-80 transition-opacity ${location.pathname === '/about-us' ? `border-b-2 ${isScrolled || location.pathname !== '/' ? 'border-white' : 'border-gray-900'}` : ''
+                            className={`text-sm tracking-wide hover:opacity-80 transition-opacity ${location.pathname === '/about-us' ? `border-b-2 ${isScrolled ? 'border-white' : 'border-gray-900'}` : ''
                                 }`}
                         >
                             ABOUT US
@@ -125,7 +125,7 @@ export function Header() {
 
                         <Link
                             to="/contact"
-                            className={`text-sm tracking-wide hover:opacity-80 transition-opacity ${location.pathname === '/contact' ? `border-b-2 ${isScrolled || location.pathname !== '/' ? 'border-white' : 'border-gray-900'}` : ''
+                            className={`text-sm tracking-wide hover:opacity-80 transition-opacity ${location.pathname === '/contact' ? `border-b-2 ${isScrolled ? 'border-white' : 'border-gray-900'}` : ''
                                 }`}
                         >
                             CONTACT
