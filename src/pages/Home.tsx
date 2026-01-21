@@ -1,6 +1,6 @@
-import { Header } from "../components/Header";
 import { BusinessSection } from "../components/BusinessSection";
 import { Footer } from "../components/Footer";
+import { Header } from "../components/Header";
 
 export function Home() {
   return (
@@ -22,9 +22,10 @@ export function Home() {
         <BusinessSection />
 
         {/* Bottom Quote Section - flex-1 pushes it to match top section */}
-        <section className="flex-1 flex flex-col justify-center py-6 sm:py-12">
-          <div className="max-w-[900px] mx-auto text-center px-[32px]">
-            <p className="text-sm sm:text-lg md:text-3xl lg:text-3xl min-[2300px]:text-5xl text-gray-800 leading-relaxed font-medium tracking-wide whitespace-nowrap">
+        <section className="flex-1 flex flex-col justify-center  ">
+          <div className="max-w-[80vw] mx-auto text-center px-[32px]">
+            <p className="text-sm sm:text-lg md:text-3xl lg:text-3xl min-[2300px]:text-5xl text-gray-800 leading-relaxed font-medium tracking-wide ">
+            {/* <p className="text-sm sm:text-lg md:text-3xl lg:text-3xl min-[2300px]:text-5xl text-gray-800 leading-relaxed font-medium tracking-wide whitespace-nowrap"> */}
               Pioneering sustainable growth and transformative solutions across global markets.
             </p>
           </div>

@@ -1,6 +1,6 @@
-import { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 interface BusinessDivision {
   number: string;
