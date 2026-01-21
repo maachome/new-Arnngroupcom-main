@@ -57,16 +57,16 @@ export function Header() {
                         src={logo}
                         alt="ARNN Group"
                         className="
-    h-20
-    sm:h-24
-    md:h-28
-    lg:h-32
-    xl:h-40
-    2xl:h-48
-    min-[1900px]:h-[12vw]
-    min-[2300px]:h-[10vw]
-    border-0 outline-none
-  "
+                                    h-20
+                                    sm:h-24
+                                    md:h-28
+                                    lg:h-32
+                                    xl:h-40
+                                    2xl:h-48
+                                    min-[1900px]:h-[12vw]
+                                    min-[2300px]:h-[10vw]
+                                    border-0 outline-none
+                                "
                     />
                 </Link>
 
