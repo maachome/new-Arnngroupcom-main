@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-import react from '@vitejs/plugin-react-swc';
-import path from 'path';
-import { fileURLToPath } from 'url';
-import { defineConfig } from 'vite';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-export default defineConfig({
-  base: '/',
-  plugins: [react()],
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './src'),
-    },
-  },
-  build: {
-    target: 'esnext',
-    outDir: 'dist',
-  },
-});
-=======
   import react from '@vitejs/plugin-react-swc';
 import path from 'path';
 import { defineConfig } from 'vite';
@@ -80,4 +57,3 @@ import { defineConfig } from 'vite';
       open: true,
     },
   });
->>>>>>> f8b36dfee4d3674b74de143729d230bf5c158a60
