@@ -195,7 +195,7 @@ export function AboutUs() {
         {[...Array(30)].map((_, i) => (
           <motion.div
             key={`star-${i}`}
-            className="absolute w-1 h-1 rounded-full bg-blue-400"
+            className={`absolute w-1 h-1 rounded-full bg-blue-400 ${i >= 10 ? 'hidden md:block' : ''}`}
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -216,7 +216,7 @@ export function AboutUs() {
         {[...Array(8)].map((_, i) => (
           <motion.div
             key={`asteroid-${i}`}
-            className="absolute w-2 h-2 rounded-full bg-gradient-to-br from-slate-300 to-slate-400"
+            className={`absolute w-2 h-2 rounded-full bg-gradient-to-br from-slate-300 to-slate-400 ${i >= 3 ? 'hidden md:block' : ''}`}
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -284,7 +284,7 @@ export function AboutUs() {
         {[...Array(40)].map((_, i) => (
           <motion.div
             key={`particle-${i}`}
-            className="absolute w-2 h-2 rounded-full"
+            className={`absolute w-2 h-2 rounded-full ${i >= 13 ? 'hidden md:block' : ''}`}
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -890,7 +890,7 @@ export function AboutUs() {
                   <img
                     src={location.flag}
                     alt={`${location.country} flag`}
-                    className="w-16 h-16 mb-4 mx-auto rounded-lg shadow-md object-cover"
+                    className="w-28 h-16 mb-4 mx-auto shadow-md object-cover"
                   />
                   <h4
                     className="text-slate-900 mb-2"

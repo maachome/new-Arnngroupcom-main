@@ -205,7 +205,7 @@ export function Contact() {
         {[...Array(30)].map((_, i) => (
           <motion.div
             key={`star-${i}`}
-            className="absolute w-1 h-1 rounded-full bg-blue-400"
+            className={`absolute w-1 h-1 rounded-full bg-blue-400 ${i >= 10 ? 'hidden md:block' : ''}`}
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -226,7 +226,7 @@ export function Contact() {
         {[...Array(8)].map((_, i) => (
           <motion.div
             key={`asteroid-${i}`}
-            className="absolute w-2 h-2 rounded-full bg-gradient-to-br from-slate-300 to-slate-400"
+            className={`absolute w-2 h-2 rounded-full bg-gradient-to-br from-slate-300 to-slate-400 ${i >= 3 ? 'hidden md:block' : ''}`}
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
