@@ -3,12 +3,12 @@ import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { servicesData } from "../data/servicesData";
 import {
-    Sheet,
-    SheetContent,
-    SheetDescription,
-    SheetHeader,
-    SheetTitle,
-    SheetTrigger,
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
 } from "./ui/sheet";
 
 export function Header() {
@@ -59,13 +59,11 @@ export function Header() {
 
   return (
     <header
-      className={`fixed left-0 right-0 z-50 py-3 px-8 flex-shrink-0 transition-all duration-500 ${
-        isVisible ? "top-0" : "-top-32"
-      } ${
-        isScrolled
+      className={`fixed left-0 right-0 z-50 py-3 px-8 flex-shrink-0 transition-all duration-500 ${isVisible ? "top-0" : "-top-32"
+        } ${isScrolled
           ? "bg-[#2d3e5f] text-white shadow-lg"
           : `bg-transparent ${location.pathname === "/" || isContactPageAtTop ? "text-gray-900" : "text-white"}`
-      }`}
+        }`}
     >
       <div className="max-w-[1400px] mx-auto flex items-center justify-between">
         {/* Logo */}
@@ -76,12 +74,8 @@ export function Header() {
           <img
             src="/arnn.png"
             alt="ARNN GROUP"
-<<<<<<< HEAD
-=======
             width="146"
             height="140"
->>>>>>> f8b36dfee4d3674b74de143729d230bf5c158a60
-            className="h-20 lg:h-28 lg:mt-3"
           />
         </Link>
 
@@ -89,22 +83,20 @@ export function Header() {
         <nav className="hidden lg:flex items-center gap-8 lg:-mt-8 mt-[-60px] mr-[0px] mb-[0px] ml-[0px]">
           <Link
             to="/"
-            className={`text-sm tracking-wide hover:opacity-80 transition-opacity ${
-              location.pathname === "/"
+            className={`text-sm tracking-wide hover:opacity-80 transition-opacity ${location.pathname === "/"
                 ? `border-b-2 ${isScrolled ? "border-white" : "border-gray-900"}`
                 : ""
-            }`}
+              }`}
           >
             HOME
           </Link>
 
           <Link
             to="/about-us"
-            className={`text-sm tracking-wide hover:opacity-80 transition-opacity ${
-              location.pathname === "/about-us"
+            className={`text-sm tracking-wide hover:opacity-80 transition-opacity ${location.pathname === "/about-us"
                 ? `border-b-2 ${isScrolled || location.pathname !== "/" ? "border-white" : "border-gray-900"}`
                 : ""
-            }`}
+              }`}
           >
             ABOUT US
           </Link>
@@ -116,11 +108,10 @@ export function Header() {
             onMouseLeave={() => setIsServicesOpen(false)}
           >
             <button
-              className={`flex items-center gap-1 text-sm tracking-wide hover:opacity-80 transition-opacity ${
-                isServicePage
+              className={`flex items-center gap-1 text-sm tracking-wide hover:opacity-80 transition-opacity ${isServicePage
                   ? `border-b-2 ${isScrolled || location.pathname !== "/" ? "border-white" : "border-gray-900"}`
                   : ""
-              }`}
+                }`}
             >
               OUR BUSINESSES
               <ChevronDown
@@ -151,11 +142,10 @@ export function Header() {
 
           <Link
             to="/contact"
-            className={`text-sm tracking-wide hover:opacity-80 transition-opacity ${
-              location.pathname === "/contact"
+            className={`text-sm tracking-wide hover:opacity-80 transition-opacity ${location.pathname === "/contact"
                 ? `border-b-2 ${isScrolled || location.pathname !== "/" ? "border-white" : "border-gray-900"}`
                 : ""
-            }`}
+              }`}
           >
             CONTACT
           </Link>
@@ -195,9 +185,8 @@ export function Header() {
               <Link
                 to="/"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`px-4 py-3 text-sm tracking-wide hover:bg-white/10 transition-colors rounded-lg ${
-                  location.pathname === "/" ? "bg-white/10" : ""
-                }`}
+                className={`px-4 py-3 text-sm tracking-wide hover:bg-white/10 transition-colors rounded-lg ${location.pathname === "/" ? "bg-white/10" : ""
+                  }`}
               >
                 HOME
               </Link>
@@ -205,11 +194,10 @@ export function Header() {
               <Link
                 to="/about-us"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`px-4 py-3 text-sm tracking-wide hover:bg-white/10 transition-colors rounded-lg ${
-                  location.pathname === "/about-us"
+                className={`px-4 py-3 text-sm tracking-wide hover:bg-white/10 transition-colors rounded-lg ${location.pathname === "/about-us"
                     ? "bg-white/10"
                     : ""
-                }`}
+                  }`}
               >
                 ABOUT US
               </Link>
@@ -222,9 +210,8 @@ export function Header() {
                       !isMobileServicesOpen,
                     )
                   }
-                  className={`flex items-center justify-between px-4 py-3 text-sm tracking-wide hover:bg-white/10 transition-colors rounded-lg ${
-                    isServicePage ? "bg-white/10" : ""
-                  }`}
+                  className={`flex items-center justify-between px-4 py-3 text-sm tracking-wide hover:bg-white/10 transition-colors rounded-lg ${isServicePage ? "bg-white/10" : ""
+                    }`}
                 >
                   OUR BUSINESSES
                   <ChevronDown
@@ -255,11 +242,10 @@ export function Header() {
               <Link
                 to="/contact"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`px-4 py-3 text-sm tracking-wide hover:bg-white/10 transition-colors rounded-lg ${
-                  location.pathname === "/contact"
+                className={`px-4 py-3 text-sm tracking-wide hover:bg-white/10 transition-colors rounded-lg ${location.pathname === "/contact"
                     ? "bg-white/10"
                     : ""
-                }`}
+                  }`}
               >
                 CONTACT
               </Link>
