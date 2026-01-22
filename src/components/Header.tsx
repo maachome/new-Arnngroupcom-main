@@ -11,6 +11,8 @@ import {
   SheetTrigger,
 } from "./ui/sheet";
 
+import arnnImage from '/arnn.png';
+
 export function Header() {
   const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
@@ -73,8 +75,8 @@ export function Header() {
           to="/"
           className="flex items-center gap-3 hover:opacity-80 transition-opacity"
         >
-          <img 
-            src="/arnn.png"
+          <img
+            src={arnnImage}
             alt="ARNN GROUP"
             className="h-20 lg:h-28 lg:mt-3"
           />
@@ -175,7 +177,7 @@ export function Header() {
           >
             <SheetHeader>
               <SheetTitle className="text-white text-left">
-                <img 
+                <img
                   src="/arnn.png"
                   alt="ARNN GROUP"
                   className="h-16"
