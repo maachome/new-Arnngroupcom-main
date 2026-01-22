@@ -1,14 +1,14 @@
+import { ChevronDown, Menu } from "lucide-react";
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { useState, useEffect } from "react";
-import { ChevronDown, Menu, X } from "lucide-react";
 import { servicesData } from "../data/servicesData";
 import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetDescription,
-  SheetTrigger,
+    Sheet,
+    SheetContent,
+    SheetDescription,
+    SheetHeader,
+    SheetTitle,
+    SheetTrigger,
 } from "./ui/sheet";
 
 export function Header() {
@@ -54,8 +54,8 @@ export function Header() {
   const isServicePage =
     location.pathname.startsWith("/services/");
 
-  // Check if we're on contact page at top of scroll
-  const isContactPageAtTop = location.pathname === "/contact" && !isScrolled;
+  // Check if we're on contact page or about-us page at top of scroll
+  const isContactPageAtTop = (location.pathname === "/contact" || location.pathname === "/about-us") && !isScrolled;
 
   return (
     <header
@@ -73,9 +73,11 @@ export function Header() {
           to="/"
           className="flex items-center gap-3 hover:opacity-80 transition-opacity"
         >
-          <img 
+          <img
             src="/arnn.png"
             alt="ARNN GROUP"
+            width="146"
+            height="140"
             className="h-20 lg:h-28 lg:mt-3"
           />
         </Link>
@@ -175,7 +177,7 @@ export function Header() {
           >
             <SheetHeader>
               <SheetTitle className="text-white text-left">
-                <img 
+                <img
                   src="/arnn.png"
                   alt="ARNN GROUP"
                   className="h-16"
