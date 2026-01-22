@@ -1,5 +1,4 @@
 import { motion } from "motion/react";
-import logo from "figma:asset/4887e81018b6be301890d453fcf0bdc0fd5e7560.png";
 
 export function GlobalLoader() {
   return (
@@ -79,10 +78,8 @@ export function GlobalLoader() {
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           {/* Animated Logo */}
-          <motion.img
-            src={logo}
-            alt="ARNN Group"
-            className="h-24"
+          <motion.div
+            className="flex items-center justify-center h-24"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ 
               opacity: 1, 
@@ -92,7 +89,16 @@ export function GlobalLoader() {
               duration: 0.6,
               ease: "easeOut"
             }}
-          />
+          >
+            <div style={{ 
+              fontSize: '2.5rem', 
+              fontWeight: '700',
+              color: '#2d3e5f',
+              letterSpacing: '0.05em'
+            }}>
+              ARNN GROUP
+            </div>
+          </motion.div>
           
           {/* Loading Bar */}
           <div className="w-48 h-0.5 bg-gray-200 rounded-full overflow-hidden">

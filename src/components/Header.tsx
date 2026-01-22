@@ -1,7 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
-import logo from "figma:asset/4887e81018b6be301890d453fcf0bdc0fd5e7560.png";
 import { servicesData } from "../data/servicesData";
 import {
   Sheet,
@@ -74,11 +73,16 @@ export function Header() {
           to="/"
           className="flex items-center gap-3 hover:opacity-80 transition-opacity"
         >
-          <img
-            src={logo}
-            alt="ARNN Group"
-            className="h-20 lg:h-28 lg:mt-3"
-          />
+          <div 
+            className="h-20 lg:h-28 lg:mt-3 flex items-center"
+            style={{ 
+              fontSize: '1.5rem', 
+              fontWeight: '700',
+              letterSpacing: '0.05em'
+            }}
+          >
+            ARNN GROUP
+          </div>
         </Link>
 
         {/* Desktop Navigation - Hidden on mobile/tablet */}
@@ -176,11 +180,16 @@ export function Header() {
           >
             <SheetHeader>
               <SheetTitle className="text-white text-left">
-                <img
-                  src={logo}
-                  alt="ARNN Group"
-                  className="h-16"
-                />
+                <div 
+                  className="h-16 flex items-center"
+                  style={{ 
+                    fontSize: '1.5rem', 
+                    fontWeight: '700',
+                    letterSpacing: '0.05em'
+                  }}
+                >
+                  ARNN GROUP
+                </div>
               </SheetTitle>
               <SheetDescription className="sr-only">
                 Navigation menu
