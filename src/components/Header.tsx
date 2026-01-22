@@ -1,17 +1,19 @@
+import { ChevronDown, Menu } from "lucide-react";
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { useState, useEffect } from "react";
-import { ChevronDown, Menu, X } from "lucide-react";
 import { servicesData } from "../data/servicesData";
 import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetDescription,
-  SheetTrigger,
+    Sheet,
+    SheetContent,
+    SheetDescription,
+    SheetHeader,
+    SheetTitle,
+    SheetTrigger,
 } from "./ui/sheet";
 
-import arnnImage from '/arnn.png';
+// import arnnImage from '/arnn.png';
+
+import arnnImage from './assets/arnn.png';
 
 export function Header() {
   const location = useLocation();
