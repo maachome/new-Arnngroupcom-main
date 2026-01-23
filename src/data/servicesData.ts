@@ -8,7 +8,7 @@ export const servicesData: ServiceData[] = [
     tagline: "Strategic Partnerships and Citizenship Investment Programs",
     description: "Empowering economic growth through strategic government partnerships, citizenship investment programs, and billion-euro direct investments across real estate, agriculture, and key industries.",
     color: "#3b82f6", // Blue
-    
+
     hero: {
       headline: "Economic Empowerment",
       subheadline: "Strategic Partnerships & Citizenship Investment",
@@ -17,7 +17,7 @@ export const servicesData: ServiceData[] = [
       mediaUrl: "https://cdn.pixabay.com/video/2021/10/12/91744-636709154_large.mp4",
       badge: "Billion-Euro Investments"
     },
-    
+
     overview: {
       title: "Strategic Partnerships Driving Economic Growth",
       subtitle: "Our Mission",
@@ -37,7 +37,7 @@ export const servicesData: ServiceData[] = [
       ],
       image: "https://images.unsplash.com/photo-1758599543152-a73184816eba?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGhhbmRzaGFrZSUyMHBhcnRuZXJzaGlwfGVufDF8fHx8MTc2MzE1MTc2MHww&ixlib=rb-4.1.0&q=80&w=1080"
     },
-    
+
     features: {
       title: "Comprehensive Investment Solutions",
       subtitle: "Key Focus Areas",
@@ -77,7 +77,7 @@ export const servicesData: ServiceData[] = [
         }
       ]
     },
-    
+
     success: {
       title: "Proven Track Record of Impactful Partnerships",
       subtitle: "Success Stories",
@@ -98,18 +98,18 @@ export const servicesData: ServiceData[] = [
         }
       ]
     },
-    
+
     cta: {
       headline: "Partner with ARNN Group for Sustainable Economic Growth",
       description: "Join our network of strategic partnerships that transcend financial transactions, fostering sustainable economic development, job creation, and global competitiveness.",
       buttonText: "Explore Partnership Opportunities",
       backgroundType: "gradient"
     },
-    
+
     nextService: "real-estate-development",
     prevService: "food-beverage"
   },
-  
+
   {
     id: "2",
     slug: "real-estate-development",
@@ -117,7 +117,7 @@ export const servicesData: ServiceData[] = [
     tagline: "Crafting Transformative Experiences",
     description: "Creating destinations that redefine urban landscapes through visionary design, cutting-edge technology, and meticulous planning, with a focus on hospitality excellence.",
     color: "#8b5cf6", // Purple
-    
+
     hero: {
       headline: "Real Estate Development",
       subheadline: "Creators of Experiences, Champions of Sustainability",
@@ -126,7 +126,7 @@ export const servicesData: ServiceData[] = [
       mediaUrl: "https://cdn.pixabay.com/video/2021/10/12/91744-636709154_large.mp4",
       badge: "Hospitality Excellence"
     },
-    
+
     overview: {
       title: "Redefining Urban Landscapes Through Hospitality",
       subtitle: "Our Commitment",
@@ -146,7 +146,7 @@ export const servicesData: ServiceData[] = [
       ],
       image: "https://images.unsplash.com/photo-1761069449669-1b17dc39831b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBob3RlbCUyMHJlc29ydCUyMGhvc3BpdGFsaXR5fGVufDF8fHx8MTc2MzE5NTc1N3ww&ixlib=rb-4.1.0&q=80&w=1080"
     },
-    
+
     features: {
       title: "Excellence in Hospitality Development",
       subtitle: "Our Portfolio",
@@ -186,7 +186,7 @@ export const servicesData: ServiceData[] = [
         }
       ]
     },
-    
+
     stats: {
       title: "Shaping the Cities of Tomorrow",
       items: [
@@ -196,7 +196,7 @@ export const servicesData: ServiceData[] = [
         { value: 25, label: "Years of Excellence", suffix: "+", icon: "award" }
       ]
     },
-    
+
     process: {
       title: "Our Development Approach",
       subtitle: "From Vision to Reality",
@@ -223,7 +223,7 @@ export const servicesData: ServiceData[] = [
         }
       ]
     },
-    
+
     success: {
       title: "Stewards of Progress and Innovation",
       subtitle: "Our Impact",
@@ -244,7 +244,7 @@ export const servicesData: ServiceData[] = [
         }
       ]
     },
-    
+
     cta: {
       headline: "Join Us in Shaping Tomorrow's Cities",
       description: "ARNN Group is more than a developer; we are creators of experiences, stewards of progress, and champions of sustainability. Join us on our journey to shape the cities of tomorrow, today.",
@@ -252,11 +252,11 @@ export const servicesData: ServiceData[] = [
       backgroundType: "image",
       backgroundUrl: "https://images.unsplash.com/photo-1681216868987-b7268753b81c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBhcmNoaXRlY3R1cmUlMjBidWlsZGluZyUyMGRlc2lnbnxlbnwxfHx8fDE3NjMxOTU3NTd8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
-    
+
     nextService: "ict",
     prevService: "economic-empowerment"
   },
-  
+
   // ICT Service
   {
     id: "3",
@@ -265,7 +265,7 @@ export const servicesData: ServiceData[] = [
     tagline: "Pioneering Innovation in Digital Finance & Technology",
     description: "Charting innovation in fintech, cryptocurrencies, server solutions, and B2C software development. Leveraging cutting-edge technologies to redefine financial services and digital infrastructure.",
     color: "#10b981", // Green for tech/innovation
-    
+
     hero: {
       headline: "ICT Development Strategy",
       subheadline: "Pioneering Innovation in Digital Finance & Technology",
@@ -274,7 +274,7 @@ export const servicesData: ServiceData[] = [
       mediaUrl: "https://cdn.pixabay.com/video/2021/10/12/91744-636709154_large.mp4",
       badge: "Digital Innovation"
     },
-    
+
     overview: {
       title: "Driving Innovation in the Digital Era",
       subtitle: "Our Vision",
@@ -294,7 +294,7 @@ export const servicesData: ServiceData[] = [
       ],
       image: "https://images.unsplash.com/flagged/photo-1579274216947-86eaa4b00475?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWNobm9sb2d5JTIwc2VydmVyJTIwZGF0YSUyMGNlbnRlcnxlbnwxfHx8fDE3NjMxOTY2MzV8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
-    
+
     features: {
       title: "Comprehensive ICT Solutions",
       subtitle: "Our Technology Portfolio",
@@ -338,7 +338,7 @@ export const servicesData: ServiceData[] = [
         }
       ]
     },
-    
+
     process: {
       title: "Our Development Approach",
       subtitle: "Innovation Pipeline",
@@ -365,7 +365,7 @@ export const servicesData: ServiceData[] = [
         }
       ]
     },
-    
+
     stats: {
       title: "ICT Impact & Innovation",
       items: [
@@ -395,7 +395,7 @@ export const servicesData: ServiceData[] = [
         }
       ]
     },
-    
+
     success: {
       title: "Technology Milestones",
       stories: [
@@ -425,7 +425,7 @@ export const servicesData: ServiceData[] = [
         }
       ]
     },
-    
+
     cta: {
       headline: "Partner with Us in Digital Innovation",
       description: "ARNN Group is shaping the future of technology through innovative ICT solutions. Join us on our journey to redefine digital finance, infrastructure, and software development.",
@@ -433,11 +433,11 @@ export const servicesData: ServiceData[] = [
       backgroundType: "image",
       backgroundUrl: "https://images.unsplash.com/photo-1760246964044-1384f71665b9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB0ZWNoJTIwb2ZmaWNlJTIwaW5ub3ZhdGlvbnxlbnwxfHx8fDE3NjMxOTY2NDl8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
-    
+
     nextService: "agro-aquaculture",
     prevService: "real-estate-development"
   },
-  
+
   {
     id: "4",
     slug: "agro-aquaculture",
@@ -445,7 +445,7 @@ export const servicesData: ServiceData[] = [
     tagline: "Pioneering Sustainable Food Production with Advanced Technology",
     description: "Revolutionizing agriculture through cutting-edge technology, hydroponics, vertical farming, and state-of-the-art aquaculture systems for sustainable food production.",
     color: "#10b981", // Emerald Green
-    
+
     hero: {
       headline: "Agro-Aquaculture",
       subheadline: "Technology-Driven Sustainable Food Production",
@@ -454,7 +454,7 @@ export const servicesData: ServiceData[] = [
       mediaUrl: "https://cdn.pixabay.com/video/2021/10/12/91744-636709154_large.mp4",
       badge: "Sustainable Innovation"
     },
-    
+
     overview: {
       title: "Revolutionizing Agriculture Through Innovation",
       subtitle: "Our Vision",
@@ -474,7 +474,7 @@ export const servicesData: ServiceData[] = [
       ],
       image: "https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoeWRyb3BvbmljcyUyMGZhcm18ZW58MXx8fHwxNzYzMTk4NTcyfDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
-    
+
     features: {
       title: "Advanced Agricultural Solutions",
       subtitle: "Innovation-Driven Farming",
@@ -518,7 +518,7 @@ export const servicesData: ServiceData[] = [
         }
       ]
     },
-    
+
     process: {
       title: "Our Agricultural Innovation Process",
       subtitle: "From Concept to Harvest",
@@ -545,7 +545,7 @@ export const servicesData: ServiceData[] = [
         }
       ]
     },
-    
+
     stats: {
       title: "Agro-Aquaculture Impact",
       items: [
@@ -574,7 +574,7 @@ export const servicesData: ServiceData[] = [
         }
       ]
     },
-    
+
     success: {
       title: "Agricultural Excellence Stories",
       stories: [
@@ -601,7 +601,7 @@ export const servicesData: ServiceData[] = [
         }
       ]
     },
-    
+
     cta: {
       headline: "Join the Agricultural Revolution",
       description: "ARNN Group is transforming food production through innovative agro-aquaculture solutions. Partner with us to build a sustainable future where technology and nature work in harmony.",
@@ -609,11 +609,11 @@ export const servicesData: ServiceData[] = [
       backgroundType: "image",
       backgroundUrl: "https://images.unsplash.com/photo-1574943320219-553eb213f72d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmVlbmhvdXNlJTIwZmFybWluZ3xlbnwxfHx8fDE3NjMxOTg3MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
-    
+
     nextService: "fashion-industries",
     prevService: "ict"
   },
-  
+
   {
     id: "5",
     slug: "fashion-industries",
@@ -621,7 +621,7 @@ export const servicesData: ServiceData[] = [
     tagline: "Redefining Elegance Through LussoCollezioni",
     description: "A distinguished leader in the fashion world, offering meticulously curated collections of jewelry, clothing, shoes, and accessories that blend timeless elegance with contemporary style.",
     color: "#ec4899", // Rose/Pink for fashion
-    
+
     hero: {
       headline: "Fashion Industries",
       subheadline: "LussoCollezioni - Where Elegance Meets Innovation",
@@ -630,7 +630,7 @@ export const servicesData: ServiceData[] = [
       mediaUrl: "https://cdn.pixabay.com/video/2021/10/12/91744-636709154_large.mp4",
       badge: "Timeless Elegance"
     },
-    
+
     overview: {
       title: "Crafting Timeless Elegance with Impeccable Detail",
       subtitle: "Our Heritage",
@@ -650,7 +650,7 @@ export const servicesData: ServiceData[] = [
       ],
       image: "https://images.unsplash.com/photo-1638382874010-aa4e76fe267d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBmYXNoaW9uJTIwamV3ZWxyeXxlbnwxfHx8fDE3NjMyMDcxMjR8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
-    
+
     features: {
       title: "Our Fashion Collections",
       subtitle: "LussoCollezioni Portfolio",
@@ -694,7 +694,7 @@ export const servicesData: ServiceData[] = [
         }
       ]
     },
-    
+
     process: {
       title: "Our Design Philosophy",
       subtitle: "From Concept to Creation",
@@ -721,7 +721,7 @@ export const servicesData: ServiceData[] = [
         }
       ]
     },
-    
+
     stats: {
       title: "Fashion Excellence by Numbers",
       items: [
@@ -751,7 +751,7 @@ export const servicesData: ServiceData[] = [
         }
       ]
     },
-    
+
     success: {
       title: "Fashion Excellence Stories",
       stories: [
@@ -778,7 +778,7 @@ export const servicesData: ServiceData[] = [
         }
       ]
     },
-    
+
     cta: {
       headline: "Discover Timeless Elegance with LussoCollezioni",
       description: "Join us on a journey where each piece tells a story of elegance, innovation, and enduring beauty. Experience fashion that exceeds expectations.",
@@ -787,11 +787,11 @@ export const servicesData: ServiceData[] = [
       backgroundType: "image",
       backgroundUrl: "https://images.unsplash.com/photo-1652701666551-9df39e7cdb04?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbGVnYW50JTIwY2xvdGhpbmclMjBjb2xsZWN0aW9ufGVufDF8fHx8MTc2MzIwNzEyNXww&ixlib=rb-4.1.0&q=80&w=1080"
     },
-    
+
     nextService: "empowering-global-talent",
     prevService: "agro-aquaculture"
   },
-  
+
   {
     id: "6",
     slug: "empowering-global-talent",
@@ -799,7 +799,7 @@ export const servicesData: ServiceData[] = [
     tagline: "Redefining Global Workforce Through WiseBell Global",
     description: "An innovative platform connecting skilled and unskilled talent with verified international employment opportunities through secure, transparent, and technology-driven solutions.",
     color: "#06b6d4", // Cyan for global connectivity
-    
+
     hero: {
       headline: "Empowering Global Talent",
       subheadline: "WiseBell Global - Redefining Global Workforce & Recruitment",
@@ -808,7 +808,7 @@ export const servicesData: ServiceData[] = [
       mediaUrl: "https://cdn.pixabay.com/video/2021/10/12/91744-636709154_large.mp4",
       badge: "Ethical Recruitment"
     },
-    
+
     overview: {
       title: "Building the Future of Ethical Global Recruitment",
       subtitle: "Our Mission",
@@ -828,7 +828,7 @@ export const servicesData: ServiceData[] = [
       ],
       image: "https://images.unsplash.com/photo-1664651205193-bfb6bfdd3b09?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnbG9iYWwlMjB3b3JrZm9yY2UlMjByZWNydWl0bWVudHxlbnwxfHx8fDE3NjMyMDc1NDl8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
-    
+
     features: {
       title: "Comprehensive Recruitment Ecosystem",
       subtitle: "Platform Features",
@@ -872,7 +872,7 @@ export const servicesData: ServiceData[] = [
         }
       ]
     },
-    
+
     process: {
       title: "Our Recruitment Journey",
       subtitle: "End-to-End Process",
@@ -899,7 +899,7 @@ export const servicesData: ServiceData[] = [
         }
       ]
     },
-    
+
     stats: {
       title: "Global Impact by Numbers",
       items: [
@@ -929,7 +929,7 @@ export const servicesData: ServiceData[] = [
         }
       ]
     },
-    
+
     success: {
       title: "Transforming Lives Through Ethical Recruitment",
       stories: [
@@ -956,7 +956,7 @@ export const servicesData: ServiceData[] = [
         }
       ]
     },
-    
+
     cta: {
       headline: "Join the Future of Ethical Global Recruitment",
       description: "Governments, employers, training institutes, and technology partners are invited to join ARNN Group and WiseBell Global in building a new standard for responsible global recruitment—creating opportunities for inclusive growth, ethical employment, and shared prosperity.",
@@ -965,11 +965,11 @@ export const servicesData: ServiceData[] = [
       backgroundType: "image",
       backgroundUrl: "https://images.unsplash.com/photo-1758873268631-fa944fc5cad2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaXZlcnNlJTIwcHJvZmVzc2lvbmFscyUyMHRlYW18ZW58MXx8fHwxNzYzMjA3NTQ5fDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
-    
+
     nextService: "healthcare-access",
     prevService: "fashion-industries"
   },
-  
+
   {
     id: "7",
     slug: "healthcare-access",
@@ -977,7 +977,7 @@ export const servicesData: ServiceData[] = [
     tagline: "MedNero - Your Gateway to World-Class Healthcare",
     description: "A pioneering hybrid telehealth and medical travel platform connecting patients with world-class medical expertise through secure, reliable, and personalized healthcare solutions.",
     color: "#f43f5e", // Rose/Red for healthcare
-    
+
     hero: {
       headline: "Transforming Global Healthcare Access",
       subheadline: "MedNero - Secure, Reliable Healthcare Anytime, Anywhere",
@@ -986,7 +986,7 @@ export const servicesData: ServiceData[] = [
       mediaUrl: "https://cdn.pixabay.com/video/2021/10/12/91744-636709154_large.mp4",
       badge: "World-Class Care"
     },
-    
+
     overview: {
       title: "Connecting Patients with World-Class Medical Excellence",
       subtitle: "Our Mission",
@@ -1006,7 +1006,7 @@ export const servicesData: ServiceData[] = [
       ],
       image: "https://images.unsplash.com/photo-1758691461916-dc7894eb8f94?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWxlaGVhbHRoJTIwbWVkaWNhbCUyMGNvbnN1bHRhdGlvbnxlbnwxfHx8fDE3NjMyMDgzOTd8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
-    
+
     features: {
       title: "Comprehensive Healthcare Solutions",
       subtitle: "Platform Services",
@@ -1050,7 +1050,7 @@ export const servicesData: ServiceData[] = [
         }
       ]
     },
-    
+
     process: {
       title: "Your Healthcare Journey",
       subtitle: "Seamless Care Experience",
@@ -1077,7 +1077,7 @@ export const servicesData: ServiceData[] = [
         }
       ]
     },
-    
+
     stats: {
       title: "Healthcare Impact by Numbers",
       items: [
@@ -1106,7 +1106,7 @@ export const servicesData: ServiceData[] = [
         }
       ]
     },
-    
+
     success: {
       title: "Transforming Healthcare Delivery",
       stories: [
@@ -1133,7 +1133,7 @@ export const servicesData: ServiceData[] = [
         }
       ]
     },
-    
+
     cta: {
       headline: "Experience World-Class Healthcare Access",
       description: "MedNero envisions a world where exceptional healthcare is accessible, affordable, and dependable for all—regardless of geography, language, or financial means. Join us in making quality medical care a universal right.",
@@ -1142,11 +1142,11 @@ export const servicesData: ServiceData[] = [
       backgroundType: "image",
       backgroundUrl: "https://images.unsplash.com/photo-1710074213379-2a9c2653046a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxob3NwaXRhbCUyMGhlYWx0aGNhcmUlMjBmYWNpbGl0eXxlbnwxfHx8fDE3NjMyMDgzOTd8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
-    
+
     nextService: "food-safety",
     prevService: "empowering-global-talent"
   },
-  
+
   {
     id: "8",
     slug: "food-safety",
@@ -1154,7 +1154,7 @@ export const servicesData: ServiceData[] = [
     tagline: "AgriFuture Global - Transforming Land for Food Security",
     description: "A visionary program transforming idle and underutilized land across GCC, Africa, and Europe into thriving agricultural zones that directly contribute to global food security.",
     color: "#16a34a", // Green for agriculture
-    
+
     hero: {
       headline: "A Global Initiative for World Food Safety",
       subheadline: "AgriFuture Global - Sustainable Agriculture for Global Food Security",
@@ -1163,7 +1163,7 @@ export const servicesData: ServiceData[] = [
       mediaUrl: "https://cdn.pixabay.com/video/2021/10/12/91744-636709154_large.mp4",
       badge: "Sustainable Agriculture"
     },
-    
+
     overview: {
       title: "Transforming Idle Land into Food Security Solutions",
       subtitle: "Our Vision",
@@ -1183,7 +1183,7 @@ export const servicesData: ServiceData[] = [
       ],
       image: "https://images.unsplash.com/photo-1757525473930-0b82237e55ac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdXN0YWluYWJsZSUyMGFncmljdWx0dXJlJTIwZmFybWluZ3xlbnwxfHx8fDE3NjMyMDg3NDV8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
-    
+
     features: {
       title: "Comprehensive Agricultural Solutions",
       subtitle: "Program Features",
@@ -1227,7 +1227,7 @@ export const servicesData: ServiceData[] = [
         }
       ]
     },
-    
+
     process: {
       title: "From Idle Land to Thriving Farms",
       subtitle: "Implementation Journey",
@@ -1254,7 +1254,7 @@ export const servicesData: ServiceData[] = [
         }
       ]
     },
-    
+
     stats: {
       title: "Global Food Security Impact",
       items: [
@@ -1283,7 +1283,7 @@ export const servicesData: ServiceData[] = [
         }
       ]
     },
-    
+
     success: {
       title: "Transforming Food Security Through Sustainable Agriculture",
       stories: [
@@ -1310,7 +1310,7 @@ export const servicesData: ServiceData[] = [
         }
       ]
     },
-    
+
     cta: {
       headline: "Join the Global Food Security Movement",
       description: "Governments, investors, entrepreneurs, and technology partners are invited to join ARNN Group and AgriFuture Global—turning urgent food security challenges into powerful opportunities for inclusive growth, rural revitalization, and global leadership in sustainable agriculture.",
@@ -1319,11 +1319,11 @@ export const servicesData: ServiceData[] = [
       backgroundType: "image",
       backgroundUrl: "https://images.unsplash.com/photo-1762828397344-1a5629661e00?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvcmdhbmljJTIwZmFybWluZyUyMGZpZWxkc3xlbnwxfHx8fDE3NjMyMDg3NDV8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
-    
+
     nextService: "luxury-furniture",
     prevService: "healthcare-access"
   },
-  
+
   {
     id: "9",
     slug: "luxury-furniture",
@@ -1331,7 +1331,7 @@ export const servicesData: ServiceData[] = [
     tagline: "Luxury Living Redefined Through Exquisite Craftsmanship",
     description: "ARNN Group delivers luxury and high-end quality furniture, accessories, and home decor finishings that reflect sophistication, elegance, and impeccable craftsmanship.",
     color: "#92400e", // Brown for furniture/wood
-    
+
     hero: {
       headline: "Furniture and Furnishing Sectors",
       subheadline: "Luxury Living Redefined Through Exquisite Craftsmanship",
@@ -1340,7 +1340,7 @@ export const servicesData: ServiceData[] = [
       mediaUrl: "https://cdn.pixabay.com/video/2021/10/12/91744-636709154_large.mp4",
       badge: "Luxury Furnishings"
     },
-    
+
     overview: {
       title: "Elevating Spaces with Sophistication and Elegance",
       subtitle: "Our Commitment",
@@ -1360,7 +1360,7 @@ export const servicesData: ServiceData[] = [
       ],
       image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBob21lJTIwZGVjb3J8ZW58MXx8fHwxNzYzMTM0MjQ3fDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
-    
+
     features: {
       title: "Comprehensive Luxury Furnishing Solutions",
       subtitle: "Our Offerings",
@@ -1404,7 +1404,7 @@ export const servicesData: ServiceData[] = [
         }
       ]
     },
-    
+
     process: {
       title: "From Concept to Exceptional Spaces",
       subtitle: "Our Process",
@@ -1431,7 +1431,7 @@ export const servicesData: ServiceData[] = [
         }
       ]
     },
-    
+
     stats: {
       title: "Excellence in Luxury Furnishings",
       items: [
@@ -1461,7 +1461,7 @@ export const servicesData: ServiceData[] = [
         }
       ]
     },
-    
+
     success: {
       title: "Transforming Spaces, Redefining Luxury",
       stories: [
@@ -1488,7 +1488,7 @@ export const servicesData: ServiceData[] = [
         }
       ]
     },
-    
+
     cta: {
       headline: "Experience Luxury Living Redefined",
       description: "As we expand our presence and offerings, ARNN Group upholds the highest standards of excellence in luxury furniture and home decor. Through unwavering commitment to quality, craftsmanship, and innovation, we redefine luxury living and set new industry benchmarks.",
@@ -1497,11 +1497,11 @@ export const servicesData: ServiceData[] = [
       backgroundType: "image",
       backgroundUrl: "https://images.unsplash.com/photo-1696774566203-b5883558badd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZXNpZ25lciUyMGZ1cm5pdHVyZSUyMHNob3dyb29tfGVufDF8fHx8MTc2MzIwODk1NXww&ixlib=rb-4.1.0&q=80&w=1080"
     },
-    
+
     nextService: "fb-segments",
     prevService: "food-safety"
   },
-  
+
   {
     id: "10",
     slug: "fb-segments",
@@ -1509,7 +1509,7 @@ export const servicesData: ServiceData[] = [
     tagline: "Driving Growth and Innovation in GCC's Dynamic F&B Landscape",
     description: "ARNN Group is strategically expanding its presence in the thriving F&B market across GCC countries, capitalizing on a $36 billion market opportunity.",
     color: "#dc2626", // Red for F&B
-    
+
     hero: {
       headline: "F&B Segments",
       subheadline: "Driving Growth and Innovation in GCC's Dynamic F&B Landscape",
@@ -1518,7 +1518,7 @@ export const servicesData: ServiceData[] = [
       mediaUrl: "https://cdn.pixabay.com/video/2021/10/12/91744-636709154_large.mp4",
       badge: "Food & Beverage Excellence"
     },
-    
+
     overview: {
       title: "Transforming the GCC F&B Landscape",
       subtitle: "Market Leadership",
@@ -1538,7 +1538,7 @@ export const servicesData: ServiceData[] = [
       ],
       image: "https://images.unsplash.com/photo-1648808694138-6706c5efc80a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBjYWZlJTIwaW50ZXJpb3J8ZW58MXx8fHwxNzYzMTUxMTY0fDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
-    
+
     features: {
       title: "Comprehensive F&B Solutions Across GCC",
       subtitle: "Our Portfolio",
@@ -1582,7 +1582,7 @@ export const servicesData: ServiceData[] = [
         }
       ]
     },
-    
+
     process: {
       title: "From Concept to Culinary Success",
       subtitle: "Our Development Process",
@@ -1609,7 +1609,7 @@ export const servicesData: ServiceData[] = [
         }
       ]
     },
-    
+
     stats: {
       title: "Leading GCC F&B Market Transformation",
       items: [
@@ -1639,7 +1639,7 @@ export const servicesData: ServiceData[] = [
         }
       ]
     },
-    
+
     success: {
       title: "Transforming Dining Experiences Across GCC",
       stories: [
@@ -1666,7 +1666,7 @@ export const servicesData: ServiceData[] = [
         }
       ]
     },
-    
+
     cta: {
       headline: "Join GCC's F&B Revolution",
       description: "ARNN Group is proactively engaged in diversifying its portfolio within the F&B sector across GCC countries, aligning with the region's evolving economic landscape and burgeoning opportunities. Partner with us to capitalize on one of the world's most dynamic and luxurious F&B markets.",
@@ -1675,7 +1675,7 @@ export const servicesData: ServiceData[] = [
       backgroundType: "image",
       backgroundUrl: "https://images.unsplash.com/photo-1625251641031-6e1f6b895d4e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmb29kJTIwYmV2ZXJhZ2UlMjBzZXJ2aWNlfGVufDF8fHx8MTc2MzIwOTEzMXww&ixlib=rb-4.1.0&q=80&w=1080"
     },
-    
+
     nextService: "economic-empowerment",
     prevService: "luxury-furniture"
   }

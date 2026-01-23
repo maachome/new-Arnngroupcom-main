@@ -28,20 +28,20 @@ export function ServiceCTA({ data, color }: ServiceCTAProps) {
           <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a0a]/90 via-[#1a1a2e]/85 to-[#0a0a0a]/95"></div>
         </div>
       )}
-      
+
       {bgType === 'image' && data.backgroundUrl && (
         <div className="absolute inset-0">
-          <div 
+          <div
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url(${data.backgroundUrl})` }}
           />
           <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a0a]/90 via-[#1a1a2e]/85 to-[#0a0a0a]/95"></div>
         </div>
       )}
-      
+
       {bgType === 'gradient' && (
         <div className="absolute inset-0">
-          <div 
+          <div
             className="absolute inset-0"
             style={{
               background: `radial-gradient(circle at 30% 50%, ${color}20, transparent 70%), radial-gradient(circle at 70% 50%, #9333ea15, transparent 70%)`
@@ -57,7 +57,7 @@ export function ServiceCTA({ data, color }: ServiceCTAProps) {
           <motion.div
             key={i}
             className="absolute w-1 h-1 rounded-full"
-            style={{ 
+            style={{
               backgroundColor: color,
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -92,13 +92,13 @@ export function ServiceCTA({ data, color }: ServiceCTAProps) {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="inline-flex items-center gap-2 px-6 py-3 rounded-full border backdrop-blur-xl mb-12"
-          style={{ 
+          style={{
             backgroundColor: `${color}15`,
             borderColor: `${color}30`
           }}
         >
           <Sparkles className="w-4 h-4" style={{ color: color }} />
-          <span 
+          <span
             className="uppercase tracking-[0.2em]"
             style={{ fontSize: '0.75rem', fontWeight: '600', color: color }}
           >
@@ -113,8 +113,8 @@ export function ServiceCTA({ data, color }: ServiceCTAProps) {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.3 }}
           className="text-white mb-8"
-          style={{ 
-            fontSize: 'clamp(2.5rem, 6vw, 5rem)', 
+          style={{
+            fontSize: 'clamp(2.5rem, 6vw, 5rem)',
             fontWeight: '900',
             lineHeight: '1.1',
             letterSpacing: '-0.02em'
@@ -157,9 +157,9 @@ export function ServiceCTA({ data, color }: ServiceCTAProps) {
                 animate={{ x: ['-100%', '200%'] }}
                 transition={{ duration: 2, repeat: Infinity, repeatDelay: 1 }}
               />
-              
+
               <div className="relative flex items-center gap-3">
-                <span 
+                <span
                   className="text-white"
                   style={{ fontSize: '1rem', fontWeight: '700', letterSpacing: '0.05em' }}
                 >
@@ -176,12 +176,12 @@ export function ServiceCTA({ data, color }: ServiceCTAProps) {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
               className="px-10 py-5 rounded-full backdrop-blur-xl border transition-all duration-300"
-              style={{ 
+              style={{
                 borderColor: `${color}50`,
                 background: `${color}10`
               }}
             >
-              <span 
+              <span
                 className="text-white"
                 style={{ fontSize: '1rem', fontWeight: '600', letterSpacing: '0.05em' }}
               >
@@ -201,7 +201,7 @@ export function ServiceCTA({ data, color }: ServiceCTAProps) {
             className="h-px w-24 origin-right"
             style={{ background: `linear-gradient(90deg, transparent, ${color})` }}
           />
-          <div 
+          <div
             className="w-2 h-2 rounded-full"
             style={{ backgroundColor: color }}
           />
