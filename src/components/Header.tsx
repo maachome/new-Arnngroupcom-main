@@ -3,13 +3,15 @@ import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { servicesData } from "../data/servicesData";
 import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
+    Sheet,
+    SheetContent,
+    SheetDescription,
+    SheetHeader,
+    SheetTitle,
+    SheetTrigger,
 } from "./ui/sheet";
+
+import arnnLogo from '@/assets/arnn.png';
 
 export function Header() {
   const location = useLocation();
@@ -71,11 +73,12 @@ export function Header() {
           to="/"
           className="flex items-center gap-3 hover:opacity-80 transition-opacity"
         >
+            {/* public/arnn.png */}
           <img
-            src="/arnn.png"
+            src={arnnLogo}
             alt="ARNN GROUP"
-            width="146"
-            height="140"
+            width={146}
+            height={140}
           />
         </Link>
 
