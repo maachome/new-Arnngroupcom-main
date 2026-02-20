@@ -10,22 +10,11 @@ interface ServiceHeroProps {
 
 export function ServiceHero({ data, color }: ServiceHeroProps) {
   const heroRef = useRef<HTMLDivElement>(null);
-  const isRealEstateHeadline =
-    data.headline === "Real Estate Development";
-  const isIctHeadline = data.headline === "ICT Development Strategy";
-  const isEmpoweringGlobalTalentHeadline =
-    data.headline === "Empowering Global Talent";
-  const isHealthcareHeadline =
-    data.headline === "Transforming Global Healthcare Access";
-  const isFoodSafetyHeadline =
-    data.headline === "A Global Initiative for World Food Safety";
-  const isFurnitureHeadline =
-    data.headline === "Furniture and Furnishing Sectors";
   const { scrollYProgress } = useScroll({
     target: heroRef,
     offset: ["start start", "end start"]
   });
-  
+
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.15]);
   const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 0.8, 0]);
   const y = useTransform(scrollYProgress, [0, 1], [0, 150]);
@@ -60,32 +49,34 @@ export function ServiceHero({ data, color }: ServiceHeroProps) {
           />
         </motion.div>
       )}
-      
+
       {/* Multi-Layer Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a0a]/60 via-[#1a1a2e]/50 to-[#0a0a0a]/70"></div>
-      <div 
+      <div
         className="absolute inset-0 opacity-30"
         style={{
           background: `radial-gradient(circle at 30% 40%, ${color}40, transparent 60%)`
         }}
       ></div>
       <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/80 via-transparent to-transparent"></div>
-      
+
       {/* Animated Grid Overlay */}
-      <div 
+      <div
         className="absolute inset-0 opacity-[0.08]"
         style={{
           backgroundImage: `linear-gradient(${color} 1px, transparent 1px), linear-gradient(90deg, ${color} 1px, transparent 1px)`,
           backgroundSize: '50px 50px'
         }}
       ></div>
-      
+
+
+
       {/* Content */}
-      <motion.div 
+      <motion.div
         style={{ opacity, y }}
         className="relative h-full flex items-center justify-center px-8"
       >
-        <div className="max-w-[1200px] w-full translate-x-3 md:translate-x-8 translate-y-12 md:translate-y-24">
+        <div className="max-w-[1200px] w-full translate-x-3 md:translate-x-8 translate-y-8 md:translate-y-14">
           {/* Badge */}
           {data.badge && (
             <motion.div
@@ -94,19 +85,19 @@ export function ServiceHero({ data, color }: ServiceHeroProps) {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="mb-8"
             >
-              <div 
+              <div
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full border backdrop-blur-xl"
-                style={{ 
+                style={{
                   backgroundColor: `${color}15`,
                   borderColor: `${color}30`
                 }}
               >
-                <div 
+                <div
                   className="w-2 h-2 rounded-full animate-pulse"
                   style={{ backgroundColor: color }}
                 ></div>
-                <span 
-                  className="uppercase tracking-[0.3em]" 
+                <span
+                  className="uppercase tracking-[0.3em]"
                   style={{ fontSize: '0.75rem', fontWeight: '600', color: color }}
                 >
                   {data.badge}
@@ -114,7 +105,7 @@ export function ServiceHero({ data, color }: ServiceHeroProps) {
               </div>
             </motion.div>
           )}
-          
+
           {/* Subheadline */}
           {data.subheadline && (
             <motion.div
@@ -123,7 +114,7 @@ export function ServiceHero({ data, color }: ServiceHeroProps) {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="mb-4"
             >
-              <span 
+              <span
                 className="uppercase tracking-[0.2em]"
                 style={{ fontSize: '0.875rem', fontWeight: '500', color: `${color}` }}
               >
@@ -131,32 +122,38 @@ export function ServiceHero({ data, color }: ServiceHeroProps) {
               </span>
             </motion.div>
           )}
-          
+
+          {/* Business Logo */}
+          {data.businessLogoUrl && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.35 }}
+              className="mb-4"
+            >
+              <img
+                src={data.businessLogoUrl}
+                alt="Wisebell logo"
+                className="h-20 md:h-24 lg:h-28 w-auto object-contain drop-shadow-[0_4px_12px_rgba(0,0,0,0.3)]"
+              />
+            </motion.div>
+          )}
+
           {/* Headline */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className={`text-white mb-8 leading-[0.95] ${
-              isRealEstateHeadline ? "lg:whitespace-nowrap" : ""
-            }`}
-            style={{ 
-              fontSize: isIctHeadline ||
-                isEmpoweringGlobalTalentHeadline ||
-                isHealthcareHeadline ||
-                isFoodSafetyHeadline ||
-                isFurnitureHeadline
-                ? 'clamp(2rem, 4.8vw, 4.5rem)'
-                : isRealEstateHeadline
-                ? 'clamp(2.4rem, 5.6vw, 5.5rem)'
-                : 'clamp(3rem, 8vw, 7rem)', 
+            className="text-white mb-8 leading-[0.95]"
+            style={{
+              fontSize: 'clamp(3rem, 8vw, 7rem)',
               fontWeight: '900',
               letterSpacing: '-0.04em'
             }}
           >
             {data.headline}
           </motion.h1>
-          
+
           {/* Description */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -167,7 +164,7 @@ export function ServiceHero({ data, color }: ServiceHeroProps) {
           >
             {data.description}
           </motion.p>
-          
+
           {/* CTA Button */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -180,7 +177,7 @@ export function ServiceHero({ data, color }: ServiceHeroProps) {
               onClick={() => {
                 const nextSection = document.querySelector('section:nth-of-type(2)');
                 if (nextSection) {
-                  nextSection.scrollIntoView({ 
+                  nextSection.scrollIntoView({
                     behavior: 'smooth',
                     block: 'start'
                   });
@@ -198,7 +195,7 @@ export function ServiceHero({ data, color }: ServiceHeroProps) {
           </motion.div>
         </div>
       </motion.div>
-      
+
       {/* Scroll Indicator */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -208,7 +205,7 @@ export function ServiceHero({ data, color }: ServiceHeroProps) {
         onClick={() => {
           const nextSection = document.querySelector('section:nth-of-type(2)');
           if (nextSection) {
-            nextSection.scrollIntoView({ 
+            nextSection.scrollIntoView({
               behavior: 'smooth',
               block: 'start'
             });
@@ -221,7 +218,7 @@ export function ServiceHero({ data, color }: ServiceHeroProps) {
           whileHover={{ scale: 1.2 }}
           className="w-6 h-10 rounded-full border-2 border-white/30 flex items-start justify-center p-2 hover:border-white/60 transition-colors duration-300"
         >
-          <motion.div 
+          <motion.div
             className="w-1.5 h-1.5 rounded-full"
             style={{ backgroundColor: color }}
           />

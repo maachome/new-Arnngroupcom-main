@@ -5,6 +5,7 @@ export interface ServiceHeroData {
   mediaType: 'video' | 'image';
   mediaUrl: string;
   badge?: string;
+  businessLogoUrl?: string;
 }
 
 export interface ServiceOverviewData {

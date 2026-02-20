@@ -1,4 +1,6 @@
 import { ServiceData } from "../types/service";
+import economicEmpowermentVideo from "../assets/desktop Color.mp4";
+import wisebellLogo from "../assets/wisebell.png";
 
 export const servicesData: ServiceData[] = [
   {
@@ -14,8 +16,9 @@ export const servicesData: ServiceData[] = [
       subheadline: "Strategic Partnerships & Citizenship Investment",
       description: "Empowering economic growth through strategic partnerships with governments, leveraging substantial billion-euro direct investments in real estate, agriculture, and industries.",
       mediaType: "video",
-      mediaUrl: "https://cdn.pixabay.com/video/2021/10/12/91744-636709154_large.mp4",
-      badge: "Billion-Euro Investments"
+      mediaUrl: economicEmpowermentVideo,
+      badge: "Billion-Euro Investments",
+      businessLogoUrl: wisebellLogo
     },
 
     overview: {
@@ -124,7 +127,8 @@ export const servicesData: ServiceData[] = [
       description: "Our commitment to excellence transcends construction—we craft transformative experiences that redefine urban landscapes and invigorate communities through hospitality-focused developments.",
       mediaType: "video",
       mediaUrl: "https://cdn.pixabay.com/video/2021/10/12/91744-636709154_large.mp4",
-      badge: "Hospitality Excellence"
+      badge: "Hospitality Excellence",
+      businessLogoUrl: wisebellLogo
     },
 
     overview: {
@@ -272,7 +276,8 @@ export const servicesData: ServiceData[] = [
       description: "ARNN Group is actively charting a course towards innovation within the Information and Communication Technologies sector, with strategic focus on emerging domains such as fintech, cryptocurrencies, server solutions, and software development.",
       mediaType: "video",
       mediaUrl: "https://cdn.pixabay.com/video/2021/10/12/91744-636709154_large.mp4",
-      badge: "Digital Innovation"
+      badge: "Digital Innovation",
+      businessLogoUrl: wisebellLogo
     },
 
     overview: {
@@ -452,7 +457,8 @@ export const servicesData: ServiceData[] = [
       description: "Pioneering agricultural innovation that seamlessly blends cutting-edge technology with traditional farming practices to revolutionize productivity, sustainability, and global food security.",
       mediaType: "video",
       mediaUrl: "https://cdn.pixabay.com/video/2021/10/12/91744-636709154_large.mp4",
-      badge: "Sustainable Innovation"
+      badge: "Sustainable Innovation",
+      businessLogoUrl: wisebellLogo
     },
 
     overview: {
@@ -628,7 +634,8 @@ export const servicesData: ServiceData[] = [
       description: "ARNN Group stands as a distinguished leader in the vibrant world of fashion, renowned for our unwavering commitment to redefine elegance and inspire through meticulously curated collections.",
       mediaType: "video",
       mediaUrl: "https://cdn.pixabay.com/video/2021/10/12/91744-636709154_large.mp4",
-      badge: "Timeless Elegance"
+      badge: "Timeless Elegance",
+      businessLogoUrl: wisebellLogo
     },
 
     overview: {
@@ -806,7 +813,8 @@ export const servicesData: ServiceData[] = [
       description: "Conceived and led by ARNN Group, WiseBell Global is an innovative platform redefining the global workforce and recruitment landscape through secure, transparent, and technology-driven solutions.",
       mediaType: "video",
       mediaUrl: "https://cdn.pixabay.com/video/2021/10/12/91744-636709154_large.mp4",
-      badge: "Ethical Recruitment"
+      badge: "Ethical Recruitment",
+      businessLogoUrl: wisebellLogo
     },
 
     overview: {
@@ -984,7 +992,8 @@ export const servicesData: ServiceData[] = [
       description: "Your gateway to secure, reliable, and world-class healthcare—anytime, anywhere. A pioneering hybrid telehealth and medical travel platform transforming global healthcare access.",
       mediaType: "video",
       mediaUrl: "https://cdn.pixabay.com/video/2021/10/12/91744-636709154_large.mp4",
-      badge: "World-Class Care"
+      badge: "World-Class Care",
+      businessLogoUrl: wisebellLogo
     },
 
     overview: {
@@ -1161,7 +1170,8 @@ export const servicesData: ServiceData[] = [
       description: "Initiated and led by ARNN Group, AgriFuture Global transforms idle and underutilized land into thriving agricultural zones through modern innovation and traditional farming methods.",
       mediaType: "video",
       mediaUrl: "https://cdn.pixabay.com/video/2021/10/12/91744-636709154_large.mp4",
-      badge: "Sustainable Agriculture"
+      badge: "Sustainable Agriculture",
+      businessLogoUrl: wisebellLogo
     },
 
     overview: {
@@ -1338,7 +1348,8 @@ export const servicesData: ServiceData[] = [
       description: "ARNN Group is deeply entrenched in the realm of luxury and high-end quality furniture, accessories, and home decor finishings, catering to discerning customers who seek to elevate their living and working spaces.",
       mediaType: "video",
       mediaUrl: "https://cdn.pixabay.com/video/2021/10/12/91744-636709154_large.mp4",
-      badge: "Luxury Furnishings"
+      badge: "Luxury Furnishings",
+      businessLogoUrl: wisebellLogo
     },
 
     overview: {
@@ -1516,7 +1527,8 @@ export const servicesData: ServiceData[] = [
       description: "ARNN Group is strategically focusing on expanding its presence in the thriving F&B market across GCC countries, with a particular emphasis on the United Arab Emirates, Saudi Arabia, Oman, and Qatar.",
       mediaType: "video",
       mediaUrl: "https://cdn.pixabay.com/video/2021/10/12/91744-636709154_large.mp4",
-      badge: "Food & Beverage Excellence"
+      badge: "Food & Beverage Excellence",
+      businessLogoUrl: wisebellLogo
     },
 
     overview: {
