@@ -623,7 +623,7 @@ export function BusinessSection() {
 
                       {/* Description - Smooth fade + slide up with delay */}
                       <p
-                        className={`mb-6 max-w-md transition-all duration-700 ease-out ${
+                        className={`mb-6 max-w-md text-[0.875rem] lg:text-[1.1rem] transition-all duration-700 ease-out ${
                           (isVisible &&
                             showContent === localIndex) ||
                           (isTouchDevice &&
@@ -632,7 +632,6 @@ export function BusinessSection() {
                             : "opacity-0 translate-y-4"
                         }`}
                         style={{
-                          fontSize: "0.875rem",
                           lineHeight: "1.6",
                           fontWeight: "400",
                           transitionDelay:
