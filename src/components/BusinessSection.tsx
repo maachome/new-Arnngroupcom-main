@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ArrowUp } from "lucide-react";
 
 interface BusinessDivision {
@@ -115,6 +115,7 @@ const divisions: BusinessDivision[] = [
 ];
 
 export function BusinessSection() {
+  const navigate = useNavigate();
   const [currentPosition, setCurrentPosition] = useState(0);
   const [hoveredIndex, setHoveredIndex] = useState<
     number | null
@@ -405,9 +406,13 @@ export function BusinessSection() {
             const endVisible = currentPosition + visibleCount;
             const isVisible =
               index >= startVisible && index < endVisible;
-
             // Calculate the local index relative to visible divisions
             const localIndex = index - currentPosition;
+            const isExpandedCard =
+              (isVisible && showContent === localIndex) ||
+              (isTouchDevice && expandedCardIndex === index);
+            const isEmpoweringGlobalTalent =
+              division.slug === "empowering-global-talent";
 
             // Calculate widths based on hover/expand state
             let cardWidth;
@@ -487,18 +492,29 @@ export function BusinessSection() {
                   }
                 }}
                 onClick={(e) => {
-                  if (isTouchDevice && isVisible) {
+                  if (!division.slug || !isVisible) return;
+                  if (Math.abs(dragOffset) > 8) return;
+
+                  if (isTouchDevice) {
                     e.stopPropagation();
-                    // Toggle expand state on mobile
+
+                    // First tap expands, second tap navigates.
                     if (expandedCardIndex === index) {
-                      // Clicking the same card - collapse it
-                      setExpandedCardIndex(null);
-                      setHoveredIndex(null);
-                    } else {
-                      // Clicking a different card - expand it
-                      setExpandedCardIndex(index);
-                      setHoveredIndex(localIndex);
+                      navigate(`/services/${division.slug}`);
+                      return;
                     }
+
+                    setExpandedCardIndex(index);
+                    setHoveredIndex(localIndex);
+                    return;
+                  }
+
+                  // Desktop: click anywhere on an expanded/hovered card to navigate.
+                  if (
+                    showContent === localIndex ||
+                    hoveredIndex === localIndex
+                  ) {
+                    navigate(`/services/${division.slug}`);
                   }
                 }}
               >
@@ -514,19 +530,24 @@ export function BusinessSection() {
                   }`}
                   style={{
                     backgroundImage: `url(${division.image})`,
+                    filter: isEmpoweringGlobalTalent
+                      ? "blur(1.5px) brightness(0.85)"
+                      : undefined,
                   }}
                 />
 
                 {/* Blue Tint Overlay */}
                 <div
-                  className={`absolute inset-0 transition-colors duration-300 ${
-                    (isVisible &&
-                      hoveredIndex === localIndex) ||
-                    (isTouchDevice &&
-                      expandedCardIndex === index)
-                      ? "bg-[#2d3e5f]/50"
-                      : "bg-[#2d3e5f]/60"
-                  }`}
+                  className="absolute inset-0 transition-colors duration-300"
+                  style={{
+                    backgroundColor: isExpandedCard
+                      ? isEmpoweringGlobalTalent
+                        ? "rgba(45, 62, 95, 0.58)"
+                        : "rgba(45, 62, 95, 0.5)"
+                      : isEmpoweringGlobalTalent
+                        ? "rgba(45, 62, 95, 0.68)"
+                        : "rgba(45, 62, 95, 0.6)",
+                  }}
                 />
 
                 {/* Content */}
