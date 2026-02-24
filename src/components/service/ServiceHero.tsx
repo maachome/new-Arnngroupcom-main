@@ -103,7 +103,7 @@ export function ServiceHero({ data, color }: ServiceHeroProps) {
         style={{ opacity, y }}
         className="relative h-full flex items-center justify-center px-8"
       >
-        <div className="max-w-[1200px] w-full translate-x-3 md:translate-x-8 translate-y-8 md:translate-y-14">
+        <div className="max-w-[1200px] w-full mt-[80px] translate-x-3 md:translate-x-8 translate-y-8 md:translate-y-14">
           {/* Badge */}
           {data.badge && (
             <motion.div
