@@ -174,9 +174,9 @@ export function Header() {
             <SheetHeader>
               <SheetTitle className="text-white text-left">
                 <img
-                  src="/arnn.png"
+                  src={arnnLogo}
                   alt="ARNN GROUP"
-                  className="h-16"
+                  className="h-16 w-auto"
                 />
               </SheetTitle>
               <SheetDescription className="sr-only">
