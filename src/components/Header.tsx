@@ -11,7 +11,7 @@ import {
     SheetTrigger,
 } from "./ui/sheet";
 
-import arnnLogo from '@/assets/arnn.png';
+const arnnLogo = 'https://res.cloudinary.com/djnxf36jq/image/upload/v1772000146/arnn_omu8nl.png';
 
 export function Header() {
   const location = useLocation();

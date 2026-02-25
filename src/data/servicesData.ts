@@ -1,9 +1,9 @@
 import { ServiceData } from "../types/service";
-import wisebellLogo from "../assets/wisebell.png";
-import agrifuturesglobal from "../assets/agri-logo.webp";
-import lussocollezioni from "../assets/lussocollezioni.png";
-import mednero from "../assets/mednero.png";
-import maachome from "../assets/MAAC_Home_Logo.webp";
+const lussocollezioni = "https://lussocollezioni.com/cdn/shop/files/lussocollezioni-logo-BLACK-Trimmed-1-1024x145.png?v=1744027689";
+const wisebellLogo = "https://www.wisebellglobal.com/_next/image?url=%2Fwisebell-logo.png&w=640&q=75";
+const mednero = "https://res.cloudinary.com/djnxf36jq/image/upload/v1772000149/mednero_e8zzqx.png";
+const maachome = "https://res.cloudinary.com/djnxf36jq/image/upload/v1772000146/MAAC_Home_Logo_pemjq7.webp";
+const agrifuturesglobal = "https://res.cloudinary.com/djnxf36jq/image/upload/v1772000148/agri-logo_ceutys.webp";
 const economicEmpowermentVideo =
   "https://res.cloudinary.com/djnxf36jq/video/upload/v1772000259/desktop_Color_woccre.mp4";
 const mednerovidro =
