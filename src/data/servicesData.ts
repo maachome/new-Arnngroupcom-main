@@ -29,8 +29,8 @@ export const servicesData: ServiceData[] = [
       mediaType: "video",
       mediaUrl: "https://cdn.pixabay.com/video/2021/10/12/91744-636709154_large.mp4",
       badge: "Billion-Euro Investments",
-      websitelink:"#",
-      // businessLogoUrl: wisebellLogo
+      websitelink: "#",
+      mobileMediaUrl: false
     },
 
     overview: {
@@ -140,8 +140,8 @@ export const servicesData: ServiceData[] = [
       mediaType: "video",
       mediaUrl: "https://cdn.pixabay.com/video/2021/10/12/91744-636709154_large.mp4",
       badge: "Hospitality Excellence",
-      websitelink:"#",
-      // businessLogoUrl: wisebellLogo
+      websitelink: "#",
+      mobileMediaUrl: false
     },
 
     overview: {
@@ -294,8 +294,8 @@ export const servicesData: ServiceData[] = [
       mediaType: "video",
       mediaUrl: "https://cdn.pixabay.com/video/2021/10/12/91744-636709154_large.mp4",
       badge: "Digital Innovation",
-      websitelink:"#",
-      // businessLogoUrl: wisebellLogo
+      websitelink: "#",
+      mobileMediaUrl: false
     },
 
     overview: {
@@ -478,8 +478,8 @@ export const servicesData: ServiceData[] = [
       mobileVideoUrl: "https://www.youtube.com/watch?v=5Y7c63qcIsg",
       badge: "Sustainable Innovation",
       businessLogoUrl: agrifuturesglobal,
-      websitelink: "https://www.agrifutureglobal.com"
-
+      websitelink: "https://www.agrifutureglobal.com",
+      mobileMediaUrl: false
     },
 
     overview: {
@@ -658,7 +658,8 @@ export const servicesData: ServiceData[] = [
       mobileVideoUrl: "https://cdn.shopify.com/videos/c/o/v/426bc9896abe4affbc20360f0a8a0796.mp4",
       badge: "Timeless Elegance",
       businessLogoUrl: lussocollezioni,
-      websitelink:"https://lussocollezioni.com"
+      websitelink: "https://lussocollezioni.com",
+      mobileMediaUrl: false
     },
 
     overview: {
@@ -839,7 +840,8 @@ export const servicesData: ServiceData[] = [
       mobileVideoUrl: "https://www.wisebellglobal.com/homepage-video.mp4",
       badge: "Ethical Recruitment",
       businessLogoUrl: wisebellLogo,
-      websitelink:"https://www.wisebellglobal.com"
+      websitelink: "https://www.wisebellglobal.com",
+      mobileMediaUrl: false
     },
 
     overview: {
@@ -1017,10 +1019,11 @@ export const servicesData: ServiceData[] = [
       description: "Your gateway to secure, reliable, and world-class healthcare—anytime, anywhere. A pioneering hybrid telehealth and medical travel platform transforming global healthcare access.",
       mediaType: "video",
       mediaUrl: mednerovidro,
-      mobileVideoUrl: "https://www.youtube.com/watch?v=UMfCe4C2XBI",
+      mobileVideoUrl: "https://res.cloudinary.com/djnxf36jq/video/upload/v1772093559/Mobile_ver_g1ukpp.mp4",
       badge: "World-Class Care",
       businessLogoUrl: mednero,
-      websitelink:"https://mednero.com",
+      websitelink: "https://mednero.com",
+      mobileMediaUrl: false
     },
 
     overview: {
@@ -1198,8 +1201,8 @@ export const servicesData: ServiceData[] = [
       mediaType: "video",
       mediaUrl: "https://cdn.pixabay.com/video/2021/10/12/91744-636709154_large.mp4",
       badge: "Sustainable Agriculture",
-      websitelink:"#",
-      // businessLogoUrl: wisebellLogo
+      websitelink: "#",
+      mobileMediaUrl: false
     },
 
     overview: {
@@ -1379,7 +1382,8 @@ export const servicesData: ServiceData[] = [
       mobileVideoUrl: "https://cdn.shopify.com/videos/c/o/v/842c0f948a19437b897c501cc90a9194.mp4",
       badge: "Luxury Furnishings",
       businessLogoUrl: maachome,
-      websitelink:"https://maachome.com",
+      websitelink: "https://maachome.com",
+      mobileMediaUrl: false
     },
 
     overview: {
@@ -1558,8 +1562,8 @@ export const servicesData: ServiceData[] = [
       mediaType: "video",
       mediaUrl: "https://cdn.pixabay.com/video/2021/10/12/91744-636709154_large.mp4",
       badge: "Food & Beverage Excellence",
-      websitelink:"#",
-      // businessLogoUrl: wisebellLogo
+      websitelink: "#",
+      mobileMediaUrl: false
     },
 
     overview: {

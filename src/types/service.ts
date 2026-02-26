@@ -1,4 +1,5 @@
 export interface ServiceHeroData {
+  mobileMediaUrl: boolean;
   headline: string;
   subheadline: string;
   description: string;
