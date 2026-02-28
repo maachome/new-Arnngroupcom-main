@@ -417,6 +417,7 @@ export function BusinessSection() {
               (isTouchDevice && expandedCardIndex === index);
             const isEmpoweringGlobalTalent =
               division.slug === "empowering-global-talent";
+            const isICTCard = division.slug === "ict";
 
             // Calculate widths based on hover/expand state
             let cardWidth;
@@ -553,7 +554,7 @@ export function BusinessSection() {
                 />
 
                 {/* Content */}
-                <div className="relative h-full flex flex-col text-white">
+                <div className="relative h-full flex flex-col text-white font-serif">
                   {/* Default State - Vertical Title and Number */}
                   <div
                     className={`h-full flex flex-col items-center justify-end p-6 pb-12 transition-all duration-500 ease-out ${
@@ -599,7 +600,7 @@ export function BusinessSection() {
                     <div>
                       {/* Heading - Smooth fade + slide up */}
                       <h3
-                        className={`mb-4 transition-all duration-700 ease-out font-serif ${
+                        className={`mb-4 transition-all duration-700 ease-out ${
                           (isVisible &&
                             showContent === localIndex) ||
                           (isTouchDevice &&
@@ -608,9 +609,9 @@ export function BusinessSection() {
                             : "opacity-0 translate-y-4"
                         }`}
                         style={{
-                          fontSize: "3.5rem",
+                          fontSize: isICTCard ? "2.5rem" : "3.5rem",
                           lineHeight: "1.3",
-                          fontWeight: "600",
+                          fontWeight: "400",
                           transitionDelay:
                             (isVisible &&
                               showContent === localIndex) ||
@@ -625,7 +626,7 @@ export function BusinessSection() {
 
                       {/* Description - Smooth fade + slide up with delay */}
                       <p
-                        className={`mb-6 max-w-md text-[1rem] md:text-[1.125rem] lg:text-[2.75rem] transition-all duration-700 ease-out font-serif ${
+                        className={`mb-6 max-w-md text-[1rem] md:text-[1.125rem] lg:text-[2.75rem] transition-all duration-700 ease-out ${
                           (isVisible &&
                             showContent === localIndex) ||
                           (isTouchDevice &&
@@ -635,7 +636,7 @@ export function BusinessSection() {
                         }`}
                         style={{
                           lineHeight: "1.6",
-                          fontWeight: "600",
+                          fontWeight: "400",
                           transitionDelay:
                             (isVisible &&
                               showContent === localIndex) ||
@@ -673,7 +674,7 @@ export function BusinessSection() {
                           <span
                             style={{
                               fontSize: "0.75rem",
-                              fontWeight: "600",
+                              fontWeight: "400",
                               letterSpacing: "0.1em",
                             }}
                           >
@@ -706,7 +707,7 @@ export function BusinessSection() {
                           <span
                             style={{
                               fontSize: "0.75rem",
-                              fontWeight: "600",
+                              fontWeight: "400",
                               letterSpacing: "0.1em",
                             }}
                           >
@@ -729,7 +730,7 @@ export function BusinessSection() {
                       style={{
                         fontSize: "5rem",
                         lineHeight: "1",
-                        fontWeight: "700",
+                        fontWeight: "400",
                         transitionDelay:
                           (isVisible &&
                             showContent === localIndex) ||
