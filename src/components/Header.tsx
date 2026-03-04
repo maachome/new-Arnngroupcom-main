@@ -61,7 +61,7 @@ export function Header() {
 
   return (
     <header
-      className={`fixed left-0 right-0 z-50 py-3 px-8 flex-shrink-0 transition-all duration-500 ${isVisible ? "top-0" : "-top-32"
+      className={`fixed left-0 right-0 z-50 py-3 px-4 md:px-8 flex-shrink-0 transition-all duration-500 ${isVisible ? "top-0" : "-top-32"
         } ${isScrolled
           ? "bg-[#2d3e5f] text-white shadow-lg"
           : `bg-transparent ${location.pathname === "/" || isContactPageAtTop ? "text-gray-900" : "text-white"}`
@@ -77,8 +77,7 @@ export function Header() {
           <img
             src={arnnLogo}
             alt="ARNN GROUP"
-            width={146}
-            height={140}
+            className="h-20 w-auto md:h-[140px]"
           />
         </Link>
 
