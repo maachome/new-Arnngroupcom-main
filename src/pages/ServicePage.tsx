@@ -12,6 +12,7 @@ import { ServiceSuccess } from "../components/service/ServiceSuccess";
 import { ServiceCTA } from "../components/service/ServiceCTA";
 import { getServiceBySlug } from "../data/servicesData";
 import { useEffect } from "react";
+import "../styles/service-redesign.css";
 
 export function ServicePage() {
   const { slug } = useParams<{ slug: string }>();
@@ -35,7 +36,7 @@ export function ServicePage() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className="min-h-screen flex flex-col bg-[#0a0a0a]"
+      className="srv-shell min-h-screen flex flex-col"
     >
       <Header />
       

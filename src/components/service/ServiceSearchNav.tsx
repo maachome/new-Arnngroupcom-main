@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { useNavigate, useParams } from "react-router-dom";
 import { getServiceBySlug } from "../../data/servicesData";
+import { ArrowRight, Compass, Sparkles } from "lucide-react";
 
 const categories = [
   { slug: "economic-empowerment", name: "Economic Empowerment", color: "#3b82f6" },
@@ -18,143 +19,84 @@ const categories = [
 export function ServiceSearchNav() {
   const navigate = useNavigate();
   const { slug } = useParams();
-  
-  // Get current service data for color
   const currentService = slug ? getServiceBySlug(slug) : undefined;
   const serviceColor = currentService?.color || "#2d3e5f";
+  const currentIndex = categories.findIndex((category) => category.slug === slug);
+  const nextCategory =
+    currentIndex >= 0 ? categories[(currentIndex + 1) % categories.length] : categories[0];
 
   return (
-    <section className="relative py-20 px-8 bg-gradient-to-b from-[#0a0a0a] via-[#1a1a2e] to-[#0a0a0a] overflow-hidden border-t border-white/5">
-      {/* Background Elements */}
-      <div 
-        className="absolute top-0 right-1/4 w-[600px] h-[600px] rounded-full blur-[150px] opacity-20"
-        style={{ backgroundColor: serviceColor }}
-      ></div>
-      <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] rounded-full blur-[120px] opacity-10" style={{ backgroundColor: serviceColor }}></div>
-      
-      <div className="max-w-[1400px] mx-auto relative z-10">
-        {/* Category Navigation */}
+    <section
+      id="service-categories"
+      className="srv-section"
+      style={{ ["--srv-accent" as string]: serviceColor }}
+    >
+      <div className="srv-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="srv-category-shell"
         >
-          <div className="text-center mb-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="mb-3"
+          <div className="srv-category-hero">
+            <div>
+              <div className="srv-chip">
+                <Compass size={14} />
+                <span>Browse by category</span>
+              </div>
+              <h3 className="srv-heading mt-5">Continue through the group’s business verticals.</h3>
+              <p className="srv-nav-copy mt-4 max-w-[54ch]">
+                Move across the portfolio through one shared navigation surface instead of a loose
+                collection of end-of-page links.
+              </p>
+            </div>
+
+            <button
+              className="srv-category-spotlight"
+              onClick={() => navigate(`/services/${nextCategory.slug}`)}
             >
-              <span 
-                className="uppercase tracking-[0.25em]"
-                style={{ fontSize: '0.75rem', fontWeight: '600', color: serviceColor }}
-              >
-                Our Services
-              </span>
-            </motion.div>
-            <motion.h3
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-white mb-2"
-              style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', fontWeight: '700' }}
-            >
-              Browse by Category
-            </motion.h3>
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.3 }}
-              className="text-gray-400"
-              style={{ fontSize: '0.875rem', fontWeight: '300' }}
-            >
-              Explore our diverse portfolio of solutions
-            </motion.p>
+              <div className="srv-category-spotlight-top">
+                <div className="srv-card-icon">
+                  <Sparkles size={20} />
+                </div>
+                <span>Next category</span>
+              </div>
+              <strong>{nextCategory.name}</strong>
+              <div className="srv-category-spotlight-bottom">
+                <span>Open service page</span>
+                <ArrowRight size={18} />
+              </div>
+            </button>
           </div>
 
-          {/* Horizontal Scrollable Category Pills */}
-          <div className="relative">
-            <div className="overflow-x-auto pb-4 scrollbar-hide">
-              <div className="flex flex-wrap gap-3 justify-center px-1">
-                {categories.map((category, index) => {
-                  const isActive = slug === category.slug;
-                  return (
-                    <motion.button
-                      key={category.slug}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.4 + index * 0.05 }}
-                      onClick={() => navigate(`/services/${category.slug}`)}
-                      className={`
-                        relative px-5 py-3 rounded-xl transition-all duration-300 backdrop-blur-xl border group overflow-hidden
-                        ${isActive 
-                          ? 'border-white/30 shadow-xl scale-105' 
-                          : 'border-white/10 hover:border-white/20 shadow-lg hover:shadow-xl'
-                        }
-                      `}
-                      style={{
-                        background: isActive 
-                          ? `linear-gradient(135deg, ${category.color}40, ${category.color}20)`
-                          : `linear-gradient(135deg, ${category.color}15, transparent)`
-                      }}
-                      whileHover={{ scale: isActive ? 1.05 : 1.03 }}
-                      whileTap={{ scale: 0.98 }}
-                    >
-                      {/* Active Glow Effect */}
-                      {isActive && (
-                        <motion.div
-                          className="absolute inset-0 rounded-xl blur-xl opacity-50"
-                          style={{ backgroundColor: category.color }}
-                          animate={{ 
-                            opacity: [0.3, 0.5, 0.3],
-                          }}
-                          transition={{ 
-                            duration: 2,
-                            repeat: Infinity,
-                            ease: "easeInOut"
-                          }}
-                        />
-                      )}
-                      
-                      {/* Hover Gradient Effect */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
-                      
-                      {/* Category Content */}
-                      <div className="relative whitespace-nowrap flex items-center gap-2">
-                        <span 
-                          className={`transition-colors ${isActive ? 'text-white' : 'text-gray-300 group-hover:text-white'}`}
-                          style={{ fontSize: '0.875rem', fontWeight: isActive ? '600' : '500', letterSpacing: '0.02em' }}
-                        >
-                          {category.name}
-                        </span>
-                        {isActive && (
-                          <motion.div
-                            initial={{ scale: 0 }}
-                            animate={{ scale: 1 }}
-                            className="w-1.5 h-1.5 rounded-full"
-                            style={{ backgroundColor: category.color }}
-                          />
-                        )}
-                      </div>
-                    </motion.button>
-                  );
-                })}
-              </div>
-            </div>
+          <div className="srv-category-board">
+            {categories.map((category, index) => {
+              const isActive = slug === category.slug;
+              return (
+                <motion.button
+                  key={category.slug}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.35, delay: index * 0.03 }}
+                  onClick={() => navigate(`/services/${category.slug}`)}
+                  className={`srv-category-tile ${isActive ? "active" : ""}`}
+                  style={{ ["--srv-tile-accent" as string]: category.color }}
+                >
+                  <div className="srv-category-tile-top">
+                    <span className="srv-category-index">{`0${index + 1}`}</span>
+                    <ArrowRight size={16} />
+                  </div>
+                  <div className="srv-category-copy">
+                    <span className="srv-category-name">{category.name}</span>
+                  </div>
+                </motion.button>
+              );
+            })}
           </div>
         </motion.div>
       </div>
-
-      <style>{`
-        .scrollbar-hide::-webkit-scrollbar {
-          display: none;
-        }
-        .scrollbar-hide {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
-        }
-      `}</style>
     </section>
   );
 }

@@ -311,7 +311,7 @@ export const servicesData: ServiceData[] = [
         "Cutting-edge technology integration",
         "Enhanced accessibility, efficiency, and security"
       ],
-      image: "https://images.unsplash.com/flagged/photo-1579274216947-86eaa4b00475?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWNobm9sb2d5JTIwc2VydmVyJTIwZGF0YSUyMGNlbnRlcnxlbnwxfHx8fDE3NjMxOTY2MzV8MA&ixlib=rb-4.1.0&q=80&w=1080"
+      image: "https://images.pexels.com/photos/17489157/pexels-photo-17489157.jpeg?cs=srgb&dl=pexels-cookiecutter-17489157.jpg&fm=jpg"
     },
 
     features: {
