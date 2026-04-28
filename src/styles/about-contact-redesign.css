@@ -1074,6 +1074,78 @@
   min-height: 180px;
 }
 
+.ar2-phone-shell-world {
+  --react-international-phone-height: 58px;
+  --react-international-phone-border-radius: 18px;
+  --react-international-phone-border-color: rgba(255, 255, 255, 0.12);
+  --react-international-phone-background-color: rgba(255, 255, 255, 0.08);
+  --react-international-phone-text-color: #ffffff;
+  --react-international-phone-dropdown-item-background-color: #18233d;
+  --react-international-phone-dropdown-item-text-color: rgba(255, 255, 255, 0.88);
+  --react-international-phone-dropdown-item-dial-code-color: rgba(255, 255, 255, 0.44);
+  --react-international-phone-selected-dropdown-item-background-color: rgba(124, 167, 255, 0.16);
+  --react-international-phone-selected-dropdown-item-text-color: #ffffff;
+  --react-international-phone-selected-dropdown-item-dial-code-color: rgba(255, 255, 255, 0.72);
+  --react-international-phone-country-selector-background-color-hover: rgba(255, 255, 255, 0.11);
+  --react-international-phone-country-selector-arrow-color: rgba(255, 255, 255, 0.58);
+  --react-international-phone-dropdown-shadow: 0 20px 44px rgba(11, 18, 34, 0.38);
+  --react-international-phone-font-size: 15px;
+  width: 100%;
+}
+
+.ar2-phone-shell-world .react-international-phone-input-container {
+  width: 100%;
+}
+
+.ar2-phone-shell-world .react-international-phone-country-selector-button,
+.ar2-phone-shell-world .react-international-phone-input {
+  transition:
+    border-color 180ms ease,
+    background-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.ar2-phone-shell-world .react-international-phone-country-selector-button {
+  min-width: 86px;
+}
+
+.ar2-phone-shell-world .react-international-phone-input {
+  width: 100%;
+  min-width: 0;
+  padding-inline: 18px;
+  font: 500 15px/1.55 "Inter", sans-serif;
+}
+
+.ar2-phone-shell-world .react-international-phone-input::placeholder {
+  color: rgba(255, 255, 255, 0.42);
+}
+
+.ar2-phone-shell-world .react-international-phone-input-container:focus-within .react-international-phone-country-selector-button,
+.ar2-phone-shell-world .react-international-phone-input-container:focus-within .react-international-phone-input {
+  border-color: rgba(124, 167, 255, 0.72);
+  background: rgba(255, 255, 255, 0.11);
+  box-shadow: 0 0 0 4px rgba(124, 167, 255, 0.12);
+}
+
+.ar2-phone-shell-world .react-international-phone-country-selector-dropdown {
+  width: min(340px, calc(100vw - 48px));
+  max-height: 280px;
+  padding: 8px 0;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  scrollbar-width: thin;
+}
+
+.ar2-phone-shell-world .react-international-phone-country-selector-dropdown__list-item {
+  min-height: 40px;
+  padding-inline: 12px;
+}
+
+.ar2-phone-shell-world .react-international-phone-country-selector-dropdown__list-item-country-name,
+.ar2-phone-shell-world .react-international-phone-country-selector-dropdown__list-item-dial-code {
+  font: 500 14px/1.5 "Inter", sans-serif;
+}
+
 .ar2-form-submit {
   cursor: pointer;
   border: 0;
@@ -1194,6 +1266,10 @@
   .ar2-map-frame,
   .ar2-map-frame iframe {
     min-height: 380px;
+  }
+
+  .ar2-phone-shell-world .react-international-phone-country-selector-button {
+    min-width: 78px;
   }
 
   .ar2-quick-card {

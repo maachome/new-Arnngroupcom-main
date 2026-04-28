@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import "../styles/about-contact-redesign.css";
+import "react-international-phone/style.css";
 import {
   ArrowRight,
   CheckCircle2,
@@ -13,6 +14,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import { useState } from "react";
+import { PhoneInput } from "react-international-phone";
 
 const officeAddress = "Office No. 215, Al Makhawi Building, Oud Metha, Dubai";
 const mapSearchAddress = "Al Makhawi Building, Oud Metha, Dubai";
@@ -54,20 +56,52 @@ const responseNotes = [
   "Phone and email remain available for direct contact.",
 ];
 
+function getDefaultPhoneCountry() {
+  if (typeof window === "undefined") return "ae";
+
+  const localeRegion = navigator.language.split("-")[1]?.toLowerCase();
+  if (localeRegion) return localeRegion;
+
+  const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+  const timeZoneMap: Record<string, string> = {
+    "Asia/Dubai": "ae",
+    "Asia/Riyadh": "sa",
+    "Asia/Qatar": "qa",
+    "Asia/Kuwait": "kw",
+    "Asia/Bahrain": "bh",
+    "Asia/Muscat": "om",
+    "Asia/Kolkata": "in",
+    "Asia/Karachi": "pk",
+    "Asia/Dhaka": "bd",
+    "Africa/Cairo": "eg",
+    "Europe/London": "gb",
+    "America/New_York": "us",
+    "America/Chicago": "us",
+    "America/Denver": "us",
+    "America/Los_Angeles": "us",
+  };
+
+  return timeZoneMap[timeZone] || "ae";
+}
+
 export function Contact() {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState(() => ({
     name: "",
     email: "",
+    phoneCountry: getDefaultPhoneCountry(),
+    phone: "",
     subject: "",
     message: "",
-  });
+  }));
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+  const [submitMessage, setSubmitMessage] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus("idle");
+    setSubmitMessage("");
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -79,23 +113,39 @@ export function Contact() {
           access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "YOUR_ACCESS_KEY_HERE",
           name: formData.name,
           email: formData.email,
+          phone: formData.phone.trim(),
           subject: formData.subject,
           message: formData.message,
         }),
       });
 
       const result = await response.json();
+      const resultMessage =
+        result?.body?.message || result?.message || "Something went wrong. Please try again.";
 
-      if (result.success) {
+      if (response.ok && result.success) {
         setSubmitStatus("success");
-        setFormData({ name: "", email: "", subject: "", message: "" });
-        window.setTimeout(() => setSubmitStatus("idle"), 5000);
+        setSubmitMessage(resultMessage || "Your message was sent successfully.");
+        setFormData((current) => ({
+          name: "",
+          email: "",
+          phoneCountry: current.phoneCountry,
+          phone: "",
+          subject: "",
+          message: "",
+        }));
+        window.setTimeout(() => {
+          setSubmitStatus("idle");
+          setSubmitMessage("");
+        }, 5000);
       } else {
         setSubmitStatus("error");
+        setSubmitMessage(resultMessage);
       }
     } catch (error) {
       console.error("Form submission error:", error);
       setSubmitStatus("error");
+      setSubmitMessage("Network error. Please check your connection and try again.");
     } finally {
       setIsSubmitting(false);
     }
@@ -251,18 +301,47 @@ export function Contact() {
                     </label>
                   </div>
 
-                  <label className="ar2-field">
-                    <span>Subject</span>
-                    <input
-                      type="text"
-                      value={formData.subject}
-                      onChange={(e) =>
-                        setFormData((current) => ({ ...current, subject: e.target.value }))
-                      }
-                      required
-                      placeholder="Partnership, project, media, or strategic enquiry"
-                    />
-                  </label>
+                  <div className="ar2-form-grid">
+                    <div className="ar2-field">
+                      <span>Phone</span>
+                      <div className="ar2-phone-shell ar2-phone-shell-world">
+                        <PhoneInput
+                          defaultCountry={formData.phoneCountry}
+                          value={formData.phone}
+                          onChange={(phone, meta) =>
+                            setFormData((current) => ({
+                              ...current,
+                              phone,
+                              phoneCountry: meta.country.iso2,
+                            }))
+                          }
+                          forceDialCode
+                          disableDialCodePrefill={false}
+                          inputProps={{
+                            name: "phone",
+                            autoComplete: "tel",
+                            required: false,
+                            "aria-label": "Phone number",
+                          }}
+                          placeholder="50 123 4567"
+                          className="ar2-phone-input"
+                        />
+                      </div>
+                    </div>
+
+                    <label className="ar2-field">
+                      <span>Subject</span>
+                      <input
+                        type="text"
+                        value={formData.subject}
+                        onChange={(e) =>
+                          setFormData((current) => ({ ...current, subject: e.target.value }))
+                        }
+                        required
+                        placeholder="Partnership, project, media, or strategic enquiry"
+                      />
+                    </label>
+                  </div>
 
                   <label className="ar2-field">
                     <span>Message</span>
@@ -289,13 +368,13 @@ export function Contact() {
                   {submitStatus === "success" && (
                     <div className="ar2-status ar2-status-success">
                       <CheckCircle2 size={18} />
-                      <span>Your message was sent successfully.</span>
+                      <span>{submitMessage || "Your message was sent successfully."}</span>
                     </div>
                   )}
 
                   {submitStatus === "error" && (
                     <div className="ar2-status ar2-status-error">
-                      <span>Something went wrong. Please try again.</span>
+                      <span>{submitMessage || "Something went wrong. Please try again."}</span>
                     </div>
                   )}
                 </form>

@@ -13,6 +13,7 @@ import {
 } from "./ui/sheet";
 
 const arnnLogo = 'https://res.cloudinary.com/djnxf36jq/image/upload/v1772000146/arnn_omu8nl.png';
+const arnnLogoScrolled = "https://res.cloudinary.com/djnxf36jq/image/upload/v1777382900/white_font_arnngroup_logo_xmhwev.png";
 
 export function Header() {
   const location = useLocation();
@@ -95,7 +96,7 @@ export function Header() {
           className="flex items-center gap-3 hover:opacity-80 transition-opacity"
         >
           <img
-            src={arnnLogo}
+            src={isScrolled ? arnnLogoScrolled : arnnLogo}
             alt="ARNN GROUP"
             className="site-logo"
           />
