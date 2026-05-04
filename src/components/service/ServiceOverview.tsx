@@ -39,7 +39,7 @@ export function ServiceOverview({ data, color }: ServiceOverviewProps) {
             >
               {data.image ? (
                 <div className="srv-overview-image">
-                  <img src={data.image} alt={data.title} />
+                  <img key={data.image} src={data.image} alt={data.title} />
                   <div className="srv-overview-image-glow" />
                 </div>
               ) : null}

@@ -45,7 +45,7 @@ export function ServicePage() {
       
       {/* Overview Section */}
       {service.overview && (
-        <ServiceOverview data={service.overview} color={service.color} />
+        <ServiceOverview key={service.slug} data={service.overview} color={service.color} />
       )}
       
       {/* Features Section */}
