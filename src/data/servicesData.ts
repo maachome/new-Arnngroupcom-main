@@ -7,7 +7,7 @@ const agrifuturesglobal = "https://res.cloudinary.com/djnxf36jq/image/upload/v17
 const economicEmpowermentVideo ="https://cdn.shopify.com/videos/c/o/v/90f4f6ec75d341e0903daf1d9e5cba91.mp4";
 const mednerovidro ="https://cdn.shopify.com/videos/c/o/v/53de1eb2a57e44edbaf858325c881d03.mp4";
 const lussocollezionivid = "https://res.cloudinary.com/djnxf36jq/video/upload/v1772000152/lussocollezioni_znpj4x.webm"
-const agrifutureglobalvid ="https://cdn.shopify.com/videos/c/o/v/8f0daad6abae4963a523eec50a1ed2e4.mp4";
+const agrifutureglobalvid ="https://arnn-group.s3.ap-south-1.amazonaws.com/New+Website+ARNN/Agro-Aqua.mp4";
 const maachomevid ="https://res.cloudinary.com/djnxf36jq/video/upload/v1772000159/maachomevid_jvowuv.webm";
 export const servicesData: ServiceData[] = [
   {
@@ -23,7 +23,7 @@ export const servicesData: ServiceData[] = [
       subheadline: "Strategic Partnerships & Citizenship Investment",
       description: "Empowering economic growth through strategic partnerships with governments, leveraging substantial billion-euro direct investments in real estate, agriculture, and industries.",
       mediaType: "video",
-      mediaUrl: "https://cdn.pixabay.com/video/2021/10/12/91744-636709154_large.mp4",
+      mediaUrl: "https://arnn-group.s3.ap-south-1.amazonaws.com/New+Website+ARNN/Economic+Empowerment.mp4",
       badge: "Billion-Euro Investments",
       websitelink: "#",
       mobileMediaUrl: false
@@ -46,7 +46,7 @@ export const servicesData: ServiceData[] = [
         "Job creation and revenue generation for governments",
         "Talent attraction and brain gain initiatives"
       ],
-      image: "https://images.unsplash.com/photo-1758599543152-a73184816eba?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGhhbmRzaGFrZSUyMHBhcnRuZXJzaGlwfGVufDF8fHx8MTc2MzE1MTc2MHww&ixlib=rb-4.1.0&q=80&w=1080"
+      image: "https://arnn-group.s3.ap-south-1.amazonaws.com/New+Website+ARNN/Economic.png"
     },
 
     features: {
@@ -134,7 +134,7 @@ export const servicesData: ServiceData[] = [
       subheadline: "Creators of Experiences, Champions of Sustainability",
       description: "Our commitment to excellence transcends construction—we craft transformative experiences that redefine urban landscapes and invigorate communities through hospitality-focused developments.",
       mediaType: "video",
-      mediaUrl: "https://cdn.pixabay.com/video/2021/10/12/91744-636709154_large.mp4",
+      mediaUrl: "https://arnn-group.s3.ap-south-1.amazonaws.com/New+Website+ARNN/Real+estate.mp4",
       badge: "Hospitality Excellence",
       websitelink: "#",
       mobileMediaUrl: false
@@ -157,7 +157,7 @@ export const servicesData: ServiceData[] = [
         "Sustainability and community engagement focus",
         "Energy-efficient and environmentally responsible design"
       ],
-      image: "https://images.unsplash.com/photo-1761069449669-1b17dc39831b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBob3RlbCUyMHJlc29ydCUyMGhvc3BpdGFsaXR5fGVufDF8fHx8MTc2MzE5NTc1N3ww&ixlib=rb-4.1.0&q=80&w=1080"
+      image: "https://arnn-group.s3.ap-south-1.amazonaws.com/New+Website+ARNN/Real+estate.png"
     },
 
     features: {
@@ -288,7 +288,7 @@ export const servicesData: ServiceData[] = [
       subheadline: "Pioneering Innovation in Digital Finance & Technology",
       description: "ARNN Group is actively charting a course towards innovation within the Information and Communication Technologies sector, with strategic focus on emerging domains such as fintech, cryptocurrencies, server solutions, and software development.",
       mediaType: "video",
-      mediaUrl: "https://cdn.pixabay.com/video/2021/10/12/91744-636709154_large.mp4",
+      mediaUrl: "https://arnn-group.s3.ap-south-1.amazonaws.com/New+Website+ARNN/ICT+Development+Strategy.mp4",
       badge: "Digital Innovation",
       websitelink: "#",
       mobileMediaUrl: false
@@ -311,7 +311,7 @@ export const servicesData: ServiceData[] = [
         "Cutting-edge technology integration",
         "Enhanced accessibility, efficiency, and security"
       ],
-      image: "https://images.pexels.com/photos/17489157/pexels-photo-17489157.jpeg?cs=srgb&dl=pexels-cookiecutter-17489157.jpg&fm=jpg"
+      image: "https://arnn-group.s3.ap-south-1.amazonaws.com/New+Website+ARNN/ICT+Development.png"
     },
 
     features: {
@@ -470,11 +470,11 @@ export const servicesData: ServiceData[] = [
       subheadline: "Technology-Driven Sustainable Food Production",
       description: "Pioneering agricultural innovation that seamlessly blends cutting-edge technology with traditional farming practices to revolutionize productivity, sustainability, and global food security.",
       mediaType: "video",
-      mediaUrl: agrifutureglobalvid,
-      mobileVideoUrl: "https://cdn.shopify.com/videos/c/o/v/669c6deb83704373a5d09c323d6c7ea9.mp4",
+  
+      mobileVideoUrl: "https://arnn-group.s3.ap-south-1.amazonaws.com/New+Website+ARNN/Agro-Aqua.mp4",
       badge: "Sustainable Innovation",
-      businessLogoUrl: agrifuturesglobal,
-      websitelink: "https://www.agrifutureglobal.com",
+      mediaUrl: "https://arnn-group.s3.ap-south-1.amazonaws.com/New+Website+ARNN/Agro-Aqua.mp4",
+      websitelink: "#",
       mobileMediaUrl: false
     },
 
@@ -495,7 +495,7 @@ export const servicesData: ServiceData[] = [
         "Sustainable resource utilization",
         "Advanced fish processing technologies"
       ],
-      image: "https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoeWRyb3BvbmljcyUyMGZhcm18ZW58MXx8fHwxNzYzMTk4NTcyfDA&ixlib=rb-4.1.0&q=80&w=1080"
+      image: "https://arnn-group.s3.ap-south-1.amazonaws.com/New+Website+ARNN/Agro.png"
     },
 
     features: {
@@ -675,7 +675,7 @@ export const servicesData: ServiceData[] = [
         "Classic elegance with contemporary influences",
         "Personalized customer experiences"
       ],
-      image: "https://images.unsplash.com/photo-1638382874010-aa4e76fe267d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBmYXNoaW9uJTIwamV3ZWxyeXxlbnwxfHx8fDE3NjMyMDcxMjR8MA&ixlib=rb-4.1.0&q=80&w=1080"
+      image: "https://arnn-group.s3.ap-south-1.amazonaws.com/New+Website+ARNN/Fashion.png"
     },
 
     features: {
@@ -857,7 +857,7 @@ export const servicesData: ServiceData[] = [
         "International labor standards alignment",
         "Community development and knowledge transfer"
       ],
-      image: "https://images.unsplash.com/photo-1664651205193-bfb6bfdd3b09?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnbG9iYWwlMjB3b3JrZm9yY2UlMjByZWNydWl0bWVudHxlbnwxfHx8fDE3NjMyMDc1NDl8MA&ixlib=rb-4.1.0&q=80&w=1080"
+      image: "https://arnn-group.s3.ap-south-1.amazonaws.com/New+Website+ARNN/WiseBell.png"
     },
 
     features: {
@@ -1039,7 +1039,7 @@ export const servicesData: ServiceData[] = [
         "Foreign currency savings through teleconsultations",
         "Transparent pricing and full concierge support"
       ],
-      image: "https://images.unsplash.com/photo-1758691461916-dc7894eb8f94?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWxlaGVhbHRoJTIwbWVkaWNhbCUyMGNvbnN1bHRhdGlvbnxlbnwxfHx8fDE3NjMyMDgzOTd8MA&ixlib=rb-4.1.0&q=80&w=1080"
+      image: "https://arnn-group.s3.ap-south-1.amazonaws.com/New+Website+ARNN/HealthCare.png"
     },
 
     features: {
@@ -1185,7 +1185,7 @@ export const servicesData: ServiceData[] = [
   {
     id: "8",
     slug: "food-safety",
-    title: "A Global Initiative for World Food Safety",
+    title: "AgriFuture Global",
     tagline: "AgriFuture Global - Transforming Land for Food Security",
     description: "A visionary program transforming idle and underutilized land across GCC, Africa, and Europe into thriving agricultural zones that directly contribute to global food security.",
     color: "#16a34a", // Green for agriculture
@@ -1194,9 +1194,9 @@ export const servicesData: ServiceData[] = [
       headline: "A Global Initiative for World Food Safety",
       subheadline: "AgriFuture Global - Sustainable Agriculture for Global Food Security",
       description: "Initiated and led by ARNN Group, AgriFuture Global transforms idle and underutilized land into thriving agricultural zones through modern innovation and traditional farming methods.",
+     businessLogoUrl: agrifuturesglobal,
       mediaType: "video",
-      mediaUrl: "https://cdn.pixabay.com/video/2021/10/12/91744-636709154_large.mp4",
-      badge: "Sustainable Agriculture",
+      mediaUrl: "https://arnn-group.s3.ap-south-1.amazonaws.com/New+Website+ARNN/F%26B+Segments.mp4",
       websitelink: "#",
       mobileMediaUrl: false
     },
@@ -1218,7 +1218,7 @@ export const servicesData: ServiceData[] = [
         "Government partnerships and public-private collaboration",
         "Job creation, skills development, and profit-sharing"
       ],
-      image: "https://images.unsplash.com/photo-1757525473930-0b82237e55ac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdXN0YWluYWJsZSUyMGFncmljdWx0dXJlJTIwZmFybWluZ3xlbnwxfHx8fDE3NjMyMDg3NDV8MA&ixlib=rb-4.1.0&q=80&w=1080"
+      image: "https://arnn-group.s3.ap-south-1.amazonaws.com/New+Website+ARNN/FNB.png"
     },
 
     features: {
@@ -1399,7 +1399,7 @@ export const servicesData: ServiceData[] = [
         "Customized solutions reflecting unique style and brand identity",
         "Vertical integration with production facilities"
       ],
-      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBob21lJTIwZGVjb3J8ZW58MXx8fHwxNzYzMTM0MjQ3fDA&ixlib=rb-4.1.0&q=80&w=1080"
+      image: "https://arnn-group.s3.ap-south-1.amazonaws.com/New+Website+ARNN/Furniture.png"
     },
 
     features: {
@@ -1556,9 +1556,8 @@ export const servicesData: ServiceData[] = [
       subheadline: "Driving Growth and Innovation in GCC's Dynamic F&B Landscape",
       description: "ARNN Group is strategically focusing on expanding its presence in the thriving F&B market across GCC countries, with a particular emphasis on the United Arab Emirates, Saudi Arabia, Oman, and Qatar.",
       mediaType: "video",
-      mediaUrl: "https://cdn.pixabay.com/video/2021/10/12/91744-636709154_large.mp4",
+      mediaUrl: "https://arnn-group.s3.ap-south-1.amazonaws.com/New+Website+ARNN/F%26B+Segments.mp4",
       badge: "Food & Beverage Excellence",
-      websitelink: "#",
       mobileMediaUrl: false
     },
 
@@ -1579,7 +1578,7 @@ export const servicesData: ServiceData[] = [
         "Prime beneficiary of economic diversification initiatives",
         "Portfolio diversification across multiple F&B segments"
       ],
-      image: "https://images.unsplash.com/photo-1648808694138-6706c5efc80a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBjYWZlJTIwaW50ZXJpb3J8ZW58MXx8fHwxNzYzMTUxMTY0fDA&ixlib=rb-4.1.0&q=80&w=1080"
+      image: "https://arnn-group.s3.ap-south-1.amazonaws.com/New+Website+ARNN/FNB.png"
     },
 
     features: {
