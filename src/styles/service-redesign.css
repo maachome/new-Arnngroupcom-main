@@ -131,9 +131,9 @@
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(8, 18, 40, 0.82) 0%, rgba(10, 24, 52, 0.68) 38%, rgba(10, 24, 52, 0.3) 62%, rgba(10, 24, 52, 0.5) 100%),
-    radial-gradient(circle at 18% 18%, rgba(183, 138, 47, 0.18), transparent 30%),
-    linear-gradient(180deg, rgba(15, 31, 63, 0.16), rgba(15, 31, 63, 0.42));
+    linear-gradient(90deg, rgba(8, 18, 40, 0.7) 0%, rgba(10, 24, 52, 0.54) 38%, rgba(10, 24, 52, 0.2) 62%, rgba(10, 24, 52, 0.38) 100%),
+    radial-gradient(circle at 18% 18%, rgba(183, 138, 47, 0.14), transparent 30%),
+    linear-gradient(180deg, rgba(15, 31, 63, 0.08), rgba(15, 31, 63, 0.24));
 }
 
 .srv-hero-grid {
@@ -1328,8 +1328,17 @@
 }
 
 .srv-category-tile.active {
-  border-color: color-mix(in srgb, var(--srv-tile-accent) 38%, var(--srv-border-strong));
-  box-shadow: 0 14px 30px color-mix(in srgb, var(--srv-tile-accent) 10%, transparent);
+  background: color-mix(in srgb, var(--srv-gold-soft) 36%, white);
+  border-color: var(--srv-gold-border);
+  box-shadow: 0 14px 30px rgba(183, 138, 47, 0.12);
+}
+
+.srv-category-tile.active .srv-category-tile-top svg {
+  color: var(--srv-gold-text);
+}
+
+.srv-category-tile.active .srv-category-name {
+  color: var(--srv-text-primary);
 }
 
 .srv-category-tile-top svg {
@@ -1490,8 +1499,8 @@
 
   .srv-hero-overlay {
     background:
-      linear-gradient(180deg, rgba(8, 18, 40, 0.8), rgba(10, 24, 52, 0.56) 46%, rgba(10, 24, 52, 0.62)),
-      radial-gradient(circle at 22% 18%, rgba(183, 138, 47, 0.14), transparent 34%);
+      linear-gradient(180deg, rgba(8, 18, 40, 0.7), rgba(10, 24, 52, 0.44) 46%, rgba(10, 24, 52, 0.52)),
+      radial-gradient(circle at 22% 18%, rgba(183, 138, 47, 0.11), transparent 34%);
   }
 
   .srv-hero-content {
@@ -2197,8 +2206,8 @@
 
 .about-srv-hero-overlay {
   background:
-    linear-gradient(90deg, rgba(8, 18, 40, 0.82) 0%, rgba(10, 24, 52, 0.7) 40%, rgba(10, 24, 52, 0.34) 62%, rgba(10, 24, 52, 0.52) 100%),
-    radial-gradient(circle at 20% 18%, rgba(183, 138, 47, 0.18), transparent 32%);
+    linear-gradient(90deg, rgba(8, 18, 40, 0.68) 0%, rgba(10, 24, 52, 0.56) 40%, rgba(10, 24, 52, 0.22) 62%, rgba(10, 24, 52, 0.4) 100%),
+    radial-gradient(circle at 20% 18%, rgba(183, 138, 47, 0.14), transparent 32%);
 }
 
 .about-srv-hero-stage {
@@ -2402,8 +2411,8 @@
 
   .about-srv-hero-overlay {
     background:
-      linear-gradient(180deg, rgba(8, 18, 40, 0.84), rgba(10, 24, 52, 0.62) 42%, rgba(10, 24, 52, 0.72)),
-      radial-gradient(circle at 20% 14%, rgba(183, 138, 47, 0.14), transparent 30%);
+      linear-gradient(180deg, rgba(8, 18, 40, 0.72), rgba(10, 24, 52, 0.5) 42%, rgba(10, 24, 52, 0.58)),
+      radial-gradient(circle at 20% 14%, rgba(183, 138, 47, 0.11), transparent 30%);
   }
 
   .about-srv-hero-stage {

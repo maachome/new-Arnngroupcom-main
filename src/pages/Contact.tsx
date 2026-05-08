@@ -22,7 +22,6 @@ import { Header } from "../components/Header";
 import "../styles/about-contact-redesign.css";
 
 const officeAddress = "Office No. 215, Al Makhawi Building, Oud Metha, Dubai";
-const mapSearchAddress = "Al Makhawi Building, Oud Metha, Dubai";
 
 const channels = [
   {
@@ -512,51 +511,6 @@ export function Contact() {
           </div>
         </section>
 
-        <section className="ar2-section ar2-map-section">
-          <div className="ar2-container">
-            <motion.div
-              className="ar2-map-shell"
-              initial={{ opacity: 0, y: 18 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.5 }}
-            >
-              <div className="ar2-map-copy">
-                <div className="ar2-chip">
-                  <MapPin size={14} />
-                  <span>Office location</span>
-                </div>
-                <h2 className="ar2-heading">Visit our Dubai office.</h2>
-                <p className="ar2-body">
-                  For scheduled meetings, partnership discussions, and in-person business
-                  conversations, our office is located in Oud Metha, Dubai.
-                </p>
-                <div className="ar2-map-address">
-                  <span>Address</span>
-                  <strong>{officeAddress}</strong>
-                  <a
-                    className="ar2-map-link"
-                    href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapSearchAddress)}`}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Open in Google Maps
-                    <ArrowRight size={16} />
-                  </a>
-                </div>
-              </div>
-
-              <div className="ar2-map-frame">
-                <iframe
-                  title="ARNN Group office location"
-                  src={`https://www.google.com/maps?q=${encodeURIComponent(mapSearchAddress)}&output=embed`}
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                />
-              </div>
-            </motion.div>
-          </div>
-        </section>
       </main>
 
       <Footer />

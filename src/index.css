@@ -4313,7 +4313,7 @@
 
   /* Background video treatment to improve text/button contrast */
   .bg-video-blur {
-    filter: blur(0.8px) brightness(0.92) saturate(1.04);
+    filter: blur(0.35px) brightness(0.97) saturate(1.03);
     will-change: filter;
   }
 

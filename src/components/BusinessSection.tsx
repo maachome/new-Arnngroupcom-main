@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { ArrowUp } from "lucide-react";
+import { servicesData } from "../data/servicesData";
 
 interface BusinessDivision {
   number: string;
@@ -11,6 +12,10 @@ interface BusinessDivision {
   slug?: string; // Optional slug for service page link
 }
 
+const serviceOverviewImageBySlug = new Map(
+  servicesData.map((service) => [service.slug, service.overview.image]),
+);
+
 const divisions: BusinessDivision[] = [
   {
     number: "1",
@@ -18,8 +23,7 @@ const divisions: BusinessDivision[] = [
     heading: "Economic Empowerment",
     description:
       "Empowering communities through sustainable business development and financial inclusion initiatives.",
-    image:
-      "https://images.unsplash.com/photo-1758304480396-c259d6ff1aa8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGNvbW11bml0eSUyMGRldmVsb3BtZW50fGVufDF8fHx8MTc2MzQ1ODM4OHww&ixlib=rb-4.1.0&q=80&w=1080",
+    image: serviceOverviewImageBySlug.get("economic-empowerment") || "",
     slug: "economic-empowerment",
   },
   {
@@ -28,8 +32,7 @@ const divisions: BusinessDivision[] = [
     heading: "Real Estate Development",
     description:
       "Creating innovative and sustainable property solutions that transform communities and elevate living standards.",
-    image:
-      "https://images.unsplash.com/photo-1695067438561-75492f7b6a9c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBhcmNoaXRlY3R1cmUlMjBidWlsZGluZ3xlbnwxfHx8fDE3NjMzODQwMTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    image: serviceOverviewImageBySlug.get("real-estate-development") || "",
     slug: "real-estate-development",
   },
   {
@@ -38,8 +41,7 @@ const divisions: BusinessDivision[] = [
     heading: "Information & Communication Technology",
     description:
       "Delivering cutting-edge technology solutions that drive digital transformation and innovation.",
-    image:
-      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1400&q=80",
+    image: serviceOverviewImageBySlug.get("ict") || "",
     slug: "ict",
   },
   {
@@ -48,8 +50,7 @@ const divisions: BusinessDivision[] = [
     heading: "Agro-Aquaculture",
     description:
       "Pioneering sustainable farming and aquaculture practices for food security and environmental stewardship.",
-    image:
-      "https://images.unsplash.com/photo-1686426575720-99714548a7e1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaXNoJTIwZmFybSUyMGFxdWFjdWx0dXJlfGVufDF8fHx8MTc2MzM3MDU1NHww&ixlib=rb-4.1.0&q=80&w=1080",
+    image: serviceOverviewImageBySlug.get("agro-aquaculture") || "",
     slug: "agro-aquaculture",
   },
   {
@@ -58,8 +59,7 @@ const divisions: BusinessDivision[] = [
     heading: "Fashion Industries",
     description:
       "Creating contemporary fashion and textile solutions that blend tradition with modern design excellence.",
-    image:
-      "https://images.unsplash.com/photo-1632991727906-8386e1388975?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmYXNoaW9uJTIwZGVzaWduZXIlMjBzdHVkaW98ZW58MXx8fHwxNzYzNDU4Mzg5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    image: serviceOverviewImageBySlug.get("fashion-industries") || "",
     slug: "fashion-industries",
   },
   {
@@ -68,8 +68,7 @@ const divisions: BusinessDivision[] = [
     heading: "Empowering Global Talent",
     description:
       "Connecting exceptional talent with global opportunities through strategic workforce development programs.",
-    image:
-      "https://images.unsplash.com/photo-1624555130296-e551faf8969b?crop=entropy&cs=tinysrgb&fit=max&fm=webp&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaXZlcnNlJTIwdGVhbSUyMG1lZXRpbmd8ZW58MXx8fHwxNzYzNDU1NjY4fDA&ixlib=rb-4.1.0&q=60&w=800",
+    image: serviceOverviewImageBySlug.get("empowering-global-talent") || "",
     slug: "empowering-global-talent",
   },
   {
@@ -78,8 +77,7 @@ const divisions: BusinessDivision[] = [
     heading: "Healthcare",
     description:
       "Equipping Healthcare Facilities with world-class Medical Devices and Equipment.",
-    image:
-      "https://images.unsplash.com/photo-1595464144526-5fb181b74625?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxob3NwaXRhbCUyMG1lZGljYWwlMjBlcXVpcG1lbnR8ZW58MXx8fHwxNzYzNDQ0OTM3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    image: serviceOverviewImageBySlug.get("healthcare-access") || "",
     slug: "healthcare-access",
   },
   {
@@ -88,8 +86,7 @@ const divisions: BusinessDivision[] = [
     heading: "AgriFuture Global",
     description:
       "Revolutionizing agriculture through innovative technology and sustainable farming solutions worldwide.",
-    image:
-      "https://images.unsplash.com/photo-1708794666324-85ad91989d20?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzbWFydCUyMGZhcm1pbmclMjB0ZWNobm9sb2d5fGVufDF8fHx8MTc2MzQwMDMxNXww&ixlib=rb-4.1.0&q=80&w=1080",
+    image: serviceOverviewImageBySlug.get("food-safety") || "",
     slug: "food-safety",
   },
   {
@@ -98,8 +95,7 @@ const divisions: BusinessDivision[] = [
     heading: "Furniture & Furnishing",
     description:
       "Designing and manufacturing premium furniture solutions that combine functionality with aesthetic excellence.",
-    image:
-      "https://images.unsplash.com/photo-1687180498602-5a1046defaa4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBpbnRlcmlvciUyMGZ1cm5pdHVyZXxlbnwxfHx8fDE3NjM0NTgzOTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    image: serviceOverviewImageBySlug.get("luxury-furniture") || "",
     slug: "luxury-furniture",
   },
   {
@@ -108,8 +104,7 @@ const divisions: BusinessDivision[] = [
     heading: "Food & Beverage",
     description:
       "Delivering exceptional culinary experiences and innovative food service solutions across diverse markets.",
-    image:
-      "https://images.unsplash.com/photo-1676471932681-45fa972d848a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZXN0YXVyYW50JTIwZmluZSUyMGRpbmluZ3xlbnwxfHx8fDE3NjM0NTgzOTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    image: serviceOverviewImageBySlug.get("fb-segments") || "",
     slug: "fb-segments",
   },
 ];
@@ -375,7 +370,7 @@ export function BusinessSection() {
           aria-label="Previous slides"
         >
           <ArrowUp 
-            className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 transition-transform duration-300 group-hover:-translate-x-1 rotate-[-90deg] text-white"
+            className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 transition-transform duration-300 group-hover:-translate-x-0.5 rotate-[-90deg] text-white"
           />
         </button>
 
@@ -386,7 +381,7 @@ export function BusinessSection() {
           aria-label="Next slides"
         >
           <ArrowUp 
-            className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 transition-transform duration-300 group-hover:translate-x-1 rotate-90 text-white"
+            className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 transition-transform duration-300 group-hover:translate-x-0.5 rotate-90 text-white"
           />
         </button>
       </div>
@@ -535,7 +530,7 @@ export function BusinessSection() {
                   }`}
                   style={{
                     backgroundImage: `url(${division.image})`,
-                    filter: "blur(1.5px) brightness(0.85)",
+                    filter: "blur(0.6px) brightness(0.94)",
                   }}
                 />
 
@@ -545,11 +540,11 @@ export function BusinessSection() {
                   style={{
                     backgroundColor: isExpandedCard
                       ? isEmpoweringGlobalTalent
-                        ? "rgba(45, 62, 95, 0.58)"
-                        : "rgba(45, 62, 95, 0.5)"
+                        ? "rgba(45, 62, 95, 0.44)"
+                        : "rgba(45, 62, 95, 0.36)"
                       : isEmpoweringGlobalTalent
-                        ? "rgba(45, 62, 95, 0.68)"
-                        : "rgba(45, 62, 95, 0.6)",
+                        ? "rgba(45, 62, 95, 0.54)"
+                        : "rgba(45, 62, 95, 0.48)",
                   }}
                 />
 
