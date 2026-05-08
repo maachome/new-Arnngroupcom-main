@@ -262,7 +262,7 @@ export function Header() {
               <SheetHeader>
                 <SheetTitle className={`${isServicePage ? "text-white" : "text-white"} text-left`}>
                   <img
-                    src={currentLogo}
+                    src={arnnLogoScrolled}
                     alt="ARNN GROUP"
                     className="h-16 w-auto"
                   />

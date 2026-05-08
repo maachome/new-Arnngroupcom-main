@@ -1,6 +1,3 @@
-import { motion } from "motion/react";
-import { useEffect, useState } from "react";
-import { useForm, useWatch } from "react-hook-form";
 import useWeb3Forms from "@web3forms/react";
 import {
   ArrowRight,
@@ -15,6 +12,9 @@ import {
   ShieldCheck,
   Sparkles,
 } from "lucide-react";
+import { motion } from "motion/react";
+import { useEffect, useState } from "react";
+import { useForm, useWatch } from "react-hook-form";
 import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
 import { Footer } from "../components/Footer";
@@ -48,7 +48,7 @@ const channels = [
   {
     icon: Clock3,
     label: "Hours",
-    value: "Sunday - Thursday,\n9:00 AM - 6:00 PM GST",
+    value: "Monday - Saturday,\n9:00 AM - 6:00 PM GST",
     detail: "Reply window during standard business hours",
     href: null,
   },
