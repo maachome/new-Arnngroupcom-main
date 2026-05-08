@@ -159,7 +159,7 @@ const sectors = [
     summary: "Development platforms shaped by hospitality, asset quality, and long-view commercial positioning.",
   },
   {
-    title: "Information & Communication Technologies",
+    title: "Fintech, Crypto & Blockchain Innovation",
     slug: "ict",
     summary: "Technology-led platforms spanning infrastructure, software, and implementation discipline.",
   },
