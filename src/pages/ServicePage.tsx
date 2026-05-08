@@ -8,7 +8,11 @@ import { ServiceOverview } from "../components/service/ServiceOverview";
 import { ServiceFeatures } from "../components/service/ServiceFeatures";
 import { ServiceProcess } from "../components/service/ServiceProcess";
 import { ServiceStats } from "../components/service/ServiceStats";
+import { ServicePartnership } from "../components/service/ServicePartnership";
+import { ServiceStakeholders } from "../components/service/ServiceStakeholders";
+import { ServiceGovernance } from "../components/service/ServiceGovernance";
 import { ServiceSuccess } from "../components/service/ServiceSuccess";
+import { ServiceFAQ } from "../components/service/ServiceFAQ";
 import { ServiceCTA } from "../components/service/ServiceCTA";
 import { getServiceBySlug } from "../data/servicesData";
 import { useEffect } from "react";
@@ -62,10 +66,38 @@ export function ServicePage() {
       {service.stats && (
         <ServiceStats data={service.stats} color={service.color} />
       )}
+
+      {/* Partnership Model Section */}
+      {service.partnership && (
+        <ServicePartnership
+          data={service.partnership}
+          color={service.color}
+          serviceTitle={service.title}
+        />
+      )}
+
+      {/* Stakeholder Section */}
+      <ServiceStakeholders
+        data={service.stakeholders}
+        color={service.color}
+        serviceTitle={service.title}
+      />
+
+      {/* Governance Section */}
+      <ServiceGovernance
+        data={service.governance}
+        color={service.color}
+        serviceTitle={service.title}
+      />
       
       {/* Success Stories Section */}
       {service.success && (
         <ServiceSuccess data={service.success} color={service.color} />
+      )}
+
+      {/* FAQ Section */}
+      {service.faq && (
+        <ServiceFAQ data={service.faq} color={service.color} serviceTitle={service.title} />
       )}
       
       {/* CTA Section */}

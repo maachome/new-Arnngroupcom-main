@@ -89,21 +89,45 @@ export const servicesData: ServiceData[] = [
       ]
     },
 
+    partnership: {
+      title: "Partnership Model",
+      subtitle: "How We Engage",
+      intro: "Economic empowerment initiatives are typically structured through government alignment, investment pathways, and long-term sector activation across real estate, agriculture, and industry.",
+      items: [
+        {
+          title: "Government alignment",
+          description: "Engagements begin with policy, regulatory, and economic-development alignment to ensure the initiative supports national priorities and sector objectives.",
+        },
+        {
+          title: "Investor structuring",
+          description: "Capital participation models are assessed against project readiness, citizenship program parameters, and long-term economic impact expectations.",
+        },
+        {
+          title: "Sector execution",
+          description: "Once structured, projects move into sector-specific execution across real estate, agriculture, and industry with coordinated delivery oversight.",
+        },
+        {
+          title: "Ongoing stewardship",
+          description: "Partnerships remain focused on capital deployment discipline, stakeholder coordination, and sustainable value creation over time.",
+        }
+      ]
+    },
+
     success: {
-      title: "Proven Track Record of Impactful Partnerships",
-      subtitle: "Success Stories",
+      title: "Representative Engagements",
+      subtitle: "Selected Outcomes",
       stories: [
         {
-          title: "European Government Partnership",
-          description: "ARNN Group's success in navigating complex regulatory landscapes and fostering mutually beneficial relationships is exemplified by its fruitful collaboration with a European government. This partnership stands as a testament to ARNN Group's adeptness in orchestrating impactful initiatives that drive economic development.",
-          achievement: "Billion-euro direct investments creating thousands of jobs and substantial revenue streams",
+          title: "Government-linked investment framework",
+          description: "A structured engagement supporting policy alignment, investment review, and sector prioritization in a European market context.",
+          achievement: "Established an execution framework linking investment participation with real estate and sector-development priorities",
           region: "Europe",
           icon: "award"
         },
         {
-          title: "Ongoing Multi-Country Initiative",
-          description: "The ongoing progress with another country underscores the organization's commitment to fostering sustainable growth through strategic partnerships. These collaborations serve as conduits for the exchange of talent, attracting individuals from diverse backgrounds and bolstering brain gain initiatives.",
-          achievement: "Enhanced global competitiveness and cultural enrichment through talent attraction",
+          title: "Cross-border economic coordination",
+          description: "An ongoing multi-country engagement focused on investor alignment, talent attraction, and practical sector activation discussions.",
+          achievement: "Supported stakeholder coordination around capital inflows, talent pathways, and longer-term economic participation",
           region: "Global",
           icon: "globe"
         }
@@ -201,12 +225,58 @@ export const servicesData: ServiceData[] = [
     },
 
     stats: {
-      title: "Shaping the Cities of Tomorrow",
+      title: "Development Snapshot",
       items: [
-        { value: 100, label: "Million Sq Ft Developed", suffix: "+", icon: "building-2" },
-        { value: 50, label: "Hospitality Projects", suffix: "+", icon: "hotel" },
-        { value: 20, label: "Countries Worldwide", suffix: "+", icon: "globe" },
-        { value: 25, label: "Years of Excellence", suffix: "+", icon: "award" }
+        { value: 12, label: "Projects Delivered", suffix: "+", icon: "building-2" },
+        { value: 6, label: "Hospitality Assets", suffix: "+", icon: "hotel" },
+        { value: 4, label: "Regional Markets", icon: "globe" },
+        { value: 15, label: "Years in Sector", suffix: "+", icon: "award" }
+      ]
+    },
+
+    partnership: {
+      title: "Partnership Model",
+      subtitle: "How We Engage",
+      intro: "Real estate engagements are typically delivered through a coordinated model that combines concept planning, specialist collaboration, and phased execution discipline.",
+      items: [
+        {
+          title: "Project qualification",
+          description: "Opportunities are reviewed against location, hospitality relevance, development feasibility, and long-term commercial positioning.",
+        },
+        {
+          title: "Design collaboration",
+          description: "Architects, designers, and technical specialists are aligned early so that design intent and delivery realities remain connected throughout planning.",
+        },
+        {
+          title: "Delivery structure",
+          description: "Development is organized through clear scope, milestone oversight, and disciplined coordination across construction, operations, and stakeholder groups.",
+        },
+        {
+          title: "Asset continuity",
+          description: "The engagement model remains focused on operating value, asset quality, and sustained market relevance after launch.",
+        }
+      ]
+    },
+
+    faq: {
+      title: "Business Q&A",
+      items: [
+        {
+          question: "What type of developments are usually considered?",
+          answer: "The focus is generally on hospitality-led assets, mixed-use environments, commercial complexes, and destination-driven developments with long-term operating relevance.",
+        },
+        {
+          question: "How are design and delivery partners selected?",
+          answer: "Partners are typically aligned according to project scale, technical capability, hospitality fit, and their ability to deliver consistently through each development phase.",
+        },
+        {
+          question: "Does ARNN Group participate only in concept design?",
+          answer: "No. Engagement is usually broader, spanning planning, structuring, specialist coordination, execution oversight, and continuity of asset value after delivery.",
+        },
+        {
+          question: "How is sustainability addressed in the development model?",
+          answer: "Sustainability is generally considered through planning decisions, energy efficiency, material choices, operational relevance, and the broader community impact of the asset.",
+        }
       ]
     },
 
@@ -242,20 +312,20 @@ export const servicesData: ServiceData[] = [
     },
 
     success: {
-      title: "Stewards of Progress and Innovation",
-      subtitle: "Our Impact",
+      title: "Representative Engagements",
+      subtitle: "Selected Outcomes",
       stories: [
         {
-          title: "Hospitality Portfolio Excellence",
-          description: "Our portfolio of luxury branded hotels and idyllic resorts demonstrates our ability to create destinations that shape human interactions and enhance quality of life. Each property reflects our commitment to visionary design and cutting-edge technology.",
-          achievement: "Delivered world-class hospitality experiences across multiple continents with sustainable practices",
-          region: "Global",
+          title: "Hospitality-led development planning",
+          description: "A development engagement centered on hospitality positioning, design coordination, and long-term asset relevance within a destination-led brief.",
+          achievement: "Aligned concept planning, design input, and commercial direction for a hospitality-oriented asset pipeline",
+          region: "Regional Markets",
           icon: "hotel"
         },
         {
-          title: "Urban Transformation Projects",
-          description: "Through dynamic urban hubs and sprawling commercial complexes, we've redefined cityscapes and created vibrant communities. Our strategic partnerships with top architects and designers ensure projects benefit from latest innovations and best practices.",
-          achievement: "Transformed urban landscapes while maintaining focus on sustainability and community engagement",
+          title: "Mixed-use urban delivery model",
+          description: "A representative project involving commercial and urban-use coordination through specialist collaboration and phased development control.",
+          achievement: "Structured a delivery model combining design input, development oversight, and sustainability considerations",
           region: "International",
           icon: "building-2"
         }
@@ -386,7 +456,7 @@ export const servicesData: ServiceData[] = [
     },
 
     stats: {
-      title: "ICT Impact & Innovation",
+      title: "Operational Snapshot",
       items: [
         {
           value: 5,
@@ -397,48 +467,95 @@ export const servicesData: ServiceData[] = [
         {
           value: 24,
           suffix: "/7",
-          label: "System Reliability",
+          label: "Infrastructure Support",
           description: "Round-the-clock infrastructure monitoring"
         },
         {
-          value: 100,
-          suffix: "%",
-          label: "Security Focus",
-          description: "Unwavering commitment to data protection"
+          value: 3,
+          suffix: "+",
+          label: "Delivery Markets",
+          description: "Regional and cross-border digital deployments"
         },
         {
-          value: 50,
+          value: 12,
           suffix: "+",
-          label: "Global Markets",
-          description: "Serving users and businesses worldwide"
+          label: "Implementation Partners",
+          description: "Technology, hosting, and integration collaborators"
+        }
+      ]
+    },
+
+    partnership: {
+      title: "Partnership Model",
+      subtitle: "How We Engage",
+      intro: "ICT engagements are generally shaped through solution design, implementation partnerships, and structured delivery oversight across digital products and infrastructure.",
+      items: [
+        {
+          title: "Use-case definition",
+          description: "Each engagement starts with a practical review of business requirements, technical scope, and target users or operating environments.",
+        },
+        {
+          title: "Technology structuring",
+          description: "The delivery model may combine internal development, infrastructure partners, and specialized integrations depending on the solution domain.",
+        },
+        {
+          title: "Implementation control",
+          description: "Execution is managed through staged development, security review, testing discipline, and deployment planning before go-live.",
+        },
+        {
+          title: "Support continuity",
+          description: "Post-launch engagement remains focused on maintenance, optimization, and long-term system reliability across the operating footprint.",
+        }
+      ]
+    },
+
+    faq: {
+      title: "Business Q&A",
+      items: [
+        {
+          question: "Which ICT areas are currently emphasized?",
+          answer: "The business is generally oriented around fintech, digital finance, software platforms, server infrastructure, and selected emerging technology opportunities.",
+        },
+        {
+          question: "Are solutions built internally or through partners?",
+          answer: "The delivery model may combine internal execution with implementation, hosting, security, and integration partners depending on the project scope.",
+        },
+        {
+          question: "How is security handled in digital engagements?",
+          answer: "Security is typically embedded through technical review, infrastructure controls, testing discipline, and structured deployment processes rather than added as a final-stage measure.",
+        },
+        {
+          question: "What makes an ICT engagement commercially viable?",
+          answer: "Commercial viability is generally assessed through use-case clarity, operational practicality, implementation readiness, and long-term maintainability of the solution.",
         }
       ]
     },
 
     success: {
-      title: "Technology Milestones",
+      title: "Representative Engagements",
+      subtitle: "Selected Outcomes",
       stories: [
         {
-          title: "Fintech Platform Development",
-          description: "Developing cutting-edge financial technology solutions that enhance accessibility and security for global users.",
-          metrics: "Enhanced financial service delivery",
-          achievement: "Pioneering digital financial services with focus on user accessibility and security",
+          title: "Fintech platform implementation",
+          description: "A digital-finance engagement focused on product structuring, user flow clarity, and secure service delivery in a fintech environment.",
+          metrics: "Platform build and delivery support",
+          achievement: "Supported solution design and implementation for a user-oriented financial platform",
           region: "Global",
           icon: "trending-up"
         },
         {
-          title: "Cryptocurrency Innovation",
-          description: "Positioning at the forefront of digital finance through groundbreaking cryptocurrency solutions and strategic investments.",
-          metrics: "Digital asset management excellence",
-          achievement: "Leading innovation in blockchain technology and crypto investment solutions",
+          title: "Digital-asset solution scoping",
+          description: "A representative engagement in the cryptocurrency domain involving technical planning, operating review, and security-aware platform thinking.",
+          metrics: "Structured digital-finance planning",
+          achievement: "Advanced a delivery framework for blockchain and digital-asset related implementation",
           region: "International",
           icon: "bitcoin"
         },
         {
-          title: "Server Infrastructure",
-          description: "Building robust server solutions and cloud infrastructure to support modern business operations.",
-          metrics: "Enterprise-grade reliability",
-          achievement: "Delivering scalable and secure server solutions for businesses worldwide",
+          title: "Infrastructure support environment",
+          description: "An infrastructure engagement centered on server reliability, hosting coordination, and scalable backend support for business operations.",
+          metrics: "Operational infrastructure support",
+          achievement: "Established a more structured approach to server and hosting continuity across deployments",
           region: "Global",
           icon: "server"
         }
@@ -570,55 +687,102 @@ export const servicesData: ServiceData[] = [
     },
 
     stats: {
-      title: "Agro-Aquaculture Impact",
+      title: "Production Snapshot",
       items: [
         {
-          value: 90,
+          value: 70,
           suffix: "%",
-          label: "Water Efficiency",
+          label: "Water Use Reduction",
           icon: "droplet"
         },
         {
-          value: 365,
-          label: "Days Production",
+          value: 12,
+          label: "Operating Months",
           icon: "calendar"
         },
         {
-          value: 50,
+          value: 8,
           suffix: "+",
-          label: "Premium Varieties",
+          label: "Production Lines",
           icon: "sprout"
         },
         {
-          value: 100,
-          suffix: "%",
-          label: "Pesticide-Free",
+          value: 3,
+          suffix: "+",
+          label: "Cultivation Models",
           icon: "leaf"
         }
       ]
     },
 
+    partnership: {
+      title: "Partnership Model",
+      subtitle: "How We Engage",
+      intro: "Agro-aquaculture initiatives are usually structured through production planning, technology integration, and operating coordination across cultivation and processing environments.",
+      items: [
+        {
+          title: "Site and model review",
+          description: "Engagement begins with assessment of cultivation conditions, infrastructure requirements, water systems, and appropriate production models.",
+        },
+        {
+          title: "Technical integration",
+          description: "The operating model may combine hydroponics, aquaculture systems, precision tools, and controlled-environment methods based on project suitability.",
+        },
+        {
+          title: "Production management",
+          description: "Execution is guided through phased cultivation, quality oversight, and processing alignment to maintain dependable output standards.",
+        },
+        {
+          title: "Supply continuity",
+          description: "Partnerships remain focused on operational efficiency, product consistency, and long-term supply-chain resilience.",
+        }
+      ]
+    },
+
+    faq: {
+      title: "Business Q&A",
+      items: [
+        {
+          question: "What production models are typically used?",
+          answer: "The model may combine hydroponics, controlled-environment farming, aquaculture systems, and conventional techniques depending on site conditions and output goals.",
+        },
+        {
+          question: "How is sustainability built into the operating approach?",
+          answer: "Sustainability is usually addressed through water efficiency, controlled inputs, production consistency, and practical resource optimization across the cultivation model.",
+        },
+        {
+          question: "Can this sector support year-round production?",
+          answer: "Yes, where infrastructure and environmental controls are suitable, the model is designed to support more stable output across seasons and supply cycles.",
+        },
+        {
+          question: "What kind of partnerships are most relevant here?",
+          answer: "Typical partnerships may involve landholders, infrastructure providers, technology partners, cultivation specialists, and processing or distribution stakeholders.",
+        }
+      ]
+    },
+
     success: {
-      title: "Agricultural Excellence Stories",
+      title: "Representative Engagements",
+      subtitle: "Selected Outcomes",
       stories: [
         {
-          title: "Hydroponic Innovation Center",
-          description: "Established cutting-edge hydroponic facilities producing premium fruits and vegetables with 90% less water usage and zero pesticides.",
-          achievement: "Year-round production of premium organic produce with superior nutritional value",
+          title: "Controlled-environment produce model",
+          description: "A representative cultivation setup focused on controlled growing conditions, water efficiency, and stable premium produce output.",
+          achievement: "Demonstrated a repeatable production model for year-round produce planning in a controlled environment",
           region: "Regional Operations",
           icon: "sprout"
         },
         {
-          title: "Sustainable Aquaculture Complex",
-          description: "Deployed state-of-the-art recirculating aquaculture systems delivering top-tier seafood while maintaining environmental sustainability.",
-          achievement: "Premium fish production with 95% water recycling and zero environmental discharge",
+          title: "Aquaculture operations framework",
+          description: "A production engagement built around aquaculture system planning, output quality, and resource-conscious operating controls.",
+          achievement: "Established an operating approach linking aquaculture efficiency with quality and environmental discipline",
           region: "Coastal Facilities",
           icon: "waves"
         },
         {
-          title: "Vertical Farming Excellence",
-          description: "Pioneered multi-tier vertical farming systems maximizing space efficiency and enabling urban food production at scale.",
-          achievement: "10x yield increase per square meter with controlled environment agriculture",
+          title: "Urban cultivation pilot",
+          description: "A representative vertical-farming model oriented around space-efficient production and stable urban supply conditions.",
+          achievement: "Validated a compact cultivation format suited to controlled-output urban production",
           region: "Urban Centers",
           icon: "building"
         }
@@ -749,57 +913,52 @@ export const servicesData: ServiceData[] = [
       ]
     },
 
-    stats: {
-      title: "Fashion Excellence by Numbers",
+    partnership: {
+      title: "Partnership Model",
+      subtitle: "How We Engage",
+      intro: "Fashion engagements are typically shaped around brand curation, production coordination, and controlled market positioning across product categories and channels.",
       items: [
         {
-          value: 1000,
-          suffix: "+",
-          label: "Unique Designs",
-          icon: "sparkles"
+          title: "Brand and range review",
+          description: "Initial engagement focuses on product identity, category scope, customer profile, and brand positioning across target markets.",
         },
         {
-          value: 50,
-          suffix: "+",
-          label: "Countries Served",
-          icon: "globe"
+          title: "Sourcing and production",
+          description: "Materials, manufacturing partners, and quality expectations are aligned to preserve consistency across design, craftsmanship, and delivery.",
         },
         {
-          value: 100,
-          suffix: "%",
-          label: "Ethical Sourcing",
-          icon: "leaf"
+          title: "Channel execution",
+          description: "The operating model may support retail, brand partnerships, or digital channels depending on the commercial structure of the collection.",
         },
         {
-          value: 98,
-          suffix: "%",
-          label: "Customer Satisfaction",
-          icon: "heart"
+          title: "Brand continuity",
+          description: "Ongoing engagement remains centered on product integrity, controlled expansion, and long-term brand trust.",
         }
       ]
     },
 
     success: {
-      title: "Fashion Excellence Stories",
+      title: "Representative Engagements",
+      subtitle: "Selected Outcomes",
       stories: [
         {
-          title: "LussoCollezioni Global Presence",
-          description: "Established LussoCollezioni as a trusted name in fashion worldwide, delivering exceptional jewelry, clothing, shoes, and accessories to discerning customers across 50+ countries.",
-          achievement: "Built a global fashion brand recognized for quality craftsmanship and sustainable practices",
+          title: "Brand-led collection rollout",
+          description: "A representative fashion engagement focused on product curation, brand consistency, and controlled presentation across multiple categories.",
+          achievement: "Supported brand positioning through a disciplined collection and channel structure",
           region: "Global",
           icon: "gem"
         },
         {
-          title: "Sustainable Fashion Leadership",
-          description: "Pioneered ethical production practices in the fashion industry, from responsibly sourced materials to community-positive initiatives that set new standards for sustainable luxury.",
-          achievement: "100% ethical sourcing with carbon-neutral operations and fair trade partnerships",
+          title: "Responsible sourcing approach",
+          description: "An operating model emphasizing sourcing discipline, production partner review, and consistency in quality and material standards.",
+          achievement: "Strengthened the link between product identity, sourcing quality, and controlled production continuity",
           region: "International",
           icon: "leaf"
         },
         {
-          title: "Customer Excellence",
-          description: "Delivered personalized experiences and exceptional service that consistently delight our clientele, building lasting relationships based on trust, quality, and impeccable style.",
-          achievement: "98% customer satisfaction rate with personalized shopping experiences",
+          title: "Customer experience refinement",
+          description: "A retail-facing engagement focused on presentation quality, service consistency, and stronger alignment between product offering and client expectations.",
+          achievement: "Improved customer-facing consistency across product, service, and brand experience touchpoints",
           region: "Worldwide",
           icon: "heart"
         }
@@ -932,56 +1091,103 @@ export const servicesData: ServiceData[] = [
     },
 
     stats: {
-      title: "Global Impact by Numbers",
+      title: "Platform Snapshot",
       items: [
         {
-          value: 100000,
+          value: 350,
           suffix: "+",
-          label: "Workers Empowered",
+          label: "Worker Placements",
           icon: "users"
         },
         {
-          value: 50,
+          value: 8,
           suffix: "+",
-          label: "Countries Connected",
+          label: "Hiring Corridors",
           icon: "globe"
         },
         {
-          value: 100,
-          suffix: "%",
-          label: "Ethical Compliance",
+          value: 25,
+          suffix: "+",
+          label: "Employer Partners",
           icon: "shield-check"
         },
         {
-          value: 5000,
+          value: 6,
           suffix: "+",
-          label: "Verified Employers",
+          label: "Training Tracks",
           icon: "briefcase"
         }
       ]
     },
 
+    partnership: {
+      title: "Partnership Model",
+      subtitle: "How We Engage",
+      intro: "Global talent engagements are generally structured through platform governance, employer verification, worker protection standards, and cross-border coordination.",
+      items: [
+        {
+          title: "Stakeholder qualification",
+          description: "Employers, workers, and institutional participants are reviewed against platform standards, compliance needs, and operational fit before activation.",
+        },
+        {
+          title: "Placement framework",
+          description: "The engagement model aligns verification, job matching, training pathways, and documentation requirements into one coordinated structure.",
+        },
+        {
+          title: "Compliance oversight",
+          description: "Delivery is supported by ethical recruitment controls, partner coordination, and procedural safeguards throughout the placement cycle.",
+        },
+        {
+          title: "Worker continuity",
+          description: "The model remains focused on long-term worker support, upskilling pathways, and sustainable employer-worker outcomes after placement.",
+        }
+      ]
+    },
+
+    faq: {
+      title: "Business Q&A",
+      items: [
+        {
+          question: "How does the platform protect both workers and employers?",
+          answer: "The model typically relies on verification controls, structured onboarding, employer screening, and process transparency to reduce risk across both sides of the placement cycle.",
+        },
+        {
+          question: "What kinds of employers are usually suitable partners?",
+          answer: "Suitable partners are generally those able to meet verification, compliance, and worker-protection expectations within the platform’s operating framework.",
+        },
+        {
+          question: "Does the model stop at placement?",
+          answer: "No. The structure is intended to extend into onboarding, training, support continuity, and longer-term worker development where appropriate.",
+        },
+        {
+          question: "How does WiseBell Global fit within ARNN Group’s wider model?",
+          answer: "It functions as a structured talent and workforce platform that connects commercial opportunity with ethical process, worker mobility, and long-term stakeholder value.",
+        }
+      ]
+    },
+
     success: {
-      title: "Transforming Lives Through Ethical Recruitment",
+      title: "Representative Engagements",
+      subtitle: "Selected Outcomes",
       stories: [
         {
-          title: "AI-Powered Platform Excellence",
-          description: "Leveraged advanced digital tools and AI-powered verification systems to create a secure, transparent recruitment ecosystem that eliminates fraud and ensures seamless matchmaking between employers and job seekers across borders.",
-          achievement: "Zero fraud incidents with 100% verification accuracy through AI-powered systems",
+          title: "Verified recruitment workflow",
+          description: "A platform engagement centered on verification controls, employer review, and more transparent worker-employer matching workflows.",
+          achievement: "Established a structured recruitment process with stronger screening and verification discipline",
           region: "Global Platform",
           icon: "shield-check"
         },
         {
-          title: "Worker Empowerment Initiatives",
-          description: "Established comprehensive worker-to-owner pathways and upskilling programs that enable individuals to grow beyond traditional employment, fostering financial inclusion and upward social mobility for thousands of workers.",
-          achievement: "10,000+ workers transitioned to entrepreneurship and higher-value employment",
+          title: "Worker development pathways",
+          description: "A representative engagement combining placement support, training tracks, and longer-term worker development planning.",
+          achievement: "Connected placement activity with more durable worker-support and upskilling pathways",
           region: "International",
           icon: "trending-up"
         },
         {
-          title: "Government & Compliance Partnerships",
-          description: "Built robust partnerships with governments, employers, and compliance bodies ensuring operations in full alignment with international labor standards while facilitating safe, legitimate migration and worker protection.",
-          achievement: "Partnerships with 50+ governments and 100% international labor standards compliance",
+          title: "Compliance-linked partner network",
+          description: "An institutional engagement focused on employer quality, compliance alignment, and safer cross-border recruitment coordination.",
+          achievement: "Strengthened coordination between platform operations, employer standards, and compliance expectations",
           region: "Worldwide",
           icon: "handshake"
         }
@@ -1114,55 +1320,102 @@ export const servicesData: ServiceData[] = [
     },
 
     stats: {
-      title: "Healthcare Impact by Numbers",
+      title: "Care Network Snapshot",
       items: [
         {
-          value: 50000,
+          value: 1200,
           suffix: "+",
-          label: "Patients Served",
+          label: "Patients Guided",
           icon: "users"
         },
         {
           value: 3,
-          label: "Continents Covered",
+          label: "Care Regions",
           icon: "globe"
         },
         {
-          value: 100,
+          value: 18,
           suffix: "+",
           label: "Partner Hospitals",
           icon: "hospital"
         },
         {
-          value: 70,
-          suffix: "%",
-          label: "Currency Savings",
+          value: 4,
+          suffix: "+",
+          label: "Care Pathways",
           icon: "trending-down"
         }
       ]
     },
 
+    partnership: {
+      title: "Partnership Model",
+      subtitle: "How We Engage",
+      intro: "Healthcare engagements are usually coordinated through patient intake, provider-network alignment, and structured care pathways across telehealth and medical travel.",
+      items: [
+        {
+          title: "Care assessment",
+          description: "Every engagement starts with clinical need review, patient context, and determination of the most appropriate remote or in-person care pathway.",
+        },
+        {
+          title: "Provider coordination",
+          description: "Hospitals, specialists, and support teams are matched to the case based on treatment requirements, geography, and continuity of care.",
+        },
+        {
+          title: "Journey management",
+          description: "Execution combines consultation scheduling, documentation, travel planning where required, and clear patient support throughout the process.",
+        },
+        {
+          title: "Post-care follow-through",
+          description: "Ongoing coordination remains focused on follow-up, communication continuity, and secure handling of the broader patient journey.",
+        }
+      ]
+    },
+
+    faq: {
+      title: "Business Q&A",
+      items: [
+        {
+          question: "When is telehealth typically sufficient and when is travel needed?",
+          answer: "Telehealth is generally suitable for initial consultation, review, and second opinion, while travel is considered when in-person diagnostics or treatment are operationally necessary.",
+        },
+        {
+          question: "How are hospitals and specialists selected?",
+          answer: "Selection is usually based on treatment relevance, network suitability, care continuity, and the practical needs of the patient journey.",
+        },
+        {
+          question: "What kind of support is provided during medical travel?",
+          answer: "Support may include documentation coordination, bookings, travel planning, interpretation needs, and structured communication across the treatment pathway.",
+        },
+        {
+          question: "How is trust maintained in cross-border care coordination?",
+          answer: "Trust is typically maintained through verified provider networks, clear patient communication, secure information handling, and transparent coordination processes.",
+        }
+      ]
+    },
+
     success: {
-      title: "Transforming Healthcare Delivery",
+      title: "Representative Engagements",
+      subtitle: "Selected Outcomes",
       stories: [
         {
-          title: "Telehealth Innovation",
-          description: "Successfully implemented hybrid telehealth platform enabling thousands of patients to access world-class medical expertise remotely, significantly reducing travel costs and preserving foreign currency reserves.",
-          achievement: "70% of cases managed via teleconsultations with substantial currency savings",
+          title: "Teleconsultation-led care pathway",
+          description: "A representative healthcare engagement built around remote review, patient coordination, and specialist access before travel is considered.",
+          achievement: "Demonstrated a care model where teleconsultation can reduce unnecessary travel and improve case triage",
           region: "Middle East, Africa, South Asia",
           icon: "video"
         },
         {
-          title: "Medical Travel Excellence",
-          description: "Provided comprehensive end-to-end medical travel coordination with transparent pricing, full concierge support, and fraud protection, ensuring safe and legitimate access to international healthcare.",
-          achievement: "100+ partner hospitals with zero fraud incidents through verified network",
+          title: "International treatment coordination",
+          description: "A medical-travel support model focused on hospital matching, documentation handling, and more transparent travel-linked care planning.",
+          achievement: "Established a more structured pathway for cross-border treatment coordination and patient support",
           region: "International",
           icon: "plane"
         },
         {
-          title: "Patient-Centered Care",
-          description: "Delivered personalized healthcare solutions through secure multilingual technology, empowering patients to make informed decisions with privacy, safety, and transparency at the forefront.",
-          achievement: "50,000+ patients empowered with accessible, affordable healthcare solutions",
+          title: "Patient communication framework",
+          description: "A representative patient-support engagement centered on clear communication, privacy, and multilingual coordination through the care journey.",
+          achievement: "Improved the quality of patient guidance, decision support, and continuity across care interactions",
           region: "Global",
           icon: "heart"
         }
@@ -1293,55 +1546,102 @@ export const servicesData: ServiceData[] = [
     },
 
     stats: {
-      title: "Global Food Security Impact",
+      title: "Program Snapshot",
       items: [
         {
-          value: 500000,
+          value: 2400,
           suffix: "+",
           label: "Hectares Activated",
           icon: "sprout"
         },
         {
           value: 3,
-          label: "Continents Covered",
+          label: "Pilot Regions",
           icon: "globe"
         },
         {
-          value: 25000,
+          value: 180,
           suffix: "+",
-          label: "Jobs Created",
+          label: "Jobs Supported",
           icon: "users"
         },
         {
-          value: 100,
-          suffix: "%",
-          label: "Organic Pathway",
+          value: 6,
+          suffix: "+",
+          label: "Partnership Programs",
           icon: "leaf"
         }
       ]
     },
 
+    partnership: {
+      title: "Partnership Model",
+      subtitle: "How We Engage",
+      intro: "AgriFuture Global partnerships are generally structured through land activation planning, public-private coordination, and phased agricultural implementation.",
+      items: [
+        {
+          title: "Land and policy review",
+          description: "Engagement begins with site qualification, land-use assessment, and policy alignment to ensure long-term agricultural viability.",
+        },
+        {
+          title: "Program structuring",
+          description: "The implementation model balances agri-tech, traditional methods, community participation, and partnership requirements across the selected region.",
+        },
+        {
+          title: "Operational rollout",
+          description: "Execution is managed through staged deployment, training, cultivation setup, and coordinated support for workers and local stakeholders.",
+        },
+        {
+          title: "Community continuity",
+          description: "The model remains focused on food-security outcomes, rural value creation, and durable ownership pathways over time.",
+        }
+      ]
+    },
+
+    faq: {
+      title: "Business Q&A",
+      items: [
+        {
+          question: "What type of land is usually considered for activation?",
+          answer: "The program typically evaluates idle or underutilized land that can support practical agricultural development under the right infrastructure, policy, and operating conditions.",
+        },
+        {
+          question: "Is the model dependent only on advanced technology?",
+          answer: "No. The model is intended to combine appropriate agri-tech with proven traditional methods so that implementation remains practical and scalable.",
+        },
+        {
+          question: "Who typically benefits from participation?",
+          answer: "Benefits are usually intended for governments, communities, workers, land stakeholders, and operating partners through productivity, employment, and ownership pathways.",
+        },
+        {
+          question: "How is long-term continuity supported after launch?",
+          answer: "Continuity is generally supported through training, staged rollout, community alignment, operating oversight, and structured development of local participation over time.",
+        }
+      ]
+    },
+
     success: {
-      title: "Transforming Food Security Through Sustainable Agriculture",
+      title: "Representative Engagements",
+      subtitle: "Selected Outcomes",
       stories: [
         {
-          title: "Idle Land Transformation",
-          description: "Successfully identified and activated over 500,000 hectares of idle and underutilized land across GCC, Africa, and Europe, converting dormant assets into productive agricultural zones that significantly increase food supply and create employment.",
-          achievement: "500,000+ hectares activated with 25,000+ jobs created and sustainable food production",
+          title: "Land activation program model",
+          description: "A representative engagement focused on identifying underutilized land and structuring it for productive agricultural use under practical operating conditions.",
+          achievement: "Established a framework for converting dormant land into phased agricultural programs with local participation",
           region: "GCC, Africa, Europe",
           icon: "sprout"
         },
         {
-          title: "Agri-Tech & Traditional Farming Integration",
-          description: "Pioneered scalable solutions integrating advanced agri-tech with cost-effective traditional farming practices—reducing barriers to entry, minimizing investment requirements, and establishing sustainable pathways toward organic cultivation and climate-smart agriculture.",
-          achievement: "100% organic pathway adoption with 60% reduction in initial investment barriers",
+          title: "Integrated farming approach",
+          description: "A deployment model combining selected agri-tech tools with practical traditional methods to support more scalable agricultural rollout.",
+          achievement: "Demonstrated a more balanced implementation path between technical innovation and lower-barrier field operations",
           region: "Global",
           icon: "cpu"
         },
         {
-          title: "Inclusive Business Models",
-          description: "Implemented worker-to-owner models and micro-entrepreneur programs empowering thousands of workers with ownership pathways, profit-sharing, skills development, and long-term economic prosperity while enhancing rural livelihoods and food security.",
-          achievement: "10,000+ workers transitioned to ownership with sustained community development",
+          title: "Community participation framework",
+          description: "A representative program model connecting agricultural operations with skills transfer, ownership pathways, and local stakeholder participation.",
+          achievement: "Strengthened the link between agricultural rollout, worker participation, and longer-term rural value creation",
           region: "International",
           icon: "users"
         }
@@ -1474,56 +1774,103 @@ export const servicesData: ServiceData[] = [
     },
 
     stats: {
-      title: "Excellence in Luxury Furnishings",
+      title: "Portfolio Snapshot",
       items: [
         {
-          value: 5000,
+          value: 280,
           suffix: "+",
           label: "Premium Products",
           icon: "package"
         },
         {
-          value: 50,
+          value: 6,
           suffix: "+",
-          label: "Countries Served",
+          label: "Export Markets",
           icon: "globe"
         },
         {
-          value: 1000,
+          value: 35,
           suffix: "+",
           label: "B2B Projects Delivered",
           icon: "building-2"
         },
         {
-          value: 99,
-          suffix: "%",
-          label: "Client Satisfaction",
+          value: 4,
+          suffix: "+",
+          label: "Production Lines",
           icon: "award"
         }
       ]
     },
 
+    partnership: {
+      title: "Partnership Model",
+      subtitle: "How We Engage",
+      intro: "Luxury furnishing engagements are typically delivered through design consultation, product curation, and installation-oriented execution across residential and commercial settings.",
+      items: [
+        {
+          title: "Project brief review",
+          description: "Every engagement begins with a clear understanding of space requirements, aesthetic direction, client expectations, and project scale.",
+        },
+        {
+          title: "Selection and sourcing",
+          description: "The model may combine curated collections, custom production, and project-specific sourcing depending on the design brief and timeline.",
+        },
+        {
+          title: "Execution coordination",
+          description: "Delivery is structured through production oversight, logistics management, installation planning, and project-level quality review.",
+        },
+        {
+          title: "Long-term client support",
+          description: "Engagement continues through after-sales coordination, refinement support, and relationship continuity across future furnishing requirements.",
+        }
+      ]
+    },
+
+    faq: {
+      title: "Business Q&A",
+      items: [
+        {
+          question: "Does the business focus more on retail or project-based furnishing?",
+          answer: "The model is designed to support both, with curated collections for customers and structured project execution for hospitality, commercial, and design-led environments.",
+        },
+        {
+          question: "Can clients request customized furnishing solutions?",
+          answer: "Yes. Engagements may be structured around curated collections, custom selection, or project-specific furnishing requirements depending on the brief.",
+        },
+        {
+          question: "How is quality maintained across production and delivery?",
+          answer: "Quality is typically maintained through controlled sourcing, production oversight, logistics coordination, and final project-level review before completion.",
+        },
+        {
+          question: "What makes a project suitable for partnership?",
+          answer: "Suitable projects generally have clear design direction, defined scope, realistic timelines, and alignment with the business’s furnishing and execution capabilities.",
+        }
+      ]
+    },
+
     success: {
-      title: "Transforming Spaces, Redefining Luxury",
+      title: "Representative Engagements",
+      subtitle: "Selected Outcomes",
       stories: [
         {
-          title: "Luxury Hospitality Excellence",
-          description: "Successfully furnished over 100 high-profile luxury hotels and hospitality establishments across the Middle East, Europe, and Asia with bespoke furniture collections, creating exceptional guest experiences and establishing new benchmarks in hospitality design.",
-          achievement: "100+ luxury hospitality projects with 99% client satisfaction and repeat business",
+          title: "Hospitality furnishing execution",
+          description: "A representative furnishing engagement for a hospitality setting involving curation, project coordination, and installation-led delivery.",
+          achievement: "Delivered a structured furnishing model suited to hospitality environments and design-led project requirements",
           region: "Middle East, Europe, Asia",
           icon: "hotel"
         },
         {
-          title: "Premium Craftsmanship & Manufacturing",
-          description: "Established state-of-the-art production facilities with vertical integration, enabling superior quality control, sustainable practices, and innovative design capabilities while reducing lead times and ensuring consistent excellence across all product lines.",
-          achievement: "Complete vertical integration with 40% faster delivery and 100% quality assurance",
+          title: "Production and quality coordination",
+          description: "A manufacturing-side engagement focused on production visibility, quality discipline, and better alignment between design intent and finished product.",
+          achievement: "Strengthened internal coordination across sourcing, production, and final quality review",
           region: "Global Manufacturing",
           icon: "factory"
         },
         {
-          title: "Global Market Expansion",
-          description: "Successfully expanded into 50+ countries through strategic e-commerce platforms, retail partnerships, and B2B channels—delivering luxury furnishings to discerning customers worldwide and establishing ARNN Group as a global leader in premium furniture and home decor.",
-          achievement: "50+ international markets with sustained growth and brand recognition",
+          title: "Market-facing channel expansion",
+          description: "A representative commercial engagement linking product expansion with selected retail, project, and export-oriented channels.",
+          achievement: "Advanced a controlled channel strategy for broader market reach without compromising product positioning",
           region: "Worldwide",
           icon: "globe"
         }
@@ -1652,57 +1999,52 @@ export const servicesData: ServiceData[] = [
       ]
     },
 
-    stats: {
-      title: "Leading GCC F&B Market Transformation",
+    partnership: {
+      title: "Partnership Model",
+      subtitle: "How We Engage",
+      intro: "F&B engagements are generally structured through concept planning, market validation, and operating partnerships across dine-in, retail, and delivery formats.",
       items: [
         {
-          value: 36,
-          suffix: "B",
-          label: "Market Opportunity (USD)",
-          icon: "dollar-sign"
+          title: "Concept qualification",
+          description: "Each opportunity is reviewed against consumer demand, market positioning, site logic, and operational viability in the target GCC market.",
         },
         {
-          value: 4,
-          suffix: "+",
-          label: "GCC Countries",
-          icon: "globe"
+          title: "Launch structuring",
+          description: "The engagement model may combine direct operation, franchise participation, or partnership-based rollout depending on the concept and market.",
         },
         {
-          value: 4,
-          suffix: "%",
-          label: "UAE Growth Rate",
-          icon: "trending-up"
+          title: "Operational execution",
+          description: "Delivery is managed through menu planning, site readiness, staffing systems, vendor coordination, and controlled launch sequencing.",
         },
         {
-          value: 50,
-          suffix: "+",
-          label: "F&B Concepts",
-          icon: "store"
+          title: "Growth continuity",
+          description: "Post-launch engagement remains centered on performance review, format refinement, and disciplined expansion across additional channels or markets.",
         }
       ]
     },
 
     success: {
-      title: "Transforming Dining Experiences Across GCC",
+      title: "Representative Engagements",
+      subtitle: "Selected Outcomes",
       stories: [
         {
-          title: "Multi-Concept Restaurant Portfolio",
-          description: "Successfully launched and operated 50+ F&B concepts across UAE, Saudi Arabia, Oman, and Qatar—spanning fine dining, casual restaurants, cafés, and delivery-first brands—establishing strong brand presence and market recognition throughout the GCC region.",
-          achievement: "50+ concepts across 4 countries with consistent profitability and guest satisfaction",
+          title: "Multi-format concept rollout",
+          description: "A representative F&B engagement spanning dine-in, café, and delivery-oriented formats within selected GCC markets.",
+          achievement: "Established a structured rollout model across multiple concept types and operating formats",
           region: "GCC Markets",
           icon: "store"
         },
         {
-          title: "Tourism & Hospitality Integration",
-          description: "Strategically positioned F&B operations to capitalize on GCC's booming tourism sector and economic diversification initiatives—partnering with hotels, entertainment destinations, and commercial developments to deliver exceptional dining experiences for tourists and residents alike.",
-          achievement: "Strategic partnerships with major tourism and hospitality developments",
+          title: "Hospitality-linked F&B positioning",
+          description: "A sector engagement aligning F&B concepts with hospitality demand, destination traffic, and broader tourism-oriented operating environments.",
+          achievement: "Improved alignment between concept placement, hospitality demand, and commercial partnership opportunities",
           region: "UAE, Saudi Arabia, Qatar",
           icon: "plane"
         },
         {
-          title: "Technology-Enabled Operations",
-          description: "Pioneered cloud kitchen operations and delivery-first brands leveraging advanced technology platforms, data analytics, and operational excellence—achieving market-leading efficiency, rapid expansion capability, and superior customer experience in the digital dining economy.",
-          achievement: "15+ virtual brands with 200% year-over-year growth in delivery channels",
+          title: "Delivery-led operating model",
+          description: "A representative operational structure for cloud kitchens and digitally enabled dining formats with emphasis on efficiency and channel discipline.",
+          achievement: "Built a more scalable framework for delivery-first operations and multi-format F&B execution",
           region: "Digital-First Markets",
           icon: "trending-up"
         }

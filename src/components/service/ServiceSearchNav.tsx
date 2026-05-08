@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { useNavigate, useParams } from "react-router-dom";
 import { getServiceBySlug } from "../../data/servicesData";
-import { ArrowRight, Compass, Sparkles } from "lucide-react";
+import { ArrowRight, Compass } from "lucide-react";
 
 const categories = [
   { slug: "economic-empowerment", name: "Economic Empowerment", color: "#3b82f6" },
@@ -21,9 +21,6 @@ export function ServiceSearchNav() {
   const { slug } = useParams();
   const currentService = slug ? getServiceBySlug(slug) : undefined;
   const serviceColor = currentService?.color || "#2d3e5f";
-  const currentIndex = categories.findIndex((category) => category.slug === slug);
-  const nextCategory =
-    currentIndex >= 0 ? categories[(currentIndex + 1) % categories.length] : categories[0];
 
   return (
     <section
@@ -39,35 +36,15 @@ export function ServiceSearchNav() {
           transition={{ duration: 0.5 }}
           className="srv-category-shell"
         >
-          <div className="srv-category-hero">
-            <div>
-              <div className="srv-chip">
-                <Compass size={14} />
-                <span>Browse by category</span>
-              </div>
-              <h3 className="srv-heading mt-5">Continue through the group’s business verticals.</h3>
-              <p className="srv-nav-copy mt-4 max-w-[54ch]">
-                Move across the portfolio through one shared navigation surface instead of a loose
-                collection of end-of-page links.
-              </p>
+          <div className="srv-category-header">
+            <div className="srv-chip">
+              <Compass size={14} />
+              <span>Group businesses</span>
             </div>
-
-            <button
-              className="srv-category-spotlight"
-              onClick={() => navigate(`/services/${nextCategory.slug}`)}
-            >
-              <div className="srv-category-spotlight-top">
-                <div className="srv-card-icon">
-                  <Sparkles size={20} />
-                </div>
-                <span>Next category</span>
-              </div>
-              <strong>{nextCategory.name}</strong>
-              <div className="srv-category-spotlight-bottom">
-                <span>Open service page</span>
-                <ArrowRight size={18} />
-              </div>
-            </button>
+            <h3 className="srv-heading mt-5">Review other ARNN Group business sectors.</h3>
+            <p className="srv-nav-copy mt-4 max-w-[54ch]">
+              Navigate across the group’s operating sectors through one consistent sector index.
+            </p>
           </div>
 
           <div className="srv-category-board">
@@ -85,7 +62,7 @@ export function ServiceSearchNav() {
                   style={{ ["--srv-tile-accent" as string]: category.color }}
                 >
                   <div className="srv-category-tile-top">
-                    <span className="srv-category-index">{`0${index + 1}`}</span>
+                    <span className="srv-category-index">{`Sector ${String(index + 1).padStart(2, "0")}`}</span>
                     <ArrowRight size={16} />
                   </div>
                   <div className="srv-category-copy">

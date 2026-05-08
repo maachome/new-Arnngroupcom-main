@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { ServiceHeroData } from "../../types/service";
 import { useEffect, useRef, useState } from "react";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 interface ServiceHeroProps {
   data: ServiceHeroData;
@@ -40,15 +40,12 @@ export function ServiceHero({ data, color }: ServiceHeroProps) {
     target: heroRef,
     offset: ["start start", "end start"],
   });
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.12]);
-  const opacity = useTransform(scrollYProgress, [0, 0.55, 1], [1, 0.85, 0]);
-  const y = useTransform(scrollYProgress, [0, 1], [0, 120]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.04]);
 
   const servicePillars = [
-    data.subheadline,
-    data.badge || "Strategic growth",
-    "Explore the full service model",
-  ];
+    data.badge || "Structured sector engagement",
+    "Long-term operating alignment",
+  ].filter(Boolean);
 
   const scrollToNext = () => {
     const nextSection = document.querySelector("[data-service-section]");
@@ -109,19 +106,15 @@ export function ServiceHero({ data, color }: ServiceHeroProps) {
 
       <div className="srv-hero-overlay" />
 
-      <motion.div style={{ opacity, y }} className="srv-hero-grid">
+      <div className="srv-hero-grid">
         <div className="srv-container">
-          <div className="srv-hero-content">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="srv-hero-content"
+          >
             <div className="srv-hero-copy">
-              {data.badge && (
-                <div className="srv-chip">
-                  <Sparkles size={14} />
-                  <span>{data.badge}</span>
-                </div>
-              )}
-
-              {data.subheadline && <p className="srv-eyebrow">{data.subheadline}</p>}
-
               {data.businessLogoUrl && (
                 <div className="srv-hero-logo">
                   {data.websitelink ? (
@@ -134,34 +127,34 @@ export function ServiceHero({ data, color }: ServiceHeroProps) {
                 </div>
               )}
 
+              <div className="srv-hero-meta">
+                <span className="srv-hero-meta-label">ARNN Group Business Vertical</span>
+              </div>
+
+              {data.subheadline && <p className="srv-eyebrow">{data.subheadline}</p>}
+
               <h1 className="srv-hero-title">{data.headline}</h1>
               <p className="srv-lead srv-hero-desc">{data.description}</p>
 
               <div className="srv-hero-actions">
                 <button className="srv-button srv-button-primary" onClick={scrollToNext}>
-                  Explore more
+                  View business scope
                   <ArrowRight size={18} />
                 </button>
               </div>
-            </div>
 
-            <div className="srv-hero-sidecard">
-              <div className="srv-chip">
-                <Sparkles size={14} />
-                <span>Service focus</span>
-              </div>
-              <div className="srv-side-list">
-                {servicePillars.filter(Boolean).map((item, idx) => (
-                  <div key={`${item}-${idx}`} className="srv-side-item">
+              <div className="srv-hero-proofbar">
+                {servicePillars.map((item, idx) => (
+                  <div key={`${item}-${idx}`} className="srv-hero-proofitem">
                     <span className="srv-side-index">{`0${idx + 1}`}</span>
-                    <p className="srv-copy">{item}</p>
+                    <p>{item}</p>
                   </div>
                 ))}
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
-      </motion.div>
+      </div>
 
       <div className="srv-hero-scroll cursor-pointer" onClick={scrollToNext}>
         <motion.div

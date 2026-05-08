@@ -103,6 +103,42 @@ export interface ServiceFAQData {
   items: ServiceFAQItem[];
 }
 
+export interface ServicePartnershipItem {
+  title: string;
+  description: string;
+}
+
+export interface ServicePartnershipData {
+  title: string;
+  subtitle?: string;
+  intro?: string;
+  items: ServicePartnershipItem[];
+}
+
+export interface ServiceStakeholderItem {
+  title: string;
+  description: string;
+}
+
+export interface ServiceStakeholderData {
+  title: string;
+  subtitle?: string;
+  intro?: string;
+  items: ServiceStakeholderItem[];
+}
+
+export interface ServiceGovernanceItem {
+  title: string;
+  description: string;
+}
+
+export interface ServiceGovernanceData {
+  title: string;
+  subtitle?: string;
+  intro?: string;
+  items: ServiceGovernanceItem[];
+}
+
 export interface ServiceCTAData {
   headline: string;
   description: string;
@@ -143,6 +179,9 @@ export interface ServiceData {
   features?: ServiceFeaturesData;
   process?: ServiceProcessData;
   stats?: ServiceStatsData;
+  partnership?: ServicePartnershipData;
+  stakeholders?: ServiceStakeholderData;
+  governance?: ServiceGovernanceData;
   success?: ServiceSuccessData;
   showcase?: ServiceShowcaseData;
   benefits?: ServiceBenefitsData;

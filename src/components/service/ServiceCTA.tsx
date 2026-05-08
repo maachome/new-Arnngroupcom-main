@@ -1,4 +1,4 @@
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Briefcase } from "lucide-react";
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
 import { ServiceCTAData } from "../../types/service";
@@ -21,8 +21,8 @@ export function ServiceCTA({ data, color }: ServiceCTAProps) {
         >
           <div>
             <div className="srv-chip">
-              <Sparkles size={14} />
-              <span>Next move</span>
+              <Briefcase size={14} />
+              <span>Business inquiry</span>
             </div>
             <h2 className="srv-heading mt-5">{data.headline}</h2>
             <p className="srv-copy mt-5 max-w-[58ch]">{data.description}</p>
@@ -34,7 +34,7 @@ export function ServiceCTA({ data, color }: ServiceCTAProps) {
               <ArrowRight size={18} />
             </Link>
             <a href="#service-categories" className="srv-button srv-button-secondary">
-              Browse categories
+              View other business areas
             </a>
           </div>
         </motion.div>

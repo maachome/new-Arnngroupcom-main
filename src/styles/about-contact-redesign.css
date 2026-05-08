@@ -6,22 +6,22 @@
   --ar2-line: rgba(17, 24, 39, 0.1);
   --ar2-paper: rgba(255, 255, 255, 0.72);
   --ar2-paper-strong: rgba(255, 255, 255, 0.88);
-  --ar2-accent: #1258f2;
-  --ar2-accent-2: #ff6b3d;
+  --ar2-accent: #132f63;
+  --ar2-accent-2: #b78a2f;
   min-height: 100vh;
   color: var(--ar2-ink);
   background:
-    radial-gradient(circle at 15% 10%, rgba(72, 131, 255, 0.16), transparent 30%),
-    radial-gradient(circle at 85% 12%, rgba(255, 110, 75, 0.16), transparent 26%),
-    linear-gradient(180deg, #f7f4ee 0%, #f2ede4 44%, #f6f2eb 100%);
+    radial-gradient(circle at 15% 10%, rgba(19, 47, 99, 0.08), transparent 30%),
+    radial-gradient(circle at 85% 12%, rgba(183, 138, 47, 0.12), transparent 26%),
+    linear-gradient(180deg, #fcfbf8 0%, #f8f5ee 44%, #fbfaf6 100%);
   overflow-x: clip;
 }
 
 .ar2-contact {
   background:
-    radial-gradient(circle at 14% 8%, rgba(72, 131, 255, 0.12), transparent 26%),
-    radial-gradient(circle at 84% 10%, rgba(255, 110, 75, 0.14), transparent 24%),
-    linear-gradient(180deg, #faf7f1 0%, #efe8dc 48%, #f5efe4 100%);
+    radial-gradient(circle at 14% 8%, rgba(19, 47, 99, 0.08), transparent 26%),
+    radial-gradient(circle at 84% 10%, rgba(183, 138, 47, 0.12), transparent 24%),
+    linear-gradient(180deg, #faf8f3 0%, #f3ede2 48%, #f8f4ec 100%);
 }
 
 .ar2-main {
@@ -89,7 +89,7 @@
   right: 8%;
   width: 240px;
   height: 240px;
-  background: radial-gradient(circle, rgba(18, 88, 242, 0.4), rgba(18, 88, 242, 0));
+  background: radial-gradient(circle, rgba(19, 47, 99, 0.28), rgba(19, 47, 99, 0));
 }
 
 .ar2-beam-b {
@@ -97,7 +97,7 @@
   left: 8%;
   width: 160px;
   height: 160px;
-  background: radial-gradient(circle, rgba(255, 107, 61, 0.35), rgba(255, 107, 61, 0));
+  background: radial-gradient(circle, rgba(183, 138, 47, 0.24), rgba(183, 138, 47, 0));
 }
 
 .ar2-beam-c {
@@ -142,7 +142,7 @@
   border-radius: 40px;
   border: 1px solid rgba(255, 255, 255, 0.72);
   background:
-    linear-gradient(120deg, rgba(245, 247, 255, 0.88) 0%, rgba(255, 249, 244, 0.72) 100%);
+    linear-gradient(120deg, rgba(255, 255, 255, 0.94) 0%, rgba(248, 243, 234, 0.82) 100%);
   box-shadow:
     0 28px 72px rgba(17, 24, 39, 0.08),
     inset 0 1px 0 rgba(255, 255, 255, 0.72);
@@ -173,13 +173,16 @@
 .ar2-about-copy,
 .ar2-contact-copy,
 .ar2-editorial-card,
-.ar2-quote-card,
+.ar2-overview-card,
 .ar2-about-panel,
 .ar2-contact-intro,
 .ar2-channel-card,
 .ar2-form-shell,
 .ar2-trajectory-shell,
 .ar2-pillar-card,
+.ar2-vertical-card,
+.ar2-governance-card,
+.ar2-outlook,
 .ar2-cta,
 .ar2-stat-ribbon {
   min-width: 0;
@@ -190,9 +193,10 @@
 .ar2-about-panel,
 .ar2-response-card,
 .ar2-editorial-card,
-.ar2-quote-card,
+.ar2-overview-card,
 .ar2-form-shell,
 .ar2-trajectory-shell,
+.ar2-outlook,
 .ar2-cta {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -218,7 +222,7 @@
   padding: 10px 14px;
   border-radius: 999px;
   border: 1px solid rgba(17, 24, 39, 0.1);
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.88);
   color: rgba(17, 24, 39, 0.82);
   font: 700 11px/1 "Inter", sans-serif;
 }
@@ -259,8 +263,7 @@
 .ar2-response-item p,
 .ar2-pillar-card p,
 .ar2-trajectory-item p,
-.ar2-channel-content p,
-.ar2-quote-text {
+.ar2-channel-content p {
   color: var(--ar2-muted);
   font: 500 16px/1.72 "Inter", sans-serif;
   overflow-wrap: anywhere;
@@ -319,8 +322,8 @@
 .ar2-button-solid {
   border: 0;
   color: #fff;
-  background: linear-gradient(135deg, var(--ar2-accent), var(--ar2-accent-2));
-  box-shadow: 0 16px 34px rgba(18, 88, 242, 0.2);
+  background: linear-gradient(135deg, var(--ar2-accent), #1b407d);
+  box-shadow: 0 16px 34px rgba(19, 47, 99, 0.2);
 }
 
 .ar2-button-outline {
@@ -342,10 +345,9 @@
 .ar2-contact-intro {
   padding: 28px;
   border-radius: 32px;
-  border: 1px solid rgba(255, 255, 255, 0.7);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.54));
-  box-shadow: 0 24px 64px rgba(17, 24, 39, 0.1);
+  border: 1px solid rgba(222, 214, 198, 0.9);
+  background: #fff;
+  box-shadow: 0 18px 48px rgba(17, 24, 39, 0.08);
 }
 
 .ar2-about-panel,
@@ -535,8 +537,8 @@
 .ar2-about-microstat {
   padding: 18px 22px;
   border-radius: 24px;
-  border: 1px solid rgba(17, 24, 39, 0.08);
-  background: rgba(255, 255, 255, 0.54);
+  border: 1px solid rgba(222, 214, 198, 0.9);
+  background: #fff;
   box-shadow: 0 14px 32px rgba(17, 24, 39, 0.05);
 }
 
@@ -580,18 +582,17 @@
 
 .ar2-manifest-item span,
 .ar2-response-item span {
-  color: rgba(18, 88, 242, 0.78);
+  color: rgba(183, 138, 47, 0.92);
   font: 800 10px/1.2 "Inter", sans-serif;
   padding-top: 6px;
 }
 
 .ar2-stat-ribbon {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   border-radius: 28px;
-  border: 1px solid rgba(255, 255, 255, 0.7);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.5));
+  border: 1px solid rgba(222, 214, 198, 0.9);
+  background: rgba(255, 255, 255, 0.9);
   box-shadow: 0 18px 40px rgba(17, 24, 39, 0.08);
   overflow: hidden;
 }
@@ -624,17 +625,17 @@
 .ar2-editorial-card {
   padding: 34px;
   border-radius: 34px;
-  border: 1px solid rgba(255, 255, 255, 0.72);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.56));
-  box-shadow: 0 24px 60px rgba(17, 24, 39, 0.08);
+  border: 1px solid rgba(222, 214, 198, 0.9);
+  background: #fff;
+  box-shadow: 0 20px 54px rgba(17, 24, 39, 0.08);
 }
 
-.ar2-quote-card {
+.ar2-overview-card {
   padding: 34px;
   border-radius: 34px;
-  background: linear-gradient(145deg, #121b31, #1e2c4f);
-  box-shadow: 0 28px 60px rgba(17, 24, 39, 0.18);
+  border: 1px solid rgba(222, 214, 198, 0.9);
+  background: linear-gradient(180deg, rgba(249, 245, 237, 0.94), rgba(255, 255, 255, 0.92));
+  box-shadow: 0 20px 54px rgba(17, 24, 39, 0.08);
 }
 
 .ar2-heading {
@@ -648,21 +649,61 @@
   margin-top: 14px;
 }
 
-.ar2-quote-mark {
-  color: rgba(255, 255, 255, 0.22);
-  font: 700 92px/0.9 "Syne", sans-serif;
+.ar2-overview-list {
+  display: grid;
+  gap: 16px;
+  margin-top: 18px;
 }
 
-.ar2-quote-text {
-  margin-top: 10px;
-  color: rgba(255, 255, 255, 0.82);
-  font-size: 21px;
-  line-height: 1.55;
+.ar2-overview-item {
+  display: grid;
+  gap: 8px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(17, 24, 39, 0.08);
+}
+
+.ar2-overview-item:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.ar2-overview-item span {
+  color: rgba(183, 138, 47, 0.96);
+  font: 800 10px/1.2 "Inter", sans-serif;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.ar2-overview-item p {
+  color: var(--ar2-muted);
+  font: 500 15px/1.65 "Inter", sans-serif;
+}
+
+.ar2-overview-item-icon {
+  grid-template-columns: 38px minmax(0, 1fr);
+  gap: 14px;
+  align-items: start;
+}
+
+.ar2-overview-icon {
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--ar2-accent), var(--ar2-accent-2));
+  box-shadow: 0 10px 24px rgba(19, 47, 99, 0.14);
 }
 
 .ar2-section-head {
   max-width: 760px;
   margin-bottom: 24px;
+}
+
+.ar2-section-copy {
+  margin-top: 14px;
 }
 
 .ar2-section-head-compact {
@@ -678,9 +719,8 @@
 .ar2-pillar-card {
   padding: 28px;
   border-radius: 30px;
-  border: 1px solid rgba(255, 255, 255, 0.74);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(255, 255, 255, 0.56));
+  border: 1px solid rgba(222, 214, 198, 0.9);
+  background: #fff;
   box-shadow: 0 18px 46px rgba(17, 24, 39, 0.08);
 }
 
@@ -704,7 +744,54 @@
   border-radius: 16px;
   color: #fff;
   background: linear-gradient(135deg, var(--ar2-accent), var(--ar2-accent-2));
-  box-shadow: 0 12px 28px rgba(18, 88, 242, 0.18);
+  box-shadow: 0 12px 28px rgba(19, 47, 99, 0.16);
+}
+
+.ar2-vertical-grid,
+.ar2-governance-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.ar2-vertical-card,
+.ar2-governance-card {
+  min-height: 100%;
+  padding: 24px;
+  border-radius: 24px;
+  border: 1px solid rgba(222, 214, 198, 0.9);
+  background: #fff;
+  box-shadow: 0 16px 38px rgba(17, 24, 39, 0.07);
+}
+
+.ar2-vertical-card {
+  display: grid;
+  align-content: space-between;
+  gap: 28px;
+}
+
+.ar2-vertical-index {
+  color: rgba(183, 138, 47, 0.92);
+  font: 800 10px/1 "Inter", sans-serif;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.ar2-vertical-card h3,
+.ar2-governance-card h3 {
+  margin: 16px 0 10px;
+  color: var(--ar2-ink);
+  font: 600 1.16rem/1.24 "Inter", sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.ar2-governance-card p {
+  color: var(--ar2-muted);
+  font: 500 14px/1.68 "Inter", sans-serif;
+}
+
+.ar2-editorial-grid-balanced {
+  align-items: stretch;
 }
 
 .ar2-pillar-card h3 {
@@ -717,7 +804,7 @@
 .ar2-trajectory-shell {
   padding: 30px;
   border-radius: 34px;
-  background: linear-gradient(145deg, #111a30, #1d2d4b);
+  background: linear-gradient(145deg, #102240, #17315b);
   box-shadow: 0 28px 64px rgba(17, 24, 39, 0.18);
 }
 
@@ -771,9 +858,16 @@
   align-items: center;
   padding: 30px 32px;
   border-radius: 32px;
-  border: 1px solid rgba(255, 255, 255, 0.72);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.56));
+  border: 1px solid rgba(222, 214, 198, 0.9);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(249, 245, 237, 0.92));
+  box-shadow: 0 22px 54px rgba(17, 24, 39, 0.08);
+}
+
+.ar2-outlook {
+  padding: 30px 32px;
+  border-radius: 32px;
+  border: 1px solid rgba(222, 214, 198, 0.9);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(249, 245, 237, 0.92));
   box-shadow: 0 22px 54px rgba(17, 24, 39, 0.08);
 }
 
@@ -1283,6 +1377,11 @@
     grid-template-columns: 1fr 1fr;
   }
 
+  .ar2-vertical-grid,
+  .ar2-governance-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .ar2-pillar-1,
   .ar2-pillar-2,
   .ar2-pillar-3,
@@ -1307,13 +1406,16 @@
   .ar2-about-panel,
   .ar2-contact-intro,
   .ar2-editorial-card,
-  .ar2-quote-card,
+  .ar2-overview-card,
   .ar2-form-shell,
   .ar2-trajectory-shell,
   .ar2-cta,
+  .ar2-outlook,
   .ar2-channel-card,
   .ar2-stat-cell,
-  .ar2-pillar-card {
+  .ar2-pillar-card,
+  .ar2-vertical-card,
+  .ar2-governance-card {
     padding: 22px;
     border-radius: 24px;
   }
@@ -1345,7 +1447,9 @@
   }
 
   .ar2-stat-ribbon,
-  .ar2-pillar-grid {
+  .ar2-pillar-grid,
+  .ar2-vertical-grid,
+  .ar2-governance-grid {
     grid-template-columns: 1fr;
   }
 

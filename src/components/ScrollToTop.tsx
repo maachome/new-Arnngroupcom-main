@@ -1,21 +1,23 @@
 import { motion, AnimatePresence } from "motion/react";
 import { ArrowUp } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.scrollY > 400) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
+      setIsVisible(window.scrollY > window.innerHeight);
     };
 
+    toggleVisibility();
     window.addEventListener("scroll", toggleVisibility);
-    return () => window.removeEventListener("scroll", toggleVisibility);
+    window.addEventListener("resize", toggleVisibility);
+
+    return () => {
+      window.removeEventListener("scroll", toggleVisibility);
+      window.removeEventListener("resize", toggleVisibility);
+    };
   }, []);
 
   const scrollToTop = () => {
@@ -35,19 +37,34 @@ export function ScrollToTop() {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-50 w-14 h-14 rounded-full bg-gradient-to-br from-[#2d3e5f] to-[#1a2744] border border-white/10 flex items-center justify-center shadow-2xl hover:shadow-[0_0_30px_rgba(45,62,95,0.5)] transition-shadow duration-300 cursor-pointer group"
+          className="fixed rounded-full bg-white border border-[#dcc48a] flex items-center justify-center transition-shadow duration-300 cursor-pointer group p-0 overflow-visible"
+          style={{
+            right: window.innerWidth >= 1024 ? "3rem" : window.innerWidth >= 640 ? "3rem" : "1rem",
+            bottom: "1.75rem",
+            zIndex: 9999,
+            width: window.innerWidth >= 1024 ? "64px" : window.innerWidth >= 640 ? "44px" : "40px",
+            height: window.innerWidth >= 1024 ? "64px" : window.innerWidth >= 640 ? "44px" : "40px",
+            minWidth: window.innerWidth >= 1024 ? "64px" : window.innerWidth >= 640 ? "44px" : "40px",
+            minHeight: window.innerWidth >= 1024 ? "64px" : window.innerWidth >= 640 ? "44px" : "40px",
+            borderRadius: "9999px",
+            boxShadow:
+              "0 18px 40px rgba(15, 23, 42, 0.22), 0 8px 18px rgba(183, 138, 47, 0.22), 0 2px 6px rgba(255, 255, 255, 0.65) inset",
+          }}
           aria-label="Scroll to top"
         >
           <motion.div
             animate={{ y: [0, -3, 0] }}
             transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
           >
-            <ArrowUp className="w-6 h-6 text-white group-hover:text-blue-300 transition-colors duration-300" />
+            <ArrowUp
+              className="h-7 w-7 transition-colors duration-300 sm:h-14 sm:w-14 lg:h-28 lg:w-28"
+              style={{ color: "#9a741f" }}
+            />
           </motion.div>
           
           {/* Animated Ring */}
           <motion.div
-            className="absolute inset-0 rounded-full border-2 border-blue-400/50"
+            className="absolute inset-0 rounded-full border-2 border-[#dcc48a]/60"
             animate={{ scale: [1, 1.2, 1], opacity: [0.5, 0, 0.5] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
           />

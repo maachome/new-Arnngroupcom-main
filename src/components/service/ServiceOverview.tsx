@@ -1,6 +1,5 @@
 import { motion } from "motion/react";
 import { ServiceOverviewData } from "../../types/service";
-import { ArrowUpRight, Check } from "lucide-react";
 
 interface ServiceOverviewProps {
   data: ServiceOverviewData;
@@ -9,6 +8,8 @@ interface ServiceOverviewProps {
 
 export function ServiceOverview({ data, color }: ServiceOverviewProps) {
   const [leadParagraph, ...supportingParagraphs] = data.paragraphs;
+  const visibleSupportingParagraphs = supportingParagraphs.slice(0, 1);
+  const visibleHighlights = data.highlights?.slice(0, 3) || [];
 
   return (
     <section
@@ -31,10 +32,10 @@ export function ServiceOverview({ data, color }: ServiceOverviewProps) {
 
           <div className="srv-overview-grid">
             <motion.div
-              initial={{ opacity: 0, x: -34 }}
+              initial={{ opacity: 0, x: -24 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.65 }}
+              transition={{ duration: 0.55 }}
               className="srv-overview-visual"
             >
               {data.image ? (
@@ -43,59 +44,40 @@ export function ServiceOverview({ data, color }: ServiceOverviewProps) {
                   <div className="srv-overview-image-glow" />
                 </div>
               ) : null}
-
-              <div className="srv-overview-note">
-                <span>Focus</span>
-                <strong>{data.subtitle || "Service overview"}</strong>
-                <p>Built from the same underlying business data, presented with stronger hierarchy.</p>
-              </div>
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: 34 }}
+              initial={{ opacity: 0, x: 24 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.65, delay: 0.06 }}
+              transition={{ duration: 0.55, delay: 0.04 }}
               className="srv-overview-copywrap"
             >
               <article className="srv-panel srv-overview-leadpanel">
-                <div className="srv-overview-kicker">
-                  <span>Overview</span>
-                  <ArrowUpRight size={16} />
-                </div>
                 <p className="srv-overview-lead">{leadParagraph}</p>
-              </article>
-
-              {supportingParagraphs.length ? (
-                <div className="srv-overview-textgrid">
-                  {supportingParagraphs.map((paragraph, idx) => (
-                    <article key={idx} className="srv-panel srv-overview-textcard">
-                      <p className="srv-copy">{paragraph}</p>
-                    </article>
-                  ))}
-                </div>
-              ) : null}
-
-              {data.highlights?.length ? (
-                <div className="srv-panel srv-overview-highlights">
-                  <div className="srv-overview-kicker">
-                    <span>Key signals</span>
-                  </div>
-                  <div className="srv-overview-highlightgrid">
-                    {data.highlights.map((highlight, idx) => (
-                      <div key={idx} className="srv-overview-highlight">
-                        <div
-                          className="srv-overview-highlighticon"
-                          style={{ backgroundColor: `${color}18` }}
-                        >
-                          <Check className="w-4 h-4" style={{ color }} />
-                        </div>
-                        <span>{highlight}</span>
-                      </div>
+                {visibleSupportingParagraphs.length ? (
+                  <div className="srv-overview-body">
+                    {visibleSupportingParagraphs.map((paragraph, idx) => (
+                      <p key={idx} className="srv-copy">
+                        {paragraph}
+                      </p>
                     ))}
                   </div>
-                </div>
-              ) : null}
+                ) : null}
+
+                {visibleHighlights.length ? (
+                  <div className="srv-overview-signals">
+                    <div className="srv-overview-signalgrid">
+                      {visibleHighlights.map((highlight, idx) => (
+                        <div key={idx} className="srv-overview-signal">
+                          <span className="srv-overview-signalmark" />
+                          <span>{highlight}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ) : null}
+              </article>
             </motion.div>
           </div>
         </div>

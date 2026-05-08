@@ -58,9 +58,12 @@ export function ServiceSuccess({ data, color }: ServiceSuccessProps) {
   return (
     <section className="srv-section" style={{ ["--srv-accent" as string]: color }}>
       <div className="srv-container">
-        <div className="text-center max-w-[760px] mx-auto mb-10">
-          {data.subtitle && <div className="srv-chip mx-auto">{data.subtitle}</div>}
+        <div className="srv-success-header">
+          {data.subtitle && <div className="srv-chip">{data.subtitle}</div>}
           <h2 className="srv-heading mt-5">{data.title}</h2>
+          <p className="srv-nav-copy mt-4 max-w-[58ch]">
+            Representative engagements and selected business outcomes across the sector.
+          </p>
         </div>
 
         <div className="srv-success-grid">
@@ -86,7 +89,7 @@ export function ServiceSuccess({ data, color }: ServiceSuccessProps) {
                 <p className="srv-story-copy">{story.description}</p>
 
                 <div className="srv-achievement">
-                  <p className="srv-achievement-label">Key achievement</p>
+                  <p className="srv-achievement-label">Representative outcome</p>
                   <p className="srv-achievement-copy">{story.achievement}</p>
                 </div>
               </motion.article>

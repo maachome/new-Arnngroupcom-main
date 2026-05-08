@@ -7,7 +7,6 @@ import {
   Sprout, Waves, Package, LineChart, Gem, Shirt, Footprints, ShieldCheck, GraduationCap,
   Video, Stethoscope, Plane, Hospital, DollarSign, Map, Cpu, Wheat,
   Sofa, Lamp, Palette, Factory, Utensils, Coffee, Store, ShoppingBag, Code,
-  ArrowUpRight,
 } from "lucide-react";
 
 const iconMap: Record<string, any> = {
@@ -65,11 +64,6 @@ interface ServiceFeaturesProps {
 }
 
 export function ServiceFeatures({ data, color }: ServiceFeaturesProps) {
-  const [featured, ...remaining] = data.items;
-  const leftColumn = remaining.filter((_, idx) => idx % 2 === 0);
-  const rightColumn = remaining.filter((_, idx) => idx % 2 === 1);
-  const FeaturedIcon = featured ? iconMap[featured.icon] || Sparkles : Sparkles;
-
   return (
     <section className="srv-section" style={{ ["--srv-accent" as string]: color }}>
       <div className="srv-container">
@@ -80,83 +74,32 @@ export function ServiceFeatures({ data, color }: ServiceFeaturesProps) {
           </div>
 
           <div className="srv-features-layout">
-            {featured ? (
-              <motion.article
-                initial={{ opacity: 0, y: 28 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.55 }}
-                className="srv-feature-hero"
-              >
-                <div className="srv-feature-hero-top">
-                  <div className="srv-card-icon">
-                    <FeaturedIcon size={24} />
+            {data.items.map((feature, idx) => {
+              const Icon = iconMap[feature.icon] || Sparkles;
+              return (
+                <motion.article
+                  key={`${feature.title}-${idx}`}
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.45, delay: idx * 0.04 }}
+                  className="srv-feature-card"
+                >
+                  <div className="srv-feature-card-top">
+                    <div className="srv-card-icon">
+                      <Icon size={20} />
+                    </div>
+                    <span>{`0${idx + 1}`}</span>
                   </div>
                   <div className="srv-feature-tag">
-                    <span>Primary capability</span>
-                    <ArrowUpRight size={16} />
+                    <span>Capability</span>
                   </div>
-                </div>
-
-                <div className="srv-feature-hero-copy">
-                  <h3>{featured.title}</h3>
-                  <p>{featured.description}</p>
-                  {featured.details ? <strong>{featured.details}</strong> : null}
-                </div>
-              </motion.article>
-            ) : null}
-
-            <div className="srv-feature-column">
-              {leftColumn.map((feature, idx) => {
-                const Icon = iconMap[feature.icon] || Sparkles;
-                return (
-                  <motion.article
-                    key={`${feature.title}-${idx}`}
-                    initial={{ opacity: 0, y: 24 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: idx * 0.06 }}
-                    className="srv-feature-card"
-                  >
-                    <div className="srv-feature-card-top">
-                      <div className="srv-card-icon">
-                        <Icon size={20} />
-                      </div>
-                      <span>{`0${idx + 2}`}</span>
-                    </div>
-                    <h3>{feature.title}</h3>
-                    <p>{feature.description}</p>
-                    {feature.details ? <small>{feature.details}</small> : null}
-                  </motion.article>
-                );
-              })}
-            </div>
-
-            <div className="srv-feature-column">
-              {rightColumn.map((feature, idx) => {
-                const Icon = iconMap[feature.icon] || Sparkles;
-                return (
-                  <motion.article
-                    key={`${feature.title}-${idx}`}
-                    initial={{ opacity: 0, y: 24 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: idx * 0.06 }}
-                    className="srv-feature-card srv-feature-card-alt"
-                  >
-                    <div className="srv-feature-card-top">
-                      <div className="srv-card-icon">
-                        <Icon size={20} />
-                      </div>
-                      <span>{`0${idx + leftColumn.length + 2}`}</span>
-                    </div>
-                    <h3>{feature.title}</h3>
-                    <p>{feature.description}</p>
-                    {feature.details ? <small>{feature.details}</small> : null}
-                  </motion.article>
-                );
-              })}
-            </div>
+                  <h3>{feature.title}</h3>
+                  <p>{feature.description}</p>
+                  {feature.details ? <small>{feature.details}</small> : null}
+                </motion.article>
+              );
+            })}
           </div>
         </div>
       </div>

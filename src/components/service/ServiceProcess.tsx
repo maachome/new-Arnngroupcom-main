@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { ServiceProcessData } from "../../types/service";
-import { Check, Lightbulb, Handshake, Leaf, Target, ArrowUpRight } from "lucide-react";
+import { Check, Lightbulb, Handshake, Leaf, Target } from "lucide-react";
 
 const iconMap: Record<string, any> = {
   check: Check,
@@ -50,8 +50,7 @@ export function ServiceProcess({ data, color }: ServiceProcessProps) {
                       <Icon size={20} />
                     </div>
                     <div className="srv-process-meta">
-                      <span>{`Phase 0${idx + 1}`}</span>
-                      <ArrowUpRight size={16} />
+                      <span>{`Step 0${idx + 1}`}</span>
                     </div>
                   </div>
 
