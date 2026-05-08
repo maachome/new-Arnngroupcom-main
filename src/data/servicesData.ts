@@ -1196,8 +1196,8 @@ export const servicesData: ServiceData[] = [
       description: "Initiated and led by ARNN Group, AgriFuture Global transforms idle and underutilized land into thriving agricultural zones through modern innovation and traditional farming methods.",
      businessLogoUrl: agrifuturesglobal,
       mediaType: "video",
-      mediaUrl: "https://arnn-group.s3.ap-south-1.amazonaws.com/New+Website+ARNN/F%26B+Segments.mp4",
-      websitelink: "#",
+      mediaUrl: "https://www.youtube.com/watch?v=0-Sx9Br46g8",
+      websitelink: "https://www.agrifutureglobal.com/",
       mobileMediaUrl: false
     },
 
@@ -1218,7 +1218,7 @@ export const servicesData: ServiceData[] = [
         "Government partnerships and public-private collaboration",
         "Job creation, skills development, and profit-sharing"
       ],
-      image: "https://arnn-group.s3.ap-south-1.amazonaws.com/New+Website+ARNN/FNB.png"
+      image: "https://arnn-group.s3.ap-south-1.amazonaws.com/New+Website+ARNN/Agro.png"
     },
 
     features: {
