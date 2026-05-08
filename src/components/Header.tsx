@@ -84,12 +84,17 @@ export function Header() {
 
   // Check if we're on contact page or about-us page at top of scroll
   const isContactPageAtTop = (location.pathname === "/contact" || location.pathname === "/about-us") && !isScrolled;
+  const isAboutPageAtTop = location.pathname === "/about-us" && !isScrolled;
   const serviceHeaderBase = isScrolled
     ? "bg-[#2d3e5f] text-white shadow-lg"
-    : isAboutOrContactPage
+    : isAboutPageAtTop
+      ? "bg-transparent text-white"
+      : isAboutOrContactPage
       ? "bg-transparent text-black"
       : "bg-transparent text-white";
-  const serviceHeaderLink = isAboutOrContactPage && !isScrolled
+  const serviceHeaderLink = isAboutPageAtTop
+    ? "text-white font-normal tracking-[0.18em] [text-shadow:0_1px_10px_rgba(0,0,0,0.28)] hover:text-white transition-colors"
+    : isAboutOrContactPage && !isScrolled
     ? "text-black font-normal tracking-[0.18em] hover:text-black transition-colors"
     : "text-white font-normal tracking-[0.18em] [text-shadow:0_1px_10px_rgba(0,0,0,0.28)] hover:text-white transition-colors";
   const serviceHeaderActiveBorder = "border-[#b78a2f]";
@@ -104,6 +109,8 @@ export function Header() {
   const isCollapsedHeader = useCollapsedHeader && isScrolled && !isVisible;
   const currentLogo = isCollapsedHeader
     ? arnnLogo
+    : isAboutPageAtTop
+      ? arnnLogoScrolled
     : isServicePage || isScrolled
       ? arnnLogoScrolled
       : arnnLogo;

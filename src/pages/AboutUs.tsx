@@ -1,29 +1,26 @@
-import { Header } from "../components/Header";
-import { Footer } from "../components/Footer";
-import "../styles/about-contact-redesign.css";
 import { motion } from "motion/react";
 import {
-  BadgeCheck,
   ArrowRight,
+  BadgeCheck,
+  Blocks,
   BriefcaseBusiness,
   Building2,
   Globe2,
+  Landmark,
   MoveRight,
   Orbit,
-  Shield,
   ShieldCheck,
-  Sparkles,
   Target,
   Users2,
   Waypoints,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Footer } from "../components/Footer";
+import { Header } from "../components/Header";
+import "../styles/service-redesign.css";
 
-const groupOverview = [
-  "ARNN Group operates as a long-horizon business platform rather than a collection of disconnected ventures.",
-  "The group combines commercial judgment, operating discipline, and design awareness so each vertical can mature with credibility.",
-  "Every new initiative is assessed for strategic fit, execution readiness, and its ability to strengthen the wider portfolio over time.",
-];
+const aboutHeroVideo =
+  "https://arnn-group.s3.ap-south-1.amazonaws.com/New+Website+ARNN/Real+estate.mp4";
 
 const stats = [
   { value: "1996", label: "group foundation" },
@@ -32,476 +29,548 @@ const stats = [
   { value: "Long-term", label: "investment posture" },
 ];
 
-const verticals = [
-  "Economic Empowerment",
-  "Real Estate Development",
-  "Information & Communication Technologies",
-  "Agro-Aquaculture",
-  "Fashion Industries",
-  "Empowering Global Talent",
-  "Global Healthcare",
-  "AgriFuture Global",
-  "Furniture and Furnishing Sectors",
-  "F&B Segments",
+const overviewSignals = [
+  "Founded in 1996 with a long-horizon business mindset.",
+  "Active across 10 sectors spanning development, operations, services, and strategic platforms.",
+  "Cross-border outlook shaped by partnership discipline and execution continuity.",
 ];
 
-const pillars = [
+const capabilities = [
   {
     icon: Orbit,
+    title: "Strategic development",
+    description:
+      "ARNN Group evaluates sectors, ventures, and opportunities through a portfolio lens rather than isolated deal-making.",
+    details: "Business selection is expected to align with long-term fit, timing, and execution realism.",
+  },
+  {
+    icon: BriefcaseBusiness,
+    title: "Partnership structuring",
+    description:
+      "The group works with governments, investors, operators, and delivery specialists through clearer role definition.",
+    details: "That structure helps preserve accountability, continuity, and commercial clarity across sectors.",
+  },
+  {
+    icon: Building2,
+    title: "Operating range",
+    description:
+      "The platform spans development-led, operational, service, and investment-oriented businesses under one business standard.",
+    details: "This allows ARNN to participate across different market realities without losing institutional coherence.",
+  },
+  {
+    icon: BadgeCheck,
+    title: "Execution stewardship",
+    description:
+      "The emphasis remains on viability after launch, not just initial presentation or market entry.",
+    details: "Governance, quality controls, and continuity expectations are built into the way the group expands.",
+  },
+];
+
+const philosophy = [
+  {
+    number: "01",
     title: "Portfolio intelligence",
-    body: "Every business is expected to strengthen the wider group, not just itself.",
+    description:
+      "Each venture is expected to strengthen the wider group, not simply stand alone as a disconnected business line.",
   },
   {
-    icon: Sparkles,
-    title: "Taste in execution",
-    body: "Good strategy is not enough. The final experience also has to feel refined and intentional.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Operational discipline",
-    body: "Structure, trust, and delivery quality are treated as part of the product.",
-  },
-  {
-    icon: Target,
+    number: "02",
     title: "Selective ambition",
-    body: "We enter spaces where conviction, timing, and stewardship can create lasting relevance.",
+    description:
+      "The group enters spaces where conviction, timing, and stewardship can produce meaningful long-term relevance.",
+  },
+  {
+    number: "03",
+    title: "Operational discipline",
+    description:
+      "Structure, trust, and delivery quality are treated as core parts of the business model rather than secondary refinements.",
+  },
+  {
+    number: "04",
+    title: "Taste in execution",
+    description:
+      "Commercial logic matters, but so does the clarity, refinement, and credibility of the final experience.",
   },
 ];
 
 const governance = [
   {
-    icon: Shield,
+    icon: ShieldCheck,
     title: "Portfolio governance",
-    body: "The group evaluates opportunities against relevance, feasibility, and long-term fit before committing capital, attention, or delivery resources.",
+    description:
+      "Opportunities are reviewed against relevance, feasibility, and long-term fit before the group commits operating attention or strategic weight.",
   },
   {
-    icon: BadgeCheck,
+    icon: Landmark,
     title: "Execution standards",
-    body: "Projects and ventures are expected to move through structured checkpoints that preserve quality, accountability, and operational clarity.",
+    description:
+      "Projects and ventures move through clearer checkpoints intended to preserve accountability and operational clarity across delivery.",
   },
   {
-    icon: Building2,
+    icon: Users2,
     title: "Partnership discipline",
-    body: "Government, investor, operator, and delivery relationships are approached through clearly defined roles rather than loose coordination.",
+    description:
+      "Institutional, investor, operator, and technical relationships are organized through defined roles rather than loose coordination.",
   },
   {
     icon: Globe2,
     title: "Continuity focus",
-    body: "ARNN Group remains oriented toward continuity after launch, ensuring the business model can mature rather than peak at presentation stage.",
+    description:
+      "The group remains oriented toward continuity after launch so businesses can mature with stability instead of peaking at presentation stage.",
   },
 ];
 
-const partnershipApproach = [
+const stakeholders = [
   {
-    icon: Users2,
-    title: "Institutional counterparts",
-    body: "The group engages with public bodies, regulators, and strategic institutions where long-term alignment matters to execution.",
+    icon: Landmark,
+    title: "Governments and public bodies",
+    description:
+      "The group engages where policy alignment, approvals, and long-term economic relevance shape execution conditions.",
   },
   {
     icon: BriefcaseBusiness,
-    title: "Operators and specialists",
-    body: "Sector operators, technical specialists, and delivery partners are brought in through roles that preserve clarity and accountability.",
+    title: "Investors and capital partners",
+    description:
+      "Capital relationships are approached through strategic fit, commercial discipline, and long-view operating viability.",
   },
   {
-    icon: Orbit,
-    title: "Investors and commercial partners",
-    body: "Capital relationships are evaluated through strategic fit, commercial structure, and long-view operating relevance.",
+    icon: Building2,
+    title: "Operators and business owners",
+    description:
+      "Sector operators and commercial partners are engaged where operational strength and delivery continuity matter beyond launch.",
+  },
+  {
+    icon: Users2,
+    title: "Technical and delivery specialists",
+    description:
+      "Specialist collaborators support design, implementation, systems, and execution quality across different verticals.",
+  },
+];
+
+const sectors = [
+  {
+    title: "Economic Empowerment",
+    slug: "economic-empowerment",
+    summary: "Public-private and investment-oriented initiatives aligned to long-term economic value creation.",
+  },
+  {
+    title: "Real Estate Development",
+    slug: "real-estate-development",
+    summary: "Development platforms shaped by hospitality, asset quality, and long-view commercial positioning.",
+  },
+  {
+    title: "Information & Communication Technologies",
+    slug: "ict",
+    summary: "Technology-led platforms spanning infrastructure, software, and implementation discipline.",
+  },
+  {
+    title: "Agro-Aquaculture",
+    slug: "agro-aquaculture",
+    summary: "Production systems built around innovation, operational control, and sustainability.",
+  },
+  {
+    title: "Fashion Industries",
+    slug: "fashion-industries",
+    summary: "Brand, sourcing, and customer-facing businesses where execution quality shapes market credibility.",
+  },
+  {
+    title: "Empowering Global Talent",
+    slug: "empowering-global-talent",
+    summary: "Structured recruitment and workforce pathways with stronger emphasis on verification and continuity.",
+  },
+  {
+    title: "Global Healthcare",
+    slug: "healthcare-access",
+    summary: "Care access and treatment coordination supported by provider quality and managed patient journeys.",
+  },
+  {
+    title: "AgriFuture Global",
+    slug: "food-safety",
+    summary: "Land activation and food-security programs combining policy alignment and field execution.",
+  },
+  {
+    title: "Furniture and Furnishing Sectors",
+    slug: "luxury-furniture",
+    summary: "Residential, hospitality, and project furnishing with design, sourcing, and delivery coordination.",
+  },
+  {
+    title: "F&B Segments",
+    slug: "fb-segments",
+    summary: "Concept, operating, and market expansion models across food and beverage formats.",
   },
 ];
 
 const trajectory = [
   {
-    label: "Foundation",
-    year: "1996",
-    body: "The group begins with entrepreneurial discipline and a long-view approach to value creation.",
+    title: "Foundation",
+    details: "1996",
+    description: "ARNN Group begins with entrepreneurial discipline and a long-view approach to value creation.",
   },
   {
-    label: "Expansion",
-    year: "Scale",
-    body: "ARNN grows across multiple sectors while keeping a deliberate posture toward opportunity and execution.",
+    title: "Expansion",
+    details: "Scale",
+    description: "The group expands across sectors while maintaining a selective posture toward opportunity and execution.",
   },
   {
-    label: "Current mode",
-    year: "Today",
-    body: "The business operates as a connected platform where partnerships, design, and operations reinforce each other.",
+    title: "Current mode",
+    details: "Today",
+    description: "The business operates as a connected platform where partnerships, design quality, and operations reinforce one another.",
   },
 ];
 
 export function AboutUs() {
   return (
-    <div className="ar2-shell ar2-about">
+    <div className="srv-shell about-srv min-h-screen flex flex-col">
       <Header />
 
-      <main className="ar2-main">
-        <section className="ar2-hero">
-          <div className="ar2-noise" />
-          <div className="ar2-beam ar2-beam-a" />
-          <div className="ar2-beam ar2-beam-b" />
-
-          <div className="ar2-container">
-            <motion.div
-              className="ar2-about-hero"
-              initial={{ opacity: 0, y: 28 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.75, ease: "easeOut" }}
+      <main>
+        <section className="srv-hero about-srv-hero">
+          <div className="srv-hero-media z-0">
+            <motion.video
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="auto"
+              className="bg-video-blur"
             >
-              <div className="ar2-about-stage">
-                <div className="ar2-about-copy">
-                  <div className="ar2-chip">
+              <source src={aboutHeroVideo} type="video/mp4" />
+            </motion.video>
+          </div>
+          <div className="srv-hero-overlay about-srv-hero-overlay" />
+
+          <div className="srv-hero-grid">
+            <div className="srv-container">
+              <div className="about-srv-hero-stage">
+                <div className="srv-hero-content">
+                  <div className="srv-chip">
                     <Waypoints size={14} />
                     <span>About ARNN Group</span>
                   </div>
-                  <p className="ar2-kicker">Built with precision. Expanded with intent.</p>
-                  <h1 className="ar2-display">
+                  <p className="srv-eyebrow">Built with precision. Expanded with intent.</p>
+                  <h1 className="srv-hero-title">
                     A group platform built to develop credible businesses across sectors, markets, and long-term opportunities.
                   </h1>
-                  <p className="ar2-lead">
-                    ARNN Group develops and coordinates businesses through a disciplined portfolio approach.
-                    The objective is not expansion for its own sake, but the creation of ventures that are
-                    commercially grounded, operationally structured, and coherent within the wider group.
+                  <p className="srv-copy srv-hero-desc">
+                    ARNN Group develops and coordinates businesses through a disciplined portfolio approach built on commercial logic,
+                    operating structure, and long-term coherence across the wider group.
                   </p>
 
-                  <div className="ar2-actions">
-                    <Link to="/contact" className="ar2-button ar2-button-solid">
+                  <div className="srv-hero-actions">
+                    <Link to="/contact" className="srv-button srv-button-primary">
                       Contact the group
                       <ArrowRight size={18} />
                     </Link>
-                    <a href="#ar2-about-story" className="ar2-button ar2-button-outline">
+                    <a href="#about-overview" className="srv-button srv-button-secondary">
                       Read the story
                     </a>
                   </div>
                 </div>
-
-                <div className="ar2-about-aside">
-                  <div className="ar2-about-panel">
-                    <div className="ar2-panel-head">
-                      <span>Group overview</span>
-                      <span>01</span>
-                    </div>
-                    <div className="ar2-manifest-list">
-                      {groupOverview.map((item, index) => (
-                        <article key={item} className="ar2-manifest-item">
-                          <span>{`0${index + 1}`}</span>
-                          <p>{item}</p>
-                        </article>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="ar2-about-microstat">
-                    <span>Group position</span>
-                    <strong>Portfolio-led growth anchored by governance, design quality, and execution discipline.</strong>
-                  </div>
-                </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
-        <section className="ar2-section ar2-section-tight">
-          <div className="ar2-container">
-            <div className="ar2-stat-ribbon">
+        <section className="srv-section about-srv-stats">
+          <div className="srv-container">
+            <div className="srv-stats-grid about-srv-stats-grid">
               {stats.map((item) => (
-                <article key={item.label} className="ar2-stat-cell">
-                  <p className="ar2-stat-value">{item.value}</p>
-                  <p className="ar2-stat-label">{item.label}</p>
+                <article key={item.label} className="srv-stat">
+                  <p className="srv-stat-label">{item.label}</p>
+                  <div className="srv-stat-value">
+                    <span>{item.value}</span>
+                  </div>
                 </article>
               ))}
             </div>
           </div>
         </section>
 
-        <section id="ar2-about-story" className="ar2-section">
-          <div className="ar2-container">
-            <div className="ar2-editorial-grid">
-              <motion.article
-                className="ar2-editorial-card"
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.25 }}
-                transition={{ duration: 0.55 }}
-              >
-                <div className="ar2-chip">
-                  <Sparkles size={14} />
+        <section id="about-overview" className="srv-section">
+          <div className="srv-container">
+            <div className="srv-overview-shell">
+              <div className="srv-overview-heading">
+                <div className="srv-chip">
+                  <Blocks size={14} />
                   <span>Group overview</span>
                 </div>
-                <h2 className="ar2-heading">
+                <h2 className="srv-heading mt-5">
                   ARNN Group is structured to connect strategy, operations, and long-term portfolio value.
                 </h2>
-                <p className="ar2-body">
-                  The group does not treat sector entry as a branding exercise. Each business vertical is
-                  expected to stand on commercial logic, disciplined execution, and a credible path to maturity.
-                </p>
-                <p className="ar2-body">
-                  That operating posture allows ARNN to build a portfolio where different sectors reinforce
-                  the wider platform through judgment, continuity, and practical business stewardship.
-                </p>
-              </motion.article>
-
-              <motion.aside
-                className="ar2-overview-card"
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.25 }}
-                transition={{ duration: 0.55, delay: 0.08 }}
-              >
-                <div className="ar2-panel-head">
-                  <span>Business model</span>
-                  <span>02</span>
-                </div>
-                <div className="ar2-overview-list">
-                  <article className="ar2-overview-item">
-                    <span>Platform logic</span>
-                    <p>Each vertical is evaluated not only on standalone potential, but on how it contributes to group-level strength and relevance.</p>
-                  </article>
-                  <article className="ar2-overview-item">
-                    <span>Commercial discipline</span>
-                    <p>Growth decisions are expected to preserve market fit, quality standards, and operational viability rather than chase volume.</p>
-                  </article>
-                  <article className="ar2-overview-item">
-                    <span>Long-view stewardship</span>
-                    <p>The group remains focused on continuity after launch so businesses can mature with stability and trust.</p>
-                  </article>
-                </div>
-              </motion.aside>
-            </div>
-          </div>
-        </section>
-
-        <section className="ar2-section">
-          <div className="ar2-container">
-            <div className="ar2-section-head">
-              <div className="ar2-chip">
-                <Building2 size={14} />
-                <span>Business verticals</span>
               </div>
-              <h2 className="ar2-heading">The group spans distinct sectors with a shared operating standard.</h2>
-              <p className="ar2-body ar2-section-copy">
-                ARNN Group’s portfolio reaches across investment-oriented, operating, and service-led businesses while maintaining a common expectation around quality, governance, and execution.
-              </p>
-            </div>
 
-            <div className="ar2-vertical-grid">
-              {verticals.map((item, index) => (
-                <motion.article
-                  key={item}
-                  className="ar2-vertical-card"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.2 }}
-                  transition={{ duration: 0.45, delay: index * 0.04 }}
-                >
-                  <span className="ar2-vertical-index">{String(index + 1).padStart(2, "0")}</span>
-                  <h3>{item}</h3>
-                </motion.article>
-              ))}
-            </div>
-          </div>
-        </section>
+              <div className="srv-overview-grid">
+                <div className="srv-overview-visual">
+                  <div className="srv-panel about-srv-overview-visual">
+                    <span className="srv-card-label">Group structure</span>
+                    <h3 className="srv-card-title">A connected portfolio model rather than a disconnected holding approach.</h3>
+                    <p className="srv-card-copy">
+                      Each vertical is expected to stand on its own commercial merit while also contributing to the strength,
+                      credibility, and continuity of the wider group.
+                    </p>
+                  </div>
+                </div>
 
-        <section className="ar2-section">
-          <div className="ar2-container">
-            <div className="ar2-section-head">
-              <div className="ar2-chip">
-                <Target size={14} />
-                <span>How we operate</span>
-              </div>
-              <h2 className="ar2-heading">A sharper operating philosophy behind every vertical.</h2>
-            </div>
-
-            <div className="ar2-pillar-grid">
-              {pillars.map((item, index) => {
-                const Icon = item.icon;
-                return (
-                  <motion.article
-                    key={item.title}
-                    className={`ar2-pillar-card ar2-pillar-${index + 1}`}
-                    initial={{ opacity: 0, y: 22 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.2 }}
-                    transition={{ duration: 0.48, delay: index * 0.07 }}
-                  >
-                    <div className="ar2-icon-wrap">
-                      <Icon size={20} />
+                <div className="srv-overview-copywrap">
+                  <div className="srv-overview-leadpanel">
+                    <p className="srv-overview-lead">
+                      ARNN Group is structured to connect strategy, operations, and long-term portfolio value across multiple sectors.
+                    </p>
+                    <div className="srv-overview-body">
+                      <p className="srv-copy">
+                        The group does not treat sector participation as a branding exercise. Each business is expected to follow commercial logic,
+                        disciplined execution, and a credible path to maturity while reinforcing the wider platform.
+                      </p>
                     </div>
-                    <h3>{item.title}</h3>
-                    <p>{item.body}</p>
-                  </motion.article>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-        <section className="ar2-section">
-          <div className="ar2-container">
-            <div className="ar2-section-head">
-              <div className="ar2-chip">
-                <ShieldCheck size={14} />
-                <span>Governance</span>
-              </div>
-              <h2 className="ar2-heading">Standards and oversight shape how the group expands.</h2>
-            </div>
-
-            <div className="ar2-governance-grid">
-              {governance.map((item, index) => {
-                const Icon = item.icon;
-                return (
-                  <motion.article
-                    key={item.title}
-                    className="ar2-governance-card"
-                    initial={{ opacity: 0, y: 22 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.2 }}
-                    transition={{ duration: 0.48, delay: index * 0.06 }}
-                  >
-                    <div className="ar2-icon-wrap">
-                      <Icon size={20} />
+                    <div className="srv-overview-signals">
+                      <div className="srv-overview-signalgrid">
+                        {overviewSignals.map((item) => (
+                          <div key={item} className="srv-overview-signal">
+                            <span className="srv-overview-signalmark" />
+                            <span>{item}</span>
+                          </div>
+                        ))}
+                      </div>
                     </div>
-                    <h3>{item.title}</h3>
-                    <p>{item.body}</p>
-                  </motion.article>
-                );
-              })}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-        <section className="ar2-section">
-          <div className="ar2-container">
-            <div className="ar2-editorial-grid ar2-editorial-grid-balanced">
-              <motion.article
-                className="ar2-editorial-card"
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.25 }}
-                transition={{ duration: 0.55 }}
-              >
-                <div className="ar2-chip">
-                  <Orbit size={14} />
-                  <span>Partnership approach</span>
+        <section className="srv-section">
+          <div className="srv-container">
+            <div className="srv-features-shell">
+              <div className="srv-features-heading">
+                <div className="srv-chip">
+                  <BadgeCheck size={14} />
+                  <span>Group capabilities</span>
                 </div>
-                <h2 className="ar2-heading">
-                  The group works through structured relationships, not opportunistic alignment.
+                <h2 className="srv-heading mt-5">
+                  The group brings together strategy, structuring, delivery, and operating range.
                 </h2>
-                <p className="ar2-body">
-                  ARNN Group engages with public-sector counterparts, investors, operators, and technical
-                  partners through defined roles and commercially grounded frameworks.
-                </p>
-                <p className="ar2-body">
-                  This approach reduces ambiguity, strengthens delivery coordination, and helps preserve
-                  trust across different sectors and markets.
-                </p>
-              </motion.article>
+              </div>
 
-              <motion.aside
-                className="ar2-overview-card"
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.25 }}
-                transition={{ duration: 0.55, delay: 0.08 }}
-              >
-                <div className="ar2-panel-head">
-                  <span>Relationship model</span>
-                  <span>03</span>
-                </div>
-                <div className="ar2-overview-list">
-                  {partnershipApproach.map((item) => {
+              <div className="srv-features-layout">
+                <article className="srv-feature-hero">
+                  <div className="srv-feature-hero-top">
+                    <span className="srv-feature-tag">Active platform</span>
+                  </div>
+                  <div className="srv-feature-hero-copy">
+                    <h3>ARNN Group functions as an active business platform rather than a passive holding structure.</h3>
+                    <p>
+                      Value is created not only through ownership or participation, but through the ability to shape, coordinate,
+                      and steward ventures with discipline across different sectors.
+                    </p>
+                    <strong>Same corporate system. Same premium hierarchy. Same operational tone.</strong>
+                  </div>
+                </article>
+
+                <div className="srv-feature-column">
+                  {capabilities.slice(0, 2).map((item) => {
                     const Icon = item.icon;
                     return (
-                      <article key={item.title} className="ar2-overview-item ar2-overview-item-icon">
-                        <div className="ar2-overview-icon">
-                          <Icon size={16} />
+                      <article key={item.title} className="srv-feature-card">
+                        <div className="srv-card-icon">
+                          <Icon size={20} />
                         </div>
-                        <div>
-                          <span>{item.title}</span>
-                          <p>{item.body}</p>
+                        <div className="srv-feature-card-top">
+                          <span>Capability</span>
                         </div>
+                        <h3>{item.title}</h3>
+                        <p>{item.description}</p>
+                        <small>{item.details}</small>
                       </article>
                     );
                   })}
                 </div>
-              </motion.aside>
+
+                <div className="srv-feature-column">
+                  {capabilities.slice(2).map((item) => {
+                    const Icon = item.icon;
+                    return (
+                      <article key={item.title} className="srv-feature-card srv-feature-card-alt">
+                        <div className="srv-card-icon">
+                          <Icon size={20} />
+                        </div>
+                        <div className="srv-feature-card-top">
+                          <span>Capability</span>
+                        </div>
+                        <h3>{item.title}</h3>
+                        <p>{item.description}</p>
+                        <small>{item.details}</small>
+                      </article>
+                    );
+                  })}
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-        <section className="ar2-section">
-          <div className="ar2-container">
-            <div className="ar2-trajectory-shell">
-              <div className="ar2-section-head ar2-section-head-compact">
-                <div className="ar2-chip">
-                  <Orbit size={14} />
-                  <span>Trajectory</span>
+        <section className="srv-section">
+          <div className="srv-container">
+            <div className="srv-process-shell">
+              <div className="srv-process-heading">
+                <div className="srv-chip">
+                  <Target size={14} />
+                  <span>How we operate</span>
                 </div>
-                <h2 className="ar2-heading">Progress shaped by intent rather than volume.</h2>
+                <h2 className="srv-heading mt-5">A sharper operating philosophy behind every vertical.</h2>
               </div>
-
-              <div className="ar2-trajectory-list">
-                {trajectory.map((item, index) => (
-                  <motion.article
-                    key={item.label}
-                    className="ar2-trajectory-item"
-                    initial={{ opacity: 0, x: -18 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true, amount: 0.25 }}
-                    transition={{ duration: 0.45, delay: index * 0.08 }}
-                  >
-                    <div className="ar2-trajectory-meta">
-                      <span>{item.label}</span>
-                      <strong>{item.year}</strong>
+              <div className="srv-process-grid">
+                {philosophy.map((item) => (
+                  <article key={item.number} className="srv-process-card">
+                    <div className="srv-process-marker">
+                      <span>{item.number}</span>
                     </div>
-                    <p>{item.body}</p>
-                  </motion.article>
+                    <div className="srv-process-card-top">
+                      <span className="srv-process-meta">Operating principle</span>
+                    </div>
+                    <h3>{item.title}</h3>
+                    <p>{item.description}</p>
+                  </article>
                 ))}
               </div>
             </div>
           </div>
         </section>
 
-        <section className="ar2-section">
-          <div className="ar2-container">
-            <motion.div
-              className="ar2-outlook"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.25 }}
-              transition={{ duration: 0.5 }}
-            >
-              <div className="ar2-chip">
-                <Target size={14} />
-                <span>Group outlook</span>
+        <section className="srv-section">
+          <div className="srv-container">
+            <div className="srv-partnership-shell">
+              <div className="srv-partnership-header">
+                <div className="srv-chip">
+                  <Users2 size={14} />
+                  <span>Who we work with</span>
+                </div>
+                <h2 className="srv-heading mt-5">The group works across a focused institutional and operating network.</h2>
+                <p className="srv-copy mt-5 max-w-[60ch]">
+                  ARNN Group is strengthened through structured engagement with stakeholders whose roles matter to long-term business delivery.
+                </p>
               </div>
-              <h2 className="ar2-heading">The next stage is about disciplined expansion, not louder presentation.</h2>
-              <p className="ar2-body">
-                ARNN Group’s direction remains centered on businesses that can hold strategic weight over time.
-                That means measured sector participation, credible partnerships, and execution models that remain
-                viable beyond the first impression.
-              </p>
-            </motion.div>
+              <div className="srv-partnership-grid">
+                {stakeholders.map((item) => {
+                  const Icon = item.icon;
+                  return (
+                    <article key={item.title} className="srv-partnership-card">
+                      <div className="srv-card-icon">
+                        <Icon size={20} />
+                      </div>
+                      <h3>{item.title}</h3>
+                      <p>{item.description}</p>
+                    </article>
+                  );
+                })}
+              </div>
+            </div>
           </div>
         </section>
 
-        <section className="ar2-section ar2-section-end">
-          <div className="ar2-container">
-            <motion.div
-              className="ar2-cta"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.5 }}
-            >
-              <div>
-                <p className="ar2-kicker">Next step</p>
-                <h2 className="ar2-heading">
-                  If the opportunity matters, the conversation should be direct.
-                </h2>
+        <section className="srv-section">
+          <div className="srv-container">
+            <div className="srv-partnership-shell">
+              <div className="srv-partnership-header">
+                <div className="srv-chip">
+                  <ShieldCheck size={14} />
+                  <span>Governance</span>
+                </div>
+                <h2 className="srv-heading mt-5">Standards and oversight shape how the group expands.</h2>
               </div>
-              <Link to="/contact" className="ar2-button ar2-button-solid">
-                Start a conversation
-                <MoveRight size={18} />
-              </Link>
-            </motion.div>
+              <div className="srv-partnership-grid">
+                {governance.map((item) => {
+                  const Icon = item.icon;
+                  return (
+                    <article key={item.title} className="srv-partnership-card">
+                      <div className="srv-card-icon">
+                        <Icon size={20} />
+                      </div>
+                      <h3>{item.title}</h3>
+                      <p>{item.description}</p>
+                    </article>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="srv-section">
+          <div className="srv-container">
+            <div className="srv-partnership-shell">
+              <div className="srv-partnership-header">
+                <div className="srv-chip">
+                  <Users2 size={14} />
+                  <span>Business verticals</span>
+                </div>
+                <h2 className="srv-heading mt-5">The group spans distinct sectors with a shared operating standard.</h2>
+                <p className="srv-copy mt-5 max-w-[60ch]">
+                  ARNN Group’s portfolio reaches across investment-oriented, operating, and service-led businesses while maintaining
+                  a common expectation around quality, governance, and execution.
+                </p>
+              </div>
+              <div className="about-srv-sector-grid">
+                {sectors.map((item, index) => (
+                  <Link key={item.slug} to={`/services/${item.slug}`} className="about-srv-sector-card">
+                    <span className="about-srv-sector-index">{String(index + 1).padStart(2, "0")}</span>
+                    <h3>{item.title}</h3>
+                    <p>{item.summary}</p>
+                    <span className="about-srv-sector-link">View sector</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="srv-section">
+          <div className="srv-container">
+            <div className="srv-success-header">
+              <div className="srv-chip">
+                <Globe2 size={14} />
+                <span>Trajectory</span>
+              </div>
+              <h2 className="srv-heading mt-5">Progress shaped by intent rather than volume.</h2>
+            </div>
+            <div className="srv-success-grid about-srv-trajectory-grid">
+              {trajectory.map((item) => (
+                <article key={item.title} className="srv-story">
+                  <div className="srv-story-meta">
+                    <span className="srv-region">{item.title}</span>
+                  </div>
+                  <h3 className="srv-story-title">{item.details}</h3>
+                  <p className="srv-story-copy">{item.description}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="srv-section">
+          <div className="srv-container">
+            <div className="srv-panel srv-cta-grid">
+              <div>
+                <div className="srv-chip">
+                  <Orbit size={14} />
+                  <span>Group outlook</span>
+                </div>
+                <h2 className="srv-heading mt-5">The next stage is about disciplined expansion, not louder presentation.</h2>
+                <p className="srv-copy mt-5 max-w-[58ch]">
+                  ARNN Group’s direction remains centered on businesses that can hold strategic weight over time.
+                  That means measured sector participation, credible partnerships, and execution models that remain viable beyond the first impression.
+                </p>
+              </div>
+              <div className="srv-cta-actions">
+                <Link to="/contact" className="srv-button srv-button-primary">
+                  Start a conversation
+                  <MoveRight size={18} />
+                </Link>
+                <a href="#about-overview" className="srv-button srv-button-secondary">
+                  Return to overview
+                </a>
+              </div>
+            </div>
           </div>
         </section>
       </main>
