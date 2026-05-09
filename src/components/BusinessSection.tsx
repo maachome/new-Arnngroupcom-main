@@ -37,8 +37,8 @@ const divisions: BusinessDivision[] = [
   },
   {
     number: "3",
-    title: "ICT",
-    heading: "Information & Communication Technology",
+    title: "FINTECH, CRYPTO & BLOCKCHAIN INNOVATION",
+    heading: "Fintech, Crypto & Blockchain Innovation",
     description:
       "Delivering cutting-edge technology solutions that drive digital transformation and innovation.",
     image: serviceOverviewImageBySlug.get("ict") || "",

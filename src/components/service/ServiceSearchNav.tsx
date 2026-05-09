@@ -6,7 +6,7 @@ import { ArrowRight, Compass } from "lucide-react";
 const categories = [
   { slug: "economic-empowerment", name: "Economic Empowerment", color: "#3b82f6" },
   { slug: "real-estate-development", name: "Real Estate Development", color: "#8b5cf6" },
-  { slug: "ict", name: "Information & Communication Technologies", color: "#10b981" },
+  { slug: "ict", name: "Fintech, Crypto & Blockchain Innovation", color: "#10b981" },
   { slug: "agro-aquaculture", name: "Agro-Aquaculture", color: "#10b981" },
   { slug: "fashion-industries", name: "Fashion Industries", color: "#ec4899" },
   { slug: "empowering-global-talent", name: "Empowering Global Talent", color: "#06b6d4" },

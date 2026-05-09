@@ -348,15 +348,15 @@ export const servicesData: ServiceData[] = [
   {
     id: "3",
     slug: "ict",
-    title: "Information & Communication Technologies",
+    title: "Fintech, Crypto & Blockchain Innovation",
     tagline: "Pioneering Innovation in Digital Finance & Technology",
-    description: "Charting innovation in fintech, cryptocurrencies, server solutions, and B2C software development. Leveraging cutting-edge technologies to redefine financial services and digital infrastructure.",
+    description: "Building innovation across digital financial services, cryptocurrency solutions, server infrastructure, and B2C software development through a focused fintech and blockchain strategy.",
     color: "#10b981", // Green for tech/innovation
 
     hero: {
-      headline: "ICT Development Strategy",
+      headline: "Fintech, Crypto & Blockchain Innovation",
       subheadline: "Pioneering Innovation in Digital Finance & Technology",
-      description: "ARNN Group is actively charting a course towards innovation within the Information and Communication Technologies sector, with strategic focus on emerging domains such as fintech, cryptocurrencies, server solutions, and software development.",
+      description: "ARNN Group is actively charting a course towards innovation within the Fintech, Crypto & Blockchain Innovation sector, with a strategic focus on digital financial services, cryptocurrency solutions, server infrastructure, and B2C software development.",
       mediaType: "video",
       mediaUrl: "https://arnn-group.s3.ap-south-1.amazonaws.com/New+Website+ARNN/ICT+Development+Strategy.mp4",
       badge: "Digital Innovation",
@@ -368,8 +368,8 @@ export const servicesData: ServiceData[] = [
       title: "Driving Innovation in the Digital Era",
       subtitle: "Our Vision",
       paragraphs: [
-        "ARNN Group is actively charting a course towards innovation within the Information and Communication Technologies (ICT) sector, with a strategic focus on emerging domains such as fintech, cryptocurrencies, server solutions, and software development tailored for B2C interactions.",
-        "As we pave the way for future growth, our commitment to leveraging cutting-edge technologies remains unwavering. In the realm of fintech, we are diligently exploring avenues to redefine financial services, enhancing accessibility, efficiency, and security for users worldwide.",
+        "ARNN Group is actively charting a course towards innovation within the Fintech, Crypto & Blockchain Innovation sector, with a strategic focus on digital financial services, cryptocurrency solutions, server infrastructure, and B2C software development.",
+        "As we pave the way for future growth, our commitment to leveraging cutting-edge technologies remains unwavering. Through fintech and blockchain-driven initiatives, we aim to enhance accessibility, efficiency, security, and digital connectivity for users worldwide.",
         "Simultaneously, our foray into cryptocurrencies positions us at the forefront of digital finance, where we seek to pioneer groundbreaking solutions and investments. Complementing these endeavours, our initiatives in server solutions and software development underscore our dedication to providing robust infrastructure and intuitive platforms.",
         "With ongoing development and a steadfast commitment to innovation, ARNN Group is poised to make significant strides in the ICT sector, driving sustainable growth and shaping the future of technology."
       ],
