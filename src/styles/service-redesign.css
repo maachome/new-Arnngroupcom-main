@@ -2448,6 +2448,14 @@
     gap: 10px;
   }
 
+  .about-srv .srv-hero-actions .srv-button-primary {
+    order: 2;
+  }
+
+  .about-srv .srv-hero-actions .srv-button-secondary {
+    order: 1;
+  }
+
   .about-srv .srv-process-card-top {
     padding-left: 58px;
   }

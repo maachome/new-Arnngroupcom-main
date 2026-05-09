@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { useEffect, useState } from "react";
 
 const loaderNotes = [
   "Strategic ventures",
@@ -18,6 +19,18 @@ const shellStyle: React.CSSProperties = {
 const panelBorder = "1px solid rgba(20, 26, 42, 0.08)";
 
 export function GlobalLoader() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 640px)");
+    const updateViewport = () => setIsMobile(mediaQuery.matches);
+
+    updateViewport();
+    mediaQuery.addEventListener("change", updateViewport);
+
+    return () => mediaQuery.removeEventListener("change", updateViewport);
+  }, []);
+
   return (
     <div style={shellStyle}>
       <motion.div
@@ -55,7 +68,7 @@ export function GlobalLoader() {
           minHeight: "100vh",
           display: "grid",
           placeItems: "center",
-          padding: "32px 20px",
+          padding: isMobile ? "20px 14px" : "32px 20px",
         }}
       >
         <div
@@ -88,9 +101,9 @@ export function GlobalLoader() {
                   background: "rgba(255,255,255,0.58)",
                   backdropFilter: "blur(22px)",
                   WebkitBackdropFilter: "blur(22px)",
-                  borderRadius: "34px",
+                  borderRadius: isMobile ? "24px" : "34px",
                   boxShadow: "0 28px 90px rgba(18, 24, 39, 0.10)",
-                  padding: "28px",
+                  padding: isMobile ? "20px" : "28px",
                 }}
               >
                 <div
@@ -98,7 +111,7 @@ export function GlobalLoader() {
                     display: "inline-flex",
                     alignItems: "center",
                     gap: "10px",
-                    padding: "10px 16px",
+                    padding: isMobile ? "9px 12px" : "10px 16px",
                     borderRadius: "999px",
                     border: panelBorder,
                     background: "rgba(255,255,255,0.74)",
@@ -121,13 +134,13 @@ export function GlobalLoader() {
                   <span>Arnn Group</span>
                 </div>
 
-                <div style={{ marginTop: "28px", maxWidth: "760px" }}>
+                <div style={{ marginTop: isMobile ? "22px" : "28px", maxWidth: "760px" }}>
                   <div
                     style={{
                       color: "#6d768c",
-                      fontSize: "12px",
+                      fontSize: isMobile ? "10px" : "12px",
                       fontWeight: 800,
-                      letterSpacing: "0.3em",
+                      letterSpacing: isMobile ? "0.22em" : "0.3em",
                       textTransform: "uppercase",
                     }}
                   >
@@ -136,12 +149,12 @@ export function GlobalLoader() {
 
                   <div
                     style={{
-                      marginTop: "16px",
+                      marginTop: isMobile ? "14px" : "16px",
                       color: "#121a2f",
                       fontFamily: "Nunito, sans-serif",
                       fontWeight: 800,
-                      fontSize: "clamp(2.5rem, 6vw, 5.1rem)",
-                      lineHeight: 0.94,
+                      fontSize: isMobile ? "clamp(2rem, 11vw, 2.9rem)" : "clamp(2.5rem, 6vw, 5.1rem)",
+                      lineHeight: isMobile ? 0.98 : 0.94,
                       letterSpacing: "-0.06em",
                     }}
                   >
@@ -150,12 +163,12 @@ export function GlobalLoader() {
 
                   <div
                     style={{
-                      marginTop: "22px",
+                      marginTop: isMobile ? "18px" : "22px",
                       maxWidth: "56ch",
                       color: "#586178",
-                      fontSize: "15px",
+                      fontSize: isMobile ? "14px" : "15px",
                       fontWeight: 700,
-                      lineHeight: 1.75,
+                      lineHeight: isMobile ? 1.65 : 1.75,
                     }}
                   >
                     The portfolio experience is loading with the newer visual direction, cleaner
@@ -165,20 +178,21 @@ export function GlobalLoader() {
 
                 <div
                   style={{
-                    marginTop: "32px",
+                    marginTop: isMobile ? "24px" : "32px",
                     display: "grid",
-                    gap: "16px",
+                    gap: isMobile ? "12px" : "16px",
                   }}
                 >
                   <div
                     style={{
                       display: "flex",
                       justifyContent: "space-between",
-                      gap: "16px",
+                      gap: "12px",
+                      flexWrap: isMobile ? "wrap" : "nowrap",
                       color: "#6b748a",
                       fontSize: "11px",
                       fontWeight: 800,
-                      letterSpacing: "0.22em",
+                      letterSpacing: isMobile ? "0.16em" : "0.22em",
                       textTransform: "uppercase",
                     }}
                   >
@@ -215,7 +229,7 @@ export function GlobalLoader() {
               <div
                 style={{
                   display: "grid",
-                  gap: "20px",
+                  gap: isMobile ? "16px" : "20px",
                   gridTemplateColumns: "minmax(0, 1fr)",
                 }}
               >
@@ -223,18 +237,18 @@ export function GlobalLoader() {
                   style={{
                     border: panelBorder,
                     background: "linear-gradient(180deg, rgba(24,34,58,0.96), rgba(17,24,42,0.94))",
-                    borderRadius: "32px",
+                    borderRadius: isMobile ? "24px" : "32px",
                     boxShadow: "0 26px 80px rgba(10, 18, 38, 0.16)",
-                    padding: "28px",
+                    padding: isMobile ? "20px" : "28px",
                     color: "#ffffff",
                   }}
                 >
                   <div
                     style={{
                       display: "flex",
-                      alignItems: "center",
+                      alignItems: isMobile ? "flex-start" : "center",
                       justifyContent: "space-between",
-                      gap: "18px",
+                      gap: isMobile ? "14px" : "18px",
                     }}
                   >
                     <div>
@@ -253,7 +267,7 @@ export function GlobalLoader() {
                         style={{
                           marginTop: "10px",
                           fontWeight: 800,
-                          fontSize: "2rem",
+                          fontSize: isMobile ? "1.6rem" : "2rem",
                           letterSpacing: "-0.05em",
                           lineHeight: 1,
                         }}
@@ -266,9 +280,9 @@ export function GlobalLoader() {
                       animate={{ rotate: [0, 90, 180, 270, 360] }}
                       transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
                       style={{
-                        width: "58px",
-                        height: "58px",
-                        borderRadius: "20px",
+                        width: isMobile ? "48px" : "58px",
+                        height: isMobile ? "48px" : "58px",
+                        borderRadius: isMobile ? "16px" : "20px",
                         border: "1px solid rgba(255,255,255,0.12)",
                         background: "rgba(255,255,255,0.04)",
                         display: "grid",
@@ -288,7 +302,7 @@ export function GlobalLoader() {
                     </motion.div>
                   </div>
 
-                  <div style={{ marginTop: "28px", display: "grid", gap: "16px" }}>
+                  <div style={{ marginTop: isMobile ? "22px" : "28px", display: "grid", gap: isMobile ? "12px" : "16px" }}>
                     {loaderNotes.map((item, index) => (
                       <motion.div
                         key={item}
@@ -297,10 +311,10 @@ export function GlobalLoader() {
                         transition={{ duration: 0.45, delay: 0.3 + index * 0.08 }}
                         style={{
                           display: "grid",
-                          gridTemplateColumns: "34px minmax(0, 1fr)",
-                          gap: "12px",
+                          gridTemplateColumns: isMobile ? "28px minmax(0, 1fr)" : "34px minmax(0, 1fr)",
+                          gap: isMobile ? "10px" : "12px",
                           alignItems: "start",
-                          paddingTop: index === 0 ? "0" : "16px",
+                          paddingTop: index === 0 ? "0" : isMobile ? "12px" : "16px",
                           borderTop:
                             index === 0 ? "0" : "1px solid rgba(255,255,255,0.10)",
                         }}
@@ -320,9 +334,9 @@ export function GlobalLoader() {
                         <div
                           style={{
                             color: "rgba(255,255,255,0.78)",
-                            fontSize: "14px",
+                            fontSize: isMobile ? "13px" : "14px",
                             fontWeight: 700,
-                            lineHeight: 1.7,
+                            lineHeight: isMobile ? 1.55 : 1.7,
                           }}
                         >
                           {item}
@@ -335,7 +349,7 @@ export function GlobalLoader() {
                     animate={{ opacity: [0.34, 0.74, 0.34] }}
                     transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
                     style={{
-                      marginTop: "28px",
+                      marginTop: isMobile ? "22px" : "28px",
                       color: "rgba(255,255,255,0.36)",
                       fontSize: "11px",
                       fontWeight: 800,
@@ -351,8 +365,8 @@ export function GlobalLoader() {
                   style={{
                     border: panelBorder,
                     background: "rgba(255,255,255,0.56)",
-                    borderRadius: "26px",
-                    padding: "22px 24px",
+                    borderRadius: isMobile ? "20px" : "26px",
+                    padding: isMobile ? "18px 18px" : "22px 24px",
                     color: "#23304b",
                   }}
                 >
@@ -370,9 +384,9 @@ export function GlobalLoader() {
                   <div
                     style={{
                       marginTop: "12px",
-                      fontSize: "15px",
+                      fontSize: isMobile ? "14px" : "15px",
                       fontWeight: 700,
-                      lineHeight: 1.75,
+                      lineHeight: isMobile ? 1.6 : 1.75,
                     }}
                   >
                     Editorial, motion, and service surfaces are being prepared.
