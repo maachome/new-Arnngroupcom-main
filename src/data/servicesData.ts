@@ -1,14 +1,14 @@
 import { ServiceData } from "../types/service";
-const lussocollezioni = "https://lussocollezioni.com/cdn/shop/files/lussocollezioni-logo-BLACK-Trimmed-1-1024x145.png?v=1744027689";
-const wisebellLogo = "https://www.wisebellglobal.com/_next/image?url=%2Fwisebell-logo.png&w=640&q=75";
-const mednero = "https://res.cloudinary.com/djnxf36jq/image/upload/v1772000149/mednero_e8zzqx.png";
-const maachome = "https://res.cloudinary.com/djnxf36jq/image/upload/v1772000146/MAAC_Home_Logo_pemjq7.webp";
-const agrifuturesglobal = "https://res.cloudinary.com/djnxf36jq/image/upload/v1772000148/agri-logo_ceutys.webp";
-const economicEmpowermentVideo ="https://cdn.shopify.com/videos/c/o/v/90f4f6ec75d341e0903daf1d9e5cba91.mp4";
-const mednerovidro ="https://cdn.shopify.com/videos/c/o/v/53de1eb2a57e44edbaf858325c881d03.mp4";
-const lussocollezionivid = "https://res.cloudinary.com/djnxf36jq/video/upload/v1772000152/lussocollezioni_znpj4x.webm"
+const lussocollezioni = "https://arnn-group.s3.ap-south-1.amazonaws.com/New+Website+ARNN/lussocollezioni-logo.png";
+const wisebellLogo = "https://arnn-group.s3.ap-south-1.amazonaws.com/New+Website+ARNN/wisebell-logo.webp";
+const mednero = "https://arnn-group.s3.ap-south-1.amazonaws.com/New+Website+ARNN/mednero-logo.png";
+const maachome = "https://arnn-group.s3.ap-south-1.amazonaws.com/New+Website+ARNN/MAAC_Home_Logo_pemjq7.webp";
+const agrifuturesglobal = "https://arnn-group.s3.ap-south-1.amazonaws.com/New+Website+ARNN/agri-logo.webp";
+const economicEmpowermentVideo ="https://arnn-group.s3.ap-south-1.amazonaws.com/New+Website+ARNN/Economic+Empowerment.mp4";
+const mednerovidro ="https://arnn-group.s3.ap-south-1.amazonaws.com/New+Website+ARNN/mednero-vid.mp4";
+const lussocollezionivid = "https://arnn-group.s3.ap-south-1.amazonaws.com/New+Website+ARNN/lussocollezioni-vid.webm"
 const agrifutureglobalvid ="https://arnn-group.s3.ap-south-1.amazonaws.com/New+Website+ARNN/Agro-Aqua.mp4";
-const maachomevid ="https://res.cloudinary.com/djnxf36jq/video/upload/v1772000159/maachomevid_jvowuv.webm";
+const maachomevid ="https://arnn-group.s3.ap-south-1.amazonaws.com/New+Website+ARNN/maachome-vid.webm";
 export const servicesData: ServiceData[] = [
   {
     id: "1",
