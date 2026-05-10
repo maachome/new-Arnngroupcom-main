@@ -1,11 +1,7 @@
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 
-const loaderNotes = [
-  "Strategic ventures",
-  "Refined execution",
-  "Global portfolio",
-];
+const arnnLogo = "https://res.cloudinary.com/djnxf36jq/image/upload/v1772000146/arnn_omu8nl.png";
 
 const shellStyle: React.CSSProperties = {
   position: "fixed",
@@ -13,10 +9,8 @@ const shellStyle: React.CSSProperties = {
   zIndex: 9999,
   overflow: "hidden",
   background:
-    "radial-gradient(circle at 18% 16%, rgba(122, 156, 255, 0.16), transparent 24%), radial-gradient(circle at 82% 20%, rgba(255, 164, 124, 0.20), transparent 22%), linear-gradient(135deg, #f5f2ec 0%, #efe8de 52%, #f8f5f0 100%)",
+    "radial-gradient(circle at 18% 18%, rgba(122, 156, 255, 0.18), transparent 26%), radial-gradient(circle at 82% 78%, rgba(255, 164, 124, 0.16), transparent 24%), linear-gradient(135deg, #f6f1e8 0%, #efe8dd 50%, #f8f4ee 100%)",
 };
-
-const panelBorder = "1px solid rgba(20, 26, 42, 0.08)";
 
 export function GlobalLoader() {
   const [isMobile, setIsMobile] = useState(false);
@@ -34,28 +28,29 @@ export function GlobalLoader() {
   return (
     <div style={shellStyle}>
       <motion.div
-        animate={{ x: [0, 18, 0], y: [0, -10, 0] }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        style={{
-          position: "absolute",
-          top: "12%",
-          left: "-2rem",
-          width: "14rem",
-          height: "14rem",
-          borderRadius: "999px",
-          background: "rgba(129, 159, 255, 0.16)",
-          filter: "blur(48px)",
-        }}
-      />
-      <motion.div
-        animate={{ x: [0, -16, 0], y: [0, 12, 0] }}
+        animate={{ x: [0, 22, 0], y: [0, -18, 0] }}
         transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
         style={{
           position: "absolute",
-          right: "4%",
-          bottom: "10%",
-          width: "16rem",
-          height: "16rem",
+          top: isMobile ? "-3rem" : "0",
+          left: isMobile ? "-3rem" : "2%",
+          width: isMobile ? "11rem" : "18rem",
+          height: isMobile ? "11rem" : "18rem",
+          borderRadius: "999px",
+          background: "rgba(129, 159, 255, 0.20)",
+          filter: "blur(54px)",
+        }}
+      />
+
+      <motion.div
+        animate={{ x: [0, -18, 0], y: [0, 20, 0] }}
+        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+        style={{
+          position: "absolute",
+          right: isMobile ? "-2rem" : "6%",
+          bottom: isMobile ? "-2rem" : "8%",
+          width: isMobile ? "10rem" : "16rem",
+          height: isMobile ? "10rem" : "16rem",
           borderRadius: "999px",
           background: "rgba(255, 171, 136, 0.18)",
           filter: "blur(56px)",
@@ -68,334 +63,119 @@ export function GlobalLoader() {
           minHeight: "100vh",
           display: "grid",
           placeItems: "center",
-          padding: isMobile ? "20px 14px" : "32px 20px",
+          padding: isMobile ? "24px 18px" : "40px 24px",
         }}
       >
-        <div
+        <motion.div
+          initial={{ opacity: 0, y: 20, scale: 0.985 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 0.65, ease: "easeOut" }}
           style={{
-            width: "min(1120px, 100%)",
+            width: "min(440px, 100%)",
             display: "grid",
-            gap: "20px",
-            gridTemplateColumns: "minmax(0, 1fr)",
+            justifyItems: "center",
+            textAlign: "center",
           }}
         >
           <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
+            animate={{ y: [0, -6, 0] }}
+            transition={{ duration: 3.2, repeat: Infinity, ease: "easeInOut" }}
             style={{
+              position: "relative",
+              width: isMobile ? "112px" : "136px",
+              height: isMobile ? "112px" : "136px",
               display: "grid",
-              gap: "20px",
+              placeItems: "center",
             }}
           >
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+              style={{
+                position: "absolute",
+                inset: 0,
+                borderRadius: "999px",
+                background:
+                  "conic-gradient(from 180deg, rgba(183,138,47,0.10), rgba(45,99,242,0.65), rgba(240,131,92,0.5), rgba(183,138,47,0.10))",
+                padding: "1px",
+                WebkitMask:
+                  "radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 1px))",
+                mask: "radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 1px))",
+              }}
+            />
+
             <div
               style={{
+                width: isMobile ? "84px" : "100px",
+                height: isMobile ? "84px" : "100px",
                 display: "grid",
-                gap: "20px",
-                gridTemplateColumns: "minmax(0, 1fr)",
+                placeItems: "center",
               }}
             >
-              <div
+              <img
+                src={arnnLogo}
+                alt="ARNN Group"
                 style={{
-                  border: "1px solid rgba(255,255,255,0.72)",
-                  background: "rgba(255,255,255,0.58)",
-                  backdropFilter: "blur(22px)",
-                  WebkitBackdropFilter: "blur(22px)",
-                  borderRadius: isMobile ? "24px" : "34px",
-                  boxShadow: "0 28px 90px rgba(18, 24, 39, 0.10)",
-                  padding: isMobile ? "20px" : "28px",
+                  width: isMobile ? "98px" : "88px",
+                  height: "auto",
+                  display: "block",
                 }}
-              >
-                <div
-                  style={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: "10px",
-                    padding: isMobile ? "9px 12px" : "10px 16px",
-                    borderRadius: "999px",
-                    border: panelBorder,
-                    background: "rgba(255,255,255,0.74)",
-                    color: "#2d374d",
-                    fontSize: "11px",
-                    fontWeight: 800,
-                    letterSpacing: "0.24em",
-                    textTransform: "uppercase",
-                  }}
-                >
-                  <span
-                    style={{
-                      width: "8px",
-                      height: "8px",
-                      borderRadius: "999px",
-                      background: "#2d63f2",
-                      display: "inline-block",
-                    }}
-                  />
-                  <span>Arnn Group</span>
-                </div>
-
-                <div style={{ marginTop: isMobile ? "22px" : "28px", maxWidth: "760px" }}>
-                  <div
-                    style={{
-                      color: "#6d768c",
-                      fontSize: isMobile ? "10px" : "12px",
-                      fontWeight: 800,
-                      letterSpacing: isMobile ? "0.22em" : "0.3em",
-                      textTransform: "uppercase",
-                    }}
-                  >
-                    Modern group platform
-                  </div>
-
-                  <div
-                    style={{
-                      marginTop: isMobile ? "14px" : "16px",
-                      color: "#121a2f",
-                      fontFamily: "Nunito, sans-serif",
-                      fontWeight: 800,
-                      fontSize: isMobile ? "clamp(2rem, 11vw, 2.9rem)" : "clamp(2.5rem, 6vw, 5.1rem)",
-                      lineHeight: isMobile ? 0.98 : 0.94,
-                      letterSpacing: "-0.06em",
-                    }}
-                  >
-                    Building the next surface with sharper hierarchy.
-                  </div>
-
-                  <div
-                    style={{
-                      marginTop: isMobile ? "18px" : "22px",
-                      maxWidth: "56ch",
-                      color: "#586178",
-                      fontSize: isMobile ? "14px" : "15px",
-                      fontWeight: 700,
-                      lineHeight: isMobile ? 1.65 : 1.75,
-                    }}
-                  >
-                    The portfolio experience is loading with the newer visual direction, cleaner
-                    motion language, and stronger brand control.
-                  </div>
-                </div>
-
-                <div
-                  style={{
-                    marginTop: isMobile ? "24px" : "32px",
-                    display: "grid",
-                    gap: isMobile ? "12px" : "16px",
-                  }}
-                >
-                  <div
-                    style={{
-                      display: "flex",
-                      justifyContent: "space-between",
-                      gap: "12px",
-                      flexWrap: isMobile ? "wrap" : "nowrap",
-                      color: "#6b748a",
-                      fontSize: "11px",
-                      fontWeight: 800,
-                      letterSpacing: isMobile ? "0.16em" : "0.22em",
-                      textTransform: "uppercase",
-                    }}
-                  >
-                    <span>Preparing experience</span>
-                    <span>Loading</span>
-                  </div>
-
-                  <div
-                    style={{
-                      position: "relative",
-                      height: "4px",
-                      overflow: "hidden",
-                      borderRadius: "999px",
-                      background: "rgba(32, 39, 61, 0.08)",
-                    }}
-                  >
-                    <motion.div
-                      initial={{ x: "-45%", width: "42%" }}
-                      animate={{ x: ["-45%", "140%"] }}
-                      transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
-                      style={{
-                        position: "absolute",
-                        insetBlock: 0,
-                        left: 0,
-                        borderRadius: "999px",
-                        background:
-                          "linear-gradient(90deg, #2d63f2 0%, #5f8dff 56%, #f0835c 100%)",
-                      }}
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div
-                style={{
-                  display: "grid",
-                  gap: isMobile ? "16px" : "20px",
-                  gridTemplateColumns: "minmax(0, 1fr)",
-                }}
-              >
-                <div
-                  style={{
-                    border: panelBorder,
-                    background: "linear-gradient(180deg, rgba(24,34,58,0.96), rgba(17,24,42,0.94))",
-                    borderRadius: isMobile ? "24px" : "32px",
-                    boxShadow: "0 26px 80px rgba(10, 18, 38, 0.16)",
-                    padding: isMobile ? "20px" : "28px",
-                    color: "#ffffff",
-                  }}
-                >
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: isMobile ? "flex-start" : "center",
-                      justifyContent: "space-between",
-                      gap: isMobile ? "14px" : "18px",
-                    }}
-                  >
-                    <div>
-                      <div
-                        style={{
-                          color: "rgba(255,255,255,0.42)",
-                          fontSize: "11px",
-                          fontWeight: 800,
-                          letterSpacing: "0.24em",
-                          textTransform: "uppercase",
-                        }}
-                      >
-                        Session
-                      </div>
-                      <div
-                        style={{
-                          marginTop: "10px",
-                          fontWeight: 800,
-                          fontSize: isMobile ? "1.6rem" : "2rem",
-                          letterSpacing: "-0.05em",
-                          lineHeight: 1,
-                        }}
-                      >
-                        01
-                      </div>
-                    </div>
-
-                    <motion.div
-                      animate={{ rotate: [0, 90, 180, 270, 360] }}
-                      transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-                      style={{
-                        width: isMobile ? "48px" : "58px",
-                        height: isMobile ? "48px" : "58px",
-                        borderRadius: isMobile ? "16px" : "20px",
-                        border: "1px solid rgba(255,255,255,0.12)",
-                        background: "rgba(255,255,255,0.04)",
-                        display: "grid",
-                        placeItems: "center",
-                        flexShrink: 0,
-                      }}
-                    >
-                      <span
-                        style={{
-                          width: "10px",
-                          height: "10px",
-                          borderRadius: "999px",
-                          background: "#ff9c74",
-                          display: "inline-block",
-                        }}
-                      />
-                    </motion.div>
-                  </div>
-
-                  <div style={{ marginTop: isMobile ? "22px" : "28px", display: "grid", gap: isMobile ? "12px" : "16px" }}>
-                    {loaderNotes.map((item, index) => (
-                      <motion.div
-                        key={item}
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.45, delay: 0.3 + index * 0.08 }}
-                        style={{
-                          display: "grid",
-                          gridTemplateColumns: isMobile ? "28px minmax(0, 1fr)" : "34px minmax(0, 1fr)",
-                          gap: isMobile ? "10px" : "12px",
-                          alignItems: "start",
-                          paddingTop: index === 0 ? "0" : isMobile ? "12px" : "16px",
-                          borderTop:
-                            index === 0 ? "0" : "1px solid rgba(255,255,255,0.10)",
-                        }}
-                      >
-                        <span
-                          style={{
-                            paddingTop: "4px",
-                            color: "#7ea3ff",
-                            fontSize: "10px",
-                            fontWeight: 800,
-                            letterSpacing: "0.22em",
-                            textTransform: "uppercase",
-                          }}
-                        >
-                          {`0${index + 1}`}
-                        </span>
-                        <div
-                          style={{
-                            color: "rgba(255,255,255,0.78)",
-                            fontSize: isMobile ? "13px" : "14px",
-                            fontWeight: 700,
-                            lineHeight: isMobile ? 1.55 : 1.7,
-                          }}
-                        >
-                          {item}
-                        </div>
-                      </motion.div>
-                    ))}
-                  </div>
-
-                  <motion.div
-                    animate={{ opacity: [0.34, 0.74, 0.34] }}
-                    transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
-                    style={{
-                      marginTop: isMobile ? "22px" : "28px",
-                      color: "rgba(255,255,255,0.36)",
-                      fontSize: "11px",
-                      fontWeight: 800,
-                      letterSpacing: "0.22em",
-                      textTransform: "uppercase",
-                    }}
-                  >
-                    Loading excellence
-                  </motion.div>
-                </div>
-
-                <div
-                  style={{
-                    border: panelBorder,
-                    background: "rgba(255,255,255,0.56)",
-                    borderRadius: isMobile ? "20px" : "26px",
-                    padding: isMobile ? "18px 18px" : "22px 24px",
-                    color: "#23304b",
-                  }}
-                >
-                  <div
-                    style={{
-                      color: "#73809a",
-                      fontSize: "11px",
-                      fontWeight: 800,
-                      letterSpacing: "0.22em",
-                      textTransform: "uppercase",
-                    }}
-                  >
-                    Status
-                  </div>
-                  <div
-                    style={{
-                      marginTop: "12px",
-                      fontSize: isMobile ? "14px" : "15px",
-                      fontWeight: 700,
-                      lineHeight: isMobile ? 1.6 : 1.75,
-                    }}
-                  >
-                    Editorial, motion, and service surfaces are being prepared.
-                  </div>
-                </div>
-              </div>
+              />
             </div>
           </motion.div>
-        </div>
+
+          <div
+            style={{
+              marginTop: isMobile ? "24px" : "28px",
+              color: "#162033",
+              fontFamily: "Nunito, sans-serif",
+              fontSize: isMobile ? "clamp(1.6rem, 8vw, 2rem)" : "clamp(2rem, 4vw, 2.5rem)",
+              fontWeight: 800,
+              letterSpacing: "-0.05em",
+              lineHeight: 1.02,
+            }}
+          >
+            ARNN Group
+          </div>
+
+          <div
+            style={{
+              marginTop: "10px",
+              color: "#6a7388",
+              fontSize: isMobile ? "13px" : "14px",
+              fontWeight: 700,
+              letterSpacing: "0.16em",
+              textTransform: "uppercase",
+            }}
+          >
+            Building legacies. Empowering futures.
+          </div>
+
+          <div
+            style={{
+              marginTop: isMobile ? "24px" : "28px",
+              width: isMobile ? "148px" : "172px",
+              height: "3px",
+              borderRadius: "999px",
+              background: "rgba(24, 34, 58, 0.08)",
+              overflow: "hidden",
+              position: "relative",
+            }}
+          >
+            <motion.div
+              initial={{ x: "-45%", width: "42%" }}
+              animate={{ x: ["-45%", "165%"] }}
+              transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+              style={{
+                position: "absolute",
+                insetBlock: 0,
+                left: 0,
+                borderRadius: "999px",
+                background: "linear-gradient(90deg, #b78a2f 0%, #2d63f2 52%, #f0835c 100%)",
+              }}
+            />
+          </div>
+        </motion.div>
       </div>
     </div>
   );

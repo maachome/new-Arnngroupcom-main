@@ -1,4 +1,4 @@
-import { ChevronDown, Menu } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { servicesData } from "../data/servicesData";
@@ -101,7 +101,7 @@ export function Header() {
   const serviceDropdownShell = "bg-[#2d3e5f] rounded-lg shadow-xl border border-white/10 overflow-hidden";
   const serviceDropdownItem = "group block px-4 py-3 text-sm text-white hover:bg-white/10 transition-colors border-b border-white/5 last:border-0";
   const serviceDropdownItemActive = "bg-white/10";
-  const serviceMobileSheet = "w-full bg-[#2d3e5f] text-white border-l border-white/10";
+  const serviceMobileSheet = "w-full h-full bg-[#2d3e5f] text-white border-l border-white/10 overflow-y-auto";
   const serviceMobileItem = "px-4 py-3 text-sm tracking-wide hover:bg-white/10 hover:text-white transition-colors rounded-lg";
   const serviceMobileActive = "bg-white/10 text-white";
   const serviceMobileSubItem = "px-4 py-2 text-sm tracking-wide hover:bg-white/10 hover:text-white transition-colors rounded-lg";
@@ -117,7 +117,7 @@ export function Header() {
 
   return (
     <header
-      className={`fixed left-0 right-0 z-50 px-8 flex-shrink-0 transition-all duration-500 ${isCollapsedHeader ? "top-0 h-7 py-0" : isVisible ? "top-0 py-3" : "-top-32 py-3"
+      className={`fixed left-0 right-0 z-50 px-4 md:px-8 flex-shrink-0 transition-all duration-500 ${isCollapsedHeader ? "top-0 h-7 py-0" : isVisible ? "top-0 pt-0 pb-3 md:py-3" : "-top-32 pt-0 pb-3 md:py-3"
         } ${isServicePage || isAboutOrContactPage
           ? serviceHeaderBase
           : isScrolled
@@ -257,96 +257,112 @@ export function Header() {
             </SheetTrigger>
             <SheetContent
               side="right"
-              className={isServicePage ? serviceMobileSheet : "w-full bg-[#2d3e5f] text-white border-l border-white/10"}
+              hideClose
+              className={isServicePage ? serviceMobileSheet.replace(" overflow-y-auto", "") : "w-full h-full bg-[#2d3e5f] text-white border-l border-white/10"}
             >
-              <SheetHeader>
-                <SheetTitle className={`${isServicePage ? "text-white" : "text-white"} text-left`}>
-                  <img
-                    src={arnnLogoScrolled}
-                    alt="ARNN GROUP"
-                    className="h-16 w-auto"
-                  />
-                </SheetTitle>
-                <SheetDescription className="sr-only">
-                  Navigation menu
-                </SheetDescription>
-              </SheetHeader>
-
-              <nav className="flex flex-col gap-1 mt-8">
-                <SheetClose asChild>
-                  <Link
-                    to="/"
-                    onClick={handleMobileNav("/")}
-                    className={`${isServicePage ? serviceMobileItem : "px-4 py-3 text-xl tracking-wide hover:bg-white/10 transition-colors rounded-lg"} ${location.pathname === "/" ? isServicePage ? serviceMobileActive : "bg-white/10" : ""
-                      }`}
-                  >
-                    HOME
-                  </Link>
-                </SheetClose>
+              <div className="h-full overflow-y-auto p-6 pt-12">
+                <SheetHeader>
+                  <SheetTitle className={`${isServicePage ? "text-white" : "text-white"} text-left`}>
+                    <Link to="/" className="flex items-center">
+                      <img
+                        src={arnnLogoScrolled}
+                        alt="ARNN GROUP"
+                        style={{ maxWidth: "90px" }} className="h-auto w-full"
+                      />
+                    </Link>
+                  </SheetTitle>
+                  <SheetDescription className="sr-only">
+                    Navigation menu
+                  </SheetDescription>
+                </SheetHeader>
 
                 <SheetClose asChild>
-                  <Link
-                    to="/about-us"
-                    onClick={handleMobileNav("/about-us")}
-                    className={`${isServicePage ? serviceMobileItem : "px-4 py-3 text-xl tracking-wide hover:bg-white/10 transition-colors rounded-lg"} ${location.pathname === "/about-us"
-                      ? isServicePage ? serviceMobileActive : "bg-white/10"
-                      : ""
-                      }`}
-                  >
-                    ABOUT US
-                  </Link>
-                </SheetClose>
-
-                {/* Mobile Our Businesses Accordion */}
-                <div className="flex flex-col">
                   <button
-                    onClick={() =>
-                      setIsMobileServicesOpen(
-                        !isMobileServicesOpen,
-                      )
-                    }
-                    className={`${isServicePage ? `flex items-center justify-between ${serviceMobileItem}` : "flex items-center justify-between px-4 py-3 text-xl tracking-wide hover:bg-white/10 transition-colors rounded-lg"} ${isServicePage ? serviceMobileActive : ""
-                      }`}
+                    type="button"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="absolute top-4 right-4 z-[60] rounded-md p-2 text-white/80 transition-colors hover:bg-white/10 hover:text-white"
+                    aria-label="Close menu"
                   >
-                    OUR BUSINESSES
-                    <ChevronDown
-                      className={`w-4 h-4 transition-transform duration-200 ${isMobileServicesOpen ? "rotate-180" : ""}`}
-                    />
+                    <X className="h-8 w-8" strokeWidth={1.75} />
                   </button>
-
-                  {/* Mobile Business Categories Submenu */}
-                  {isMobileServicesOpen && (
-                    <div className="flex flex-col ml-4 mt-1">
-                      {servicesData.map((service) => (
-                        <SheetClose asChild key={service.id}>
-                        <Link
-                          to={`/services/${service.slug}`}
-                          onClick={handleMobileNav(
-                            `/services/${service.slug}`,
-                          )}
-                          className={isServicePage ? `${serviceMobileSubItem} ${activeServiceSlug === service.slug ? serviceMobileActive : ""}` : "px-4 py-2 text-xl tracking-wide hover:bg-white/10 transition-colors rounded-lg"}
-                        >
-                          {service.title}
-                        </Link>
-                        </SheetClose>
-                      ))}
-                    </div>
-                  )}
-                </div>
-
-                <SheetClose asChild>
-                  <Link
-                    to="/contact"
-                    onClick={handleMobileNav("/contact")}
-                    className={`${isServicePage ? serviceMobileItem : "px-4 py-3 text-xl tracking-wide hover:bg-white/10 transition-colors rounded-lg"} ${location.pathname === "/contact"
-                      ? isServicePage ? serviceMobileActive : "bg-white/10"
-                      : ""
-                      }`}
-                  >
-                    CONTACT
-                  </Link>
                 </SheetClose>
-              </nav>
+
+                <nav className="flex flex-col gap-1 mt-2 pb-20">
+                  <SheetClose asChild>
+                    <Link
+                      to="/"
+                      onClick={handleMobileNav("/")}
+                      className={`${isServicePage ? serviceMobileItem : "px-4 py-3 text-xl tracking-wide hover:bg-white/10 transition-colors rounded-lg"} ${location.pathname === "/" ? isServicePage ? serviceMobileActive : "bg-white/10" : ""
+                        }`}
+                    >
+                      HOME
+                    </Link>
+                  </SheetClose>
+
+                  <SheetClose asChild>
+                    <Link
+                      to="/about-us"
+                      onClick={handleMobileNav("/about-us")}
+                      className={`${isServicePage ? serviceMobileItem : "px-4 py-3 text-xl tracking-wide hover:bg-white/10 transition-colors rounded-lg"} ${location.pathname === "/about-us"
+                        ? isServicePage ? serviceMobileActive : "bg-white/10"
+                        : ""
+                        }`}
+                    >
+                      ABOUT US
+                    </Link>
+                  </SheetClose>
+
+                  {/* Mobile Our Businesses Accordion */}
+                  <div className="flex flex-col">
+                    <button
+                      onClick={() =>
+                        setIsMobileServicesOpen(
+                          !isMobileServicesOpen,
+                        )
+                      }
+                      className={`${isServicePage ? `flex items-center justify-between ${serviceMobileItem}` : "flex items-center justify-between px-4 py-3 text-xl tracking-wide hover:bg-white/10 transition-colors rounded-lg"} ${isServicePage ? serviceMobileActive : ""
+                        }`}
+                    >
+                      OUR BUSINESSES
+                      <ChevronDown
+                        className={`w-4 h-4 transition-transform duration-200 ${isMobileServicesOpen ? "rotate-180" : ""}`}
+                      />
+                    </button>
+
+                    {/* Mobile Business Categories Submenu */}
+                    {isMobileServicesOpen && (
+                      <div className="flex flex-col ml-4 mt-1">
+                        {servicesData.map((service) => (
+                          <SheetClose asChild key={service.id}>
+                          <Link
+                            to={`/services/${service.slug}`}
+                            onClick={handleMobileNav(
+                              `/services/${service.slug}`,
+                            )}
+                            className={isServicePage ? `${serviceMobileSubItem} ${activeServiceSlug === service.slug ? serviceMobileActive : ""}` : "px-4 py-2 text-xl tracking-wide hover:bg-white/10 transition-colors rounded-lg"}
+                          >
+                            {service.title}
+                          </Link>
+                          </SheetClose>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+
+                  <SheetClose asChild>
+                    <Link
+                      to="/contact"
+                      onClick={handleMobileNav("/contact")}
+                      className={`${isServicePage ? serviceMobileItem : "px-4 py-3 text-xl tracking-wide hover:bg-white/10 transition-colors rounded-lg"} ${location.pathname === "/contact"
+                        ? isServicePage ? serviceMobileActive : "bg-white/10"
+                        : ""
+                        }`}
+                    >
+                      CONTACT
+                    </Link>
+                  </SheetClose>
+                </nav>
+              </div>
             </SheetContent>
           </Sheet>
         )}

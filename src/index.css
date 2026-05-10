@@ -4544,9 +4544,9 @@
     text-wrap: balance;
   }
 
-  /* Brand logo sizing (responsive): mobile 60px, tablet 80px, desktop 120px */
+  /* Brand logo sizing (responsive): mobile 90px, tablet 80px, desktop 120px */
   .site-logo {
-    height: 60px;
+    height: 90px;
     width: auto;
   }
 

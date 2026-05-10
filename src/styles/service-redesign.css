@@ -1864,7 +1864,8 @@
   }
 
   .srv-hero-content {
-    padding: 84px 0 62px;
+    margin-top: 84px;
+    padding: 0;
   }
 
   .srv-heading {
@@ -2159,7 +2160,10 @@
     line-height: 1.65;
   }
 
-  .srv-hero-desc,
+  .srv-hero-desc {
+    display: none;
+  }
+
   .srv-copy,
   .srv-lead,
   .srv-card-copy,
@@ -2188,6 +2192,29 @@
 .srv-stat-value {
   font-size: clamp(1.75rem, 10vw, 2.35rem);
 }
+  .srv-hero-proofbar {
+    gap: 12px;
+    margin-top: 20px;
+    padding-top: 12px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .srv-hero-proofitem {
+    min-width: 140px;
+    flex: 1;
+  }
+
+  .srv-hero-proofitem p {
+    margin-top: 2px;
+    font-size: 11px;
+    line-height: 1.4;
+  }
+
+  .srv-side-index {
+    font-size: 9px;
+    padding-top: 2px;
+  }
 }
 
 /* About Us page built on the shared service-page system */

@@ -343,6 +343,7 @@ export function BusinessSection() {
   // Calculate the translate value
   const slideWidth = 100 / visibleCount; // Each slide takes this % of viewport
   const translateX = -(currentPosition * slideWidth);
+  const carouselHeight = "60vh";
 
   // Get the actual progress for the progress indicator (0 to totalDivisions-1)
   const progressIndex = currentPosition;
@@ -351,7 +352,7 @@ export function BusinessSection() {
     <section
       ref={sectionRef}
       className="relative"
-      style={{ height: "60vh" }}
+      style={{ height: carouselHeight }}
       onMouseDown={handleMouseDown}
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
@@ -464,8 +465,8 @@ export function BusinessSection() {
                 className={`relative overflow-hidden cursor-pointer transition-all duration-500 ease-in-out flex-shrink-0`}
                 style={{
                   width: cardWidth,
-                  height: "60vh",
-                  minHeight: "60vh",
+                  height: carouselHeight,
+                  minHeight: carouselHeight,
                 }}
                 onMouseEnter={() => {
                   if (!isTouchDevice && isVisible) {
