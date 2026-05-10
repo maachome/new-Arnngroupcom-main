@@ -17,6 +17,7 @@ import {
 import { Link } from "react-router-dom";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
+import { ScrollIndicator } from "../components/ScrollIndicator";
 import "../styles/service-redesign.css";
 
 const aboutHeroVideo =
@@ -269,6 +270,7 @@ export function AboutUs() {
               </div>
             </div>
           </div>
+          <ScrollIndicator />
         </section>
 
         <section className="srv-section about-srv-stats">

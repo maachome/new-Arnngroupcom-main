@@ -1,16 +1,16 @@
-import { Header } from "../components/Header";
 import { BusinessSection } from "../components/BusinessSection";
 import { Footer } from "../components/Footer";
+import { Header } from "../components/Header";
 
 export function Home() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <Header />
-      
+
       {/* Centered Content Container */}
       <div className="flex-1 flex flex-col justify-center">
         {/* Top Text Section */}
-        <section className="flex-shrink-0 my-[20px] py-[0px] px-[32px] mx-[0px] mt-[80px] mr-[0px] mb-[20px] ml-[0px]">
+        <section className="flex-shrink-0 my-[20px] py-[0px] px-[32px] mx-[0px] mt-[80px] mr-[0px] mb-[0px] ml-[0px]">
           <div className="mx-[10%] text-center">
             <p className="mt-3 md:mt-0 md:text-3xl lg:text-4xl text-gray-900 leading-relaxed uppercase text-[16px] font-bold tracking-wider">
               BUILDING LEGACIES. EMPOWERING FUTURES.

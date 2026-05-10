@@ -1,7 +1,8 @@
-import { motion, useScroll, useTransform } from "motion/react";
-import { ServiceHeroData } from "../../types/service";
-import { useEffect, useRef, useState } from "react";
 import { ArrowRight } from "lucide-react";
+import { motion, useScroll, useTransform } from "motion/react";
+import { useEffect, useRef, useState } from "react";
+import { ServiceHeroData } from "../../types/service";
+import { ScrollIndicator } from "../ScrollIndicator";
 
 interface ServiceHeroProps {
   data: ServiceHeroData;
@@ -128,7 +129,7 @@ export function ServiceHero({ data, color }: ServiceHeroProps) {
               )}
 
               <div className="srv-hero-meta">
-                <span className="srv-hero-meta-label">ARNN Group Business Vertical</span>
+                <span className="srv-hero-meta-label md:text-[16px] md:tracking-[0.3em]">ARNN Group Business Vertical</span>
               </div>
 
               {data.subheadline && <p className="srv-eyebrow">{data.subheadline}</p>}
@@ -145,9 +146,9 @@ export function ServiceHero({ data, color }: ServiceHeroProps) {
 
               <div className="srv-hero-proofbar">
                 {servicePillars.map((item, idx) => (
-                  <div key={`${item}-${idx}`} className="srv-hero-proofitem">
-                    <span className="srv-side-index">{`0${idx + 1}`}</span>
-                    <p>{item}</p>
+                  <div key={`${item}-${idx}`} className="srv-hero-proofitem flex items-center gap-3">
+                    <span className="srv-overview-signalmark shrink-0" />
+                    <p className="md:text-lg font-semibold" style={{ margin: 0 }}>{item}</p>
                   </div>
                 ))}
               </div>
@@ -156,15 +157,7 @@ export function ServiceHero({ data, color }: ServiceHeroProps) {
         </div>
       </div>
 
-      <div className="srv-hero-scroll cursor-pointer" onClick={scrollToNext}>
-        <motion.div
-          animate={{ y: [0, 12, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-          className="w-6 h-10 rounded-full border-2 border-white/30 flex items-start justify-center p-2"
-        >
-          <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: color }} />
-        </motion.div>
-      </div>
+      <ScrollIndicator />
     </section>
   );
 }
