@@ -30,6 +30,8 @@ export function ServiceHero({ data, color }: ServiceHeroProps) {
     ? "video/webm"
     : "video/mp4";
 
+  const [isIframeLoaded, setIsIframeLoaded] = useState(false);
+
   useEffect(() => {
     const onResize = () => setIsMobile(window.innerWidth < 768);
     onResize();
@@ -64,18 +66,24 @@ export function ServiceHero({ data, color }: ServiceHeroProps) {
       {data.mediaType === "video" ? (
         <div className="srv-hero-media z-0">
           {isYoutubeVideo ? (
-            <motion.div style={{ scale }} className="absolute inset-0 overflow-hidden">
+            <motion.div style={{ scale }} className="absolute inset-0 overflow-hidden bg-black">
               <iframe
                 src={youtubeEmbedUrl}
                 title="Hero video"
                 allow="autoplay; encrypted-media; picture-in-picture"
                 allowFullScreen
-                className="pointer-events-none border-0 bg-video-blur"
+                onLoad={() => {
+                  // Small delay to ensure player is actually ready and UI has cleared
+                  setTimeout(() => setIsIframeLoaded(true), 1500);
+                }}
+                className={`pointer-events-none border-0 bg-video-blur transition-opacity duration-1000 ${
+                  isIframeLoaded ? "opacity-100" : "opacity-0"
+                }`}
                 style={{
                   position: "absolute",
                   top: "50%",
                   left: "50%",
-                  transform: "translate(-50%, -50%)",
+                  transform: "translate(-50%, -50%) scale(1.15)",
                   width: "max(100%, 177.78vh)",
                   height: "max(100%, 56.25vw)",
                 }}
