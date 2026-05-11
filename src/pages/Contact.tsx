@@ -82,6 +82,7 @@ type FormValues = {
   email: string;
   company: string;
   phoneCountry: string;
+  phoneDialCode: string;
   phone: string;
   enquiryType: string;
   subject: string;
@@ -124,6 +125,7 @@ function buildDefaultValues(): FormValues {
     email: "",
     company: "",
     phoneCountry: getDefaultPhoneCountry(),
+    phoneDialCode: "",
     phone: "",
     enquiryType: "Strategic partnership",
     subject: "New business enquiry from ARNN Group website",
@@ -142,9 +144,23 @@ function getContactApiUrl() {
   return "/api/contact";
 }
 
-function buildEmailBody(values: FormValues) {
+function normalizePhoneNumber(phone: string, dialCode?: string) {
+  const trimmedPhone = phone.trim();
+  if (!trimmedPhone) return "";
+
+  const phoneDigits = trimmedPhone.replace(/\D/g, "");
+  const dialCodeDigits = (dialCode || "").replace(/\D/g, "");
+
+  if (!phoneDigits) return "";
+  if (dialCodeDigits && phoneDigits === dialCodeDigits) return "";
+  if (phoneDigits.length <= 4) return "";
+
+  return trimmedPhone;
+}
+
+function buildEmailBody(values: FormValues, normalizedPhone: string) {
   const company = values.company.trim() || "Not provided";
-  const phone = values.phone.trim() || "Not provided";
+  const phone = normalizedPhone || "Not provided";
   const brief = values.message.trim();
 
   return [
@@ -203,6 +219,8 @@ export function Contact() {
     setSubmitMessage("");
 
     try {
+      const normalizedPhone = normalizePhoneNumber(values.phone, values.phoneDialCode);
+
       const apiResponse = await fetch(getContactApiUrl(), {
         method: "POST",
         headers: {
@@ -212,11 +230,11 @@ export function Contact() {
           name: values.name.trim(),
           email: values.email.trim(),
           subject: values.subject.trim(),
-          phone: values.phone.trim() || undefined,
+          phone: normalizedPhone || undefined,
           company: values.company.trim() || undefined,
           enquiry_type: values.enquiryType,
           preferred_timeline: values.timeline,
-          message: buildEmailBody(values),
+          message: buildEmailBody(values, normalizedPhone),
           botcheck: values.botcheck,
         }),
       });
@@ -439,9 +457,16 @@ export function Contact() {
                         <PhoneInput
                           defaultCountry={watch("phoneCountry")}
                           value={watch("phone")}
-                          onChange={(phone, meta) => {
-                            setValue("phone", phone, { shouldDirty: true });
+                          onChange={(_, meta) => {
+                            setValue("phone", meta.inputValue, {
+                              shouldDirty: true,
+                              shouldValidate: true,
+                            });
                             setValue("phoneCountry", meta.country.iso2, { shouldDirty: true });
+                            setValue("phoneDialCode", meta.country.dialCode, {
+                              shouldDirty: true,
+                              shouldValidate: true,
+                            });
                           }}
                           forceDialCode
                           disableDialCodePrefill={false}
@@ -454,8 +479,15 @@ export function Contact() {
                           className="ar2-phone-input"
                         />
                       </div>
-                      <input type="hidden" {...register("phone")} />
+                      <input
+                        type="hidden"
+                        {...register("phone", {
+                          validate: (value, formValues) =>
+                            !!normalizePhoneNumber(value, formValues.phoneDialCode),
+                        })}
+                      />
                       <input type="hidden" {...register("phoneCountry")} />
+                      <input type="hidden" {...register("phoneDialCode")} />
                     </div>
 
                     <label className="ar2-field">
