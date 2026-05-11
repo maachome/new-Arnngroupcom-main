@@ -1,4 +1,3 @@
-import useWeb3Forms from "@web3forms/react";
 import {
   ArrowRight,
   BriefcaseBusiness,
@@ -91,18 +90,6 @@ type FormValues = {
   botcheck: boolean;
 };
 
-type Web3FormPayload = {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
-  phone?: string;
-  company?: string;
-  enquiry_type?: string;
-  preferred_timeline?: string;
-  replyto?: string;
-};
-
 function getDefaultPhoneCountry() {
   if (typeof window === "undefined") return "ae";
 
@@ -144,6 +131,15 @@ function buildDefaultValues(): FormValues {
     message: "",
     botcheck: false,
   };
+}
+
+function getContactApiUrl() {
+  const configuredOrigin = import.meta.env.VITE_CONTACT_API_ORIGIN?.trim();
+  if (configuredOrigin) {
+    return `${configuredOrigin.replace(/\/$/, "")}/api/contact`;
+  }
+
+  return "/api/contact";
 }
 
 function buildEmailBody(values: FormValues) {
@@ -202,41 +198,48 @@ export function Contact() {
     });
   }, [setValue, watchedEnquiryType, watchedName]);
 
-  const { submit } = useWeb3Forms<Web3FormPayload>({
-    access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "YOUR_ACCESS_KEY_HERE",
-    settings: {
-      from_name: "ARNN Group Website",
-    },
-    onSuccess: (message) => {
+  const handleFormSubmit = async (values: FormValues) => {
+    setSubmitStatus("idle");
+    setSubmitMessage("");
+
+    try {
+      const apiResponse = await fetch(getContactApiUrl(), {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: values.name.trim(),
+          email: values.email.trim(),
+          subject: values.subject.trim(),
+          phone: values.phone.trim() || undefined,
+          company: values.company.trim() || undefined,
+          enquiry_type: values.enquiryType,
+          preferred_timeline: values.timeline,
+          message: buildEmailBody(values),
+          botcheck: values.botcheck,
+        }),
+      });
+
+      const result = (await apiResponse.json().catch(() => null)) as { message?: string } | null;
+
+      if (!apiResponse.ok) {
+        throw new Error(result?.message || "Something went wrong. Please try again.");
+      }
+
       setSubmitStatus("success");
-      setSubmitMessage(message || "Your message was sent successfully.");
+      setSubmitMessage(result?.message || "Your message was sent successfully.");
       reset(buildDefaultValues());
       window.setTimeout(() => {
         setSubmitStatus("idle");
         setSubmitMessage("");
       }, 5000);
-    },
-    onError: (message) => {
+    } catch (error) {
       setSubmitStatus("error");
-      setSubmitMessage(message || "Something went wrong. Please try again.");
-    },
-  });
-
-  const handleFormSubmit = (values: FormValues) => {
-    setSubmitStatus("idle");
-    setSubmitMessage("");
-
-    return submit({
-      name: values.name.trim(),
-      email: values.email.trim(),
-      replyto: values.email.trim(),
-      subject: values.subject.trim(),
-      phone: values.phone.trim() || undefined,
-      company: values.company.trim() || undefined,
-      enquiry_type: values.enquiryType,
-      preferred_timeline: values.timeline,
-      message: buildEmailBody(values),
-    });
+      setSubmitMessage(
+        error instanceof Error ? error.message : "Something went wrong. Please try again.",
+      );
+    }
   };
 
   return (
@@ -355,8 +358,8 @@ export function Contact() {
                     Send a polished brief with the right context from the first message.
                   </h2>
                   <p className="ar2-form-copy">
-                    The form uses the official Web3Forms React integration and submits structured
-                    enquiry data so your email notifications are easier to review and reply to.
+                    The form sends structured enquiry data through our secure mail delivery flow so
+                    your email notifications are easier to review and reply to.
                   </p>
 
                   <div className="ar2-briefing-grid">
