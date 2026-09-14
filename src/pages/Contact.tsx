@@ -40,7 +40,7 @@ const channels = [
   {
     icon: MapPin,
     label: "Office",
-    value: "Office No. 215,\nAl Makhawi Building,\nOud Metha, Dubai",
+    value: "Unit 401 & 412\nBayswater Building\nBusiness Bay, Dubai\nUnited Arab Emirates",
     detail: "Regional headquarters",
     href: null,
   },
